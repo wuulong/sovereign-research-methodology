@@ -9,7 +9,7 @@
 
 ## 🏛️ 1. 主權大腦四星協同運作模型 (Sovereign Skills & DB Orchestration)
 
-整個主權科研範式並非依靠單一 AI 代理人的心流碰撞，而是由 **四大專屬學術研究 Skill** 圍繞著實體 **SQLite 資料庫 (`Research_Artifacts.db`)** 所構成的精密防禦縱深。
+整個主權科研典範並非依靠單一 AI 代理人的心流碰撞，而是由 **四大專屬學術研究 Skill** 圍繞著實體 **SQLite 資料庫 (`Research_Artifacts.db`)** 所構成的精密防禦縱深。
 
 以下為四大 Skill、十一表資料庫與聯邦手稿檔案之間的實體運作關係圖：
 
@@ -66,7 +66,7 @@ flowchart TD
     %% 關聯線：PoC-Verifier
     VRF -->|1. 檢驗外鍵與實體完整性| T_Evid
     VRF -->|2. 檢測工具鏈無摩擦率| DB
-    VRF -->|3. 計算自指閉環度| T_MS
+    VRF -->|3. 計算自指完整鏈結度| T_MS
     VRF -->|4. 覆寫產出自證報告| MPM_Doc
 
     %% 樣式設定
@@ -114,7 +114,7 @@ flowchart TD
 * **運作邏輯三部曲**：
   1. **抓漏洞 (Attack)**：擷取會議日誌或調用 `!paper_grill`，扮演刻薄紅軍，對手稿中最薄弱的主張（Claims）進行 Socratic 靈魂拷問，將質疑物理落庫至 `red_team_logs`。
   2. **拉電閘 (Verdict Lock)**：只要 `red_team_logs` 中有任何一筆質疑被判定為 **`VULNERABLE`**（脆弱有漏洞），大腦會**剛性鎖定 (Verdict Lock)**，阻斷後續的論文合龍編譯與發表程序。
-  3. **做答辯 (PASS)**：研究生被迫去補齊實驗數據並修正論文，並在 `student_defense` 寫入答辯。當 Auditor 評估通過，手動將 Verdict 更新為 **`PASS`**，電閘才會被重新推上，解除阻斷。
+  3. **做答辯 (PASS)**：研究生被迫去補齊實驗資料並修正論文，並在 `student_defense` 寫入答辯。當 Auditor 評估通過，手動將 Verdict 更新為 **`PASS`**，電閘才會被重新推上，解除阻斷。
 * **底層核心演算規則**：
   * **「紅軍防投機」計分規則**：如果研究生只對 1 篇無關緊要的文獻發動自審並獲得 PASS，就宣稱 PASS 率 100%，大腦將發動防投機制約：
     $$\text{紅軍自審得分} = (\text{自審文獻覆蓋率} \times 0.6) + (\text{自審 PASS 率} \times 0.4)$$
@@ -123,18 +123,18 @@ flowchart TD
 #### 3️⃣ `academic-paper-builder` (學術論文建構師)
 * **📢 直白一句話**：「*鋼骨結構施工隊，拒絕 AI 代寫散裝空洞文字*」
 * **運作邏輯三部曲**：
-  1. **鋪骨架 (APM論點地圖)**：強制要求手稿中的每一個學術主張 (Claim)，都必須在 `my_manuscripts` 中註冊，並在 APM 地圖中與 SQLite 的背景文獻（Papers）或現地實驗數據（Evidences）進行 `PRIMARY KEY` 的物理對合。
+  1. **鋪骨架 (APM論點地圖)**：強制要求手稿中的每一個學術主張 (Claim)，都必須在 `my_manuscripts` 中註冊，並在 APM 地圖中與 SQLite 的背景文獻（Papers）或現地實驗資料（Evidences）進行 `PRIMARY KEY` 的物理對合。
   2. **打鋼釘 (引文對齊)**：掃描手稿中的 `@cite_key`，強制核對大腦文獻庫。若有文獻未過關，判定為「幽靈引文」，予以警告並拒絕加入引文。
   3. **灌水泥 (一鍵編譯)**：自動撈取大腦資料庫中對應文獻的 `bibtex` 欄位，一鍵拼裝產出標準 `references.bib`，並動態編譯擴寫手稿，完成合龍。
 * **底層核心演算規則**：
-  * **「 Claims 剛性 Grounding」規則**：手稿的每一條 Claim 必須在 `manuscript_citations` 中有對應的聯結，且背後支持的文獻必須是 `STAGE_2_DEEP`，或是 `empirical_evidences` 中實測誤差 `friction_percentage` 小於設定臨界值（如 15%）的真實數據，否則 Claims 完整率直接下修，引爆紅色空洞警告。
+  * **「 Claims 剛性 Grounding」規則**：手稿的每一條 Claim 必須在 `manuscript_citations` 中有對應的聯結，且背後支援的文獻必須是 `STAGE_2_DEEP`，或是 `empirical_evidences` 中實測誤差 `friction_percentage` 小於設定臨界值（如 15%）的真實資料，否則 Claims 完整率直接下修，引爆紅色空洞警告。
 
 #### 4️⃣ `sovereign-poc-verifier` (主權自證驗證器)
 * **📢 直白一句話**：「*論文的硬核防偽晶片與健康檢查器*」
 * **運作邏輯三部曲**：
-  * **DB 掃毒 (資料庫完整度檢測)**：執行 `PRAGMA foreign_key_check` 與 `PRAGMA integrity_check`，自證底層 SQLite 的十一張表完美對合，無 any 外鍵斷線與資料毀損。
+  * **DB 掃毒 (資料庫完整度檢測)**：執行 `PRAGMA foreign_key_check` 與 `PRAGMA integrity_check`，自證底層 SQLite 的十一張表完美對合，無任何外鍵斷線與資料毀損。
   * **跑分測試 (本機工具高可用檢測)**：實體掃描並逐個測試本機 8 大 Python 支援腳本（如 `brain_cli.py`、`hydrate_paper_assets.py`）的可執行性，物理確保這套系統在別台電腦也能「一鍵跑通、無摩擦重現」。
-  * **防偽晶片 (手稿元自指檢測)**：實體掃描手稿內是否確實嵌入了本次資料庫 DTO JSON 的純文字指紋，向審查大佬證明：「*這篇論文的數據跟架構不是 AI 憑空捏造的，而是由這個 SQLite 資料庫 100% 物理長出來的*」。
+  * **防偽晶片 (手稿元自指檢測)**：實體掃描手稿內是否確實嵌入了本次資料庫 DTO JSON 的純文字資料指紋，向審查大佬證明：「*這篇論文的資料跟架構不是 AI 憑空捏造的，而是由這個 SQLite 資料庫 100% 物理長出來的*」。
 * **底層核心演算規則**：
   * **「MPM 元自證成熟度」規則**：
     $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦率} \times 0.30) + (\text{手稿自指自證度} \times 0.30)$$
@@ -151,10 +151,10 @@ flowchart TD
 ```
 
 #### 🛠️ 步驟一：手稿論點 (Claims) 驅動與文獻定位
-* **運作邏輯**：當研究生在撰寫手稿或論點地圖（APM）時，提出了一個關鍵的核心主張（例如：*「人機協同中，若不進行物理固化，AI 將逐步掏空人類的思考手感」*）。為了支持這條 Claim，大腦代理人啟動 `academic-research-navigator`，在 Staging 區文獻庫進行針對「頂級期刊或會議（Top-Tier Venues，如 Nature, Science, IEEE 等）」的精準理論探源，將文獻存入 Layer 0。
+* **運作邏輯**：當研究生在撰寫手稿或論點地圖（APM）時，提出了一個關鍵的核心主張（例如：*「人機協同中，若不進行物理固化，AI 將逐步掏空人類的思考手感」*）。為了支援這條 Claim，大腦代理人啟動 `academic-research-navigator`，在 Staging 區文獻庫進行針對「頂級期刊或會議（Top-Tier Venues，如 Nature, Science, IEEE 等）」的精準理論探源，將文獻存入 Layer 0。
 
 #### 🛠️ 步驟二：學術重力場篩選與優先級判定
-* **運作邏輯**：為了在時間有限的肉身精力下進行高效精讀，大腦絕不盲讀，而是剛性運行底層的 **「學術重力場評估公式 (Academic Gravity Formula)」**：
+* **運作邏輯**：為了在時間有限的肉身精力下進行高效精讀，大腦專注於重點文獻，剛性運行底層的 **「學術重力場評估公式 (Academic Gravity Formula)」**：
   $$G_a = (\text{被引用數} \times 0.40) + (\text{載體分值 Tier} \times 0.40) + (\text{年份懲罰衰減} \times 0.20)$$
 * **排序規則**：系統根據 $G_a$ 分數由高至低自動排序，過濾掉野雞期刊的語意泡沫，產出 **「文獻精讀優先級清單」**。只有高優先級（Ga 分值頂尖）的文獻，才獲准靠泊引渡至特定主題 `topic_id` 下，晉升為 Layer 1 (Active)。
 
@@ -164,9 +164,9 @@ flowchart TD
   2. **LaTeX 預萃取**：調用 Marker CLI 將 PDF 預萃取為比鄰 Markdown 檔案。此步驟將文獻中的物理公式、張量與複雜數學結構完美轉化為乾淨的 LaTeX 語法，拒絕公式亂碼，為後續精讀鋪設無摩擦的閱讀地墊。
 
 #### 🛠️ 步驟四：人機共讀穿透與「十大學術因子」降維解構
-* **運作邏輯**：調用 `!paper_digest [paper_id]` 指令。大腦協作代理人與人類研究生展開穿透式共讀，剖析文獻 LaTeX 預萃取檔，剛性降維解構並萃取出 **「十大學術因子」**：
+* **運作邏輯**：調用 `!paper_digest [paper_id]` 指令。大腦協作代理人與人類研究生展開穿透式精讀，剖析文獻 LaTeX 預萃取檔，剛性降維解構並萃取出 **「十大學術因子」**：
   1. **核心理論衝突**：文獻試圖解決什麼本質上的理論對立？
-  2. **實證研究邊界**：文獻的物理實驗或數據在哪個範圍內有效？
+  2. **實證研究邊界**：文獻的物理實驗或資料在哪個範圍內有效？
   3. **核心 DTO 設計**：文獻的資料結構與物理模型定錨常數是什麼？
   4. **失效率與極限**：文獻的方法在何時會失效？摩擦力在哪裡？
   5. **技術 Gap**：文獻留下了什麼未解的學術空白？
@@ -185,7 +185,7 @@ flowchart TD
 
 ### 🔄 1.4 雙循環論點遞迴與手稿重構流水線 (Recursive Claims Refinement & Restructuring)
 
-主權科研大腦的終極威力，不僅僅在於「幫論點尋找支持證據」，更在於透過文獻的穿透式消化，**反向強迫人類進行「雙循環學習 (Double-Loop Learning)」 ➔ 修正論文觀點，重新重構論文章節與主要描述設計**。
+主權科研大腦的終極威力，不僅僅在於「幫論點尋找支援證據」，更在於透過文獻的穿透式消化，**反向強迫人類進行「雙循環學習 (Double-Loop Learning)」 ➔ 修正論文觀點，重新重構論文章節與主要描述設計**。
 
 以下為大腦在「消化文獻 ➔ 啟發反思 ➔ 修正論點 ➔ 章節重構 ➔ 最終發表」的 **四步遞迴演化工序**：
 
@@ -199,8 +199,8 @@ flowchart TD
 
 #### 🛠️ 步驟二：人類品位行使，修正論文觀點 (Refine)
 * **演化機制**：人類行使最高主權的「品位裁決（Taste & Judgment）」，主動修正論文核心主張。
-* **數據更新**：將 Claim 1 修正為更為嚴密、具備防禦深度的科學論點（修正後主張：*「人機協作必須以人類品位裁決為靈魂，並透過 SQLite 物理合併鎖進行剛性防禦」*）。
-* **資料庫對合**：`academic-paper-builder` 接棒，將修正後的 Claims 寫回論點地圖（APM）中，並更新資料庫中 `my_manuscripts` 手稿實體的 `focus_spec` JSON 契約；同時重新註冊新的 `empirical_evidences`（包含新的本地物理偏離度 `friction_percentage` 數據），完成論點在大腦地基的重新對合。
+* **資料更新**：將 Claim 1 修正為更為嚴密、具備防禦深度的科學論點（修正後主張：*「人機協作必須以人類品位裁決為靈魂，並透過 SQLite 物理合併鎖進行剛性防禦」*）。
+* **資料庫對合**：`academic-paper-builder` 接棒，將修正後的 Claims 寫回論點地圖（APM）中，並更新資料庫中 `my_manuscripts` 手稿實體的 `focus_spec` JSON 契約；同時重新註冊新的 `empirical_evidences`（包含新的本地物理偏離度 `friction_percentage` 資料），完成論點在大腦地基的重新對合。
 
 #### 🛠️ 步驟三：論文章節大綱與「寫作意圖」重構 (Restructure)
 * **演化機制**：論文觀點的修訂，必然觸發整篇手稿大綱（ToC）與描述設計的連帶重構。
@@ -210,18 +210,20 @@ flowchart TD
 
 #### 🛠️ 步驟四：心流擴寫與終極合龍 (Draft & Compile)
 * **演化機制**：下達 `!paper_draft` 指令。
-* **動態擴寫**：AI 代理人以重構後、具備明確「寫作意圖」與「實體 DB 數據地基」的全新 ToC 以及 APM 論點地圖為鋼骨，進行有靈魂、死守人類思考手感的心流擴寫。
-* **終極合龍**：自動消除 AI 八股贅詞，將修正後的深刻論點、已消化的 Stage 2 頂級引文（papers）、本地實測真值數據（empirical_evidences）完美合龍，寫入 `sovereign_research_05_manuscript.md`，完成手稿的螺旋上升重構！
+* **動態擴寫**：AI 代理人以重構後、具備明確「寫作意圖」與「實體 DB 資料地基」的全新 ToC 以及 APM 論點地圖為鋼骨，進行有靈魂、死守人類思考手感的心流擴寫。
+* **終極合龍**：自動消除 AI 八股贅詞，將修正後的深刻論點、已消化的 Stage 2 頂級引文（papers）、本地實測真值資料（empirical_evidences）完美合龍，寫入 `sovereign_research_05_manuscript.md`，完成手稿的螺旋上升重構！
 
 ---
 
-## 🔬 2. 底層 SQLite 十一表設計哲學與痛點解鎖方案
+## 🔬 2. 底層 SQLite 十一表設計與規格 (Sovereign Database & Schema Spec)
 
-底層 SQLite 資料庫的欄位與關係設計，並非空泛的技術堆砌，而是針對**傳統學術研究痛點**與**人機協作失控危機**所量身打造的「防禦性架構」：
+### 2.1 十一表設計哲學與痛點解鎖方案
+
+底層 SQLite 資料庫的欄位與關係設計，並非空泛的技術堆置，而是針對**傳統學術研究痛點**與**人機協作失控危機**所量身打造的「防禦性架構」：
 
 | 核心痛點 (Pain Point) | 底層資料庫架構解決方案 (Database Architecture Solution) | 具體解鎖機制 (How it solves the problem) |
 | :--- | :--- | :--- |
-| **1. 認知掏空與 AI 幻覺**<br>（AI 代理人代寫、散裝黑話堆砌，研究者喪失思考手感） | **`empirical_evidences` 表**<br>聯動 **`my_manuscripts`表** | **Claims 與 DTO 雙向物理自指合龍**：<br>強制手稿中每一個學術主張 (Claim)，都必須在 `empirical_evidences` 中有對應的「現地實踐真值數據（`evidence_payload` JSON信封）」或已消化引文。拒絕任何口頭承諾，以物理數據強制 Grounding。 |
+| **1. 認知掏空與 AI 幻覺**<br>（AI 代理人代寫、散裝黑話堆砌，研究者喪失思考手感） | **`empirical_evidences` 表**<br>聯動 **`my_manuscripts`表** | **Claims 與 DTO 雙向物理自指合龍**：<br>強制手稿中每一個學術主張 (Claim)，都必須在 `empirical_evidences` 中有對應的「現地實踐真值資料（`evidence_payload` JSON信封）」或已消化引文。拒絕任何口頭承諾，以物理資料強制 Grounding。 |
 | **2. 理論地基浮空與引用斷代**<br>（僅看最新結論，對經典奠基理論一無所知，缺乏理論厚度） | **`paper_relations` 表**<br>聯動 **有向 BFS 2-Level 拓撲** | **演化圖譜二層廣度優先檢索**：<br>`paper_relations` 的 `GROUNDED_ON` 邊強制將平面引用升格為有向演化網絡。利用遞迴 SQL 檢索（Recursive CTE）與 BFS 二層探針，若底層經典文獻未消化或未載入，系統發動「根系未開發懲罰」，剛性扣減 MCI 評分。 |
 | **3. 幽靈引文與未讀先引**<br>（快餐式引用，將未讀文獻直接丟進 References 濫竽充數） | **`papers.meta_data` JSON信封**<br>聯動 **`manuscript_citations`** | **Stage 2 降維解構合規洗滌**：<br>文獻必須先完成 Stage 2 深度解構（降維提取 10 大學術因子，置於 `meta_data`），大腦才認可其為 `'STAGE_2_DEEP'`。`manuscript_citations` 會自動核對手稿引用，未過關者會被計入「幽靈引文警告」，嚴禁進入 BibTeX 拼裝。 |
 | **4. 自我認知偏差與投機防巧**<br>（自我審查流於形式，或對一兩篇文獻自審 PASS 虛報進度） | **`red_team_logs` 表**<br>聯動 **合併鎖 (Verdict Lock) 與加權計分** | **Socratic 對抗與 Verdict Lock 剛性阻斷**：<br>紅軍攻擊寫入 `red_team_logs`，狀態為 `VULNERABLE` 時會觸發合併鎖，物理阻斷論文編譯。在 MCI 算法中，紅軍得分採用「自審覆蓋率 60% + PASS率 40%」綜合模型，覆蓋率不足會受到強力制約，逼迫擴大自審。 |
@@ -230,12 +232,270 @@ flowchart TD
 
 ---
 
-### ⚖️ 2.1 物理誤差計量 (Physical Friction Measure)
+### 2.2 全庫大一統 JSON 規格書 (Metadata Schema Spec v2.1)
+
+本節規格物理固化了主權研究大腦在整個 SQLite 資料庫中，所有帶有 `meta_data` JSON 欄位的剛性資料契約 (Data Contract)。
+
+此設計引進了**「全域合規性檢核信封 (compliance_status)」**，用於動態記錄資料庫每筆詮釋資料的品質合規狀態、缺失欄位與審計軌跡，實體化「大腦自主品質治理」。
+
+#### 1. 帶有 meta_data 欄位之核心資料表盤點
+在大腦十一表 Schema 中，以下核心資料表均掛載了 `meta_data` JSON 信封，用於隔離「剛性 SQL 外鍵與索引骨架」與「彈性肌肉詮釋資料」：
+
+```
+                              ┌──────────────────┐
+                              │  projects.meta   │
+                              └─────────┬────────┘
+                                        │ (1對多)
+                              ┌─────────▼────────┐
+                              │   topics.meta    │
+                              └─────────┬────────┘
+                                        │ (1對多)
+     ┌──────────────────┐     ┌─────────▼────────┐     ┌──────────────────┐
+     │  exp_tasks.meta  ├────►│   papers.meta    │◄────┤  paper_urls.meta  │
+     └──────────────────┘     └─────────┬────────┘     └──────────────────┘
+                                        │ (1對多)
+                              ┌─────────┼────────┐
+                              │         │        │
+                     ┌────────▼────────┐ ┌───────▼────────┐
+                     │ empirical.meta  │ │ red_team.meta  │
+                     └─────────────────┘ └────────────────┘
+```
+
+#### 2. 全域必填：合規性檢核信封 (compliance_status)
+為防止資料規格隨時間退化或與規格書脫節，**所有資料表** 的 `meta_data` JSON 根節點下，**[必須]** 包含一個固定的 `compliance_status` 物件。
+
+此物件由大腦審計工具 `audit_brain_compliance.py` 自動定期掃描、檢核並動態打標更新：
+
+```json
+"compliance_status": {
+  "is_compliant": "Boolean",          // true (完全合規) 或 false (未合規/欄位缺失)
+  "checked_at": "Timestamp",           // 本次品質檢核的時間戳記 (ISO 8601 格式)
+  "missing_fields": ["String"],        // 缺失的必填 key 完整路徑清單 (例如 ["paper_extraction.core_question"])
+  "validation_message": "String"       // 合規性審計說明 (例如 "Missing Stage 2 Deep Extraction Details")
+}
+```
+
+#### 3. 各資料表 JSON 剛性結構合集
+在寫入以下各資料表的 `meta_data` 時，必須 100% 遵守對應的剛性結構（嚴禁任何 key 的拼寫變形）：
+
+##### 📌 papers (背景文獻主表 - meta_data)
+*   **用途**：記錄文獻的降維解構 DTO 與學術重力計量細節。
+*   **JSON 剛性結構**：
+```json
+{
+  "compliance_status": {              // 【全域合規信封】(自動審計打標)
+    "is_compliant": false,
+    "checked_at": "2026-05-26T18:42:00Z",
+    "missing_fields": ["paper_extraction.core_question"],
+    "validation_message": "Stage 2 details missing"
+  },
+  "stage": "String",                  // 'STAGE_1_PRELIMINARY' 或 'STAGE_2_DEEP'
+  "preliminary_relevance": "String",  // Stage 1 初步價值猜想說明
+  "academic_prestige": {              // 【學術重力與載體含金量計量】
+    "citation_count": "Integer",      // 實時/高擬真被引用次數
+    "venue_name": "String",           // 期刊/會議完整官方名稱
+    "venue_tier": "String",           // 'Top_Journal' | 'Core_Venue' | 'Arxiv_Preprint' | 'Ordinary_Venue'
+    "venue_bias_applied": "Real",     // 本地主題特異性偏置加分 (如 +3.0)
+    "institution_name": "String",     // 第一作者所屬研究機構名稱
+    "institution_tier": "String",     // 'Tier_1_Elite' | 'Tier_2_Core' | 'Tier_3_Ordinary'
+    "institution_bias_applied": "Real",// 本地主題機構特異性偏置加分 (如 +1.5)
+    "academic_gravity_score": "Real", // 計算出之學術重力最終分數 (Ga)
+    "hydration_source": "String"      // 資料灌溉來源：'semantic_scholar_api' 或 'heuristic_fallback'
+  },
+  "paper_extraction": {               // 【標準論文降維萃取 DTO】(Stage 2 強制必填，若 stage = 'STAGE_1_PRELIMINARY' 則可先不填，但 is_compliant 將為 false)
+    "core_question": "String",        // 論文試圖解決的具體痛點與背景問題
+    "core_methodology": "String",     // 論文採用的具體方法、模型或物理/軟體架構
+    "key_insights": ["String"],       // 2-3 個最具物理硬度與辯證價值的關鍵主張列表
+    "unique_contribution": "String",  // 相比前人，這篇論文最核心、唯一的原創突破與 Novelty 判定
+    "empirical_setup": "String",      // 實踐或實驗的物理情境、資料集、模擬工具與硬體配置
+    "key_results": "String",          // 論文的定量成果與 Baseline 對比數值表現
+    "limitations_outlook": "String",  // 論文自身承認的局限性、適用邊界與未來改善方向
+    "key_references_to_suck": [       // 這篇論文中，對其具備基石/靈魂地位的參考文獻
+      {
+        "cite_key": "String",
+        "reason": "String"
+      }
+    ],
+    "sovereign_taste_verdict": {      // 【防掏空防線：主權學者批判性品位裁決】
+      "critique": "String",           // 將他者文獻與我們本地實踐現地真值對比批判的 Verdict 防禦答辯
+      "taste_score": "Real"           // 研究者給予該論文的學術品位主觀定錨評分 (0.0 至 10.0)
+    }
+  }
+}
+```
+
+##### 📌 empirical_evidences (肉身實踐與實體舉證表 - meta_data)
+*   **用途**：記錄實作舉證時的系統環境、執行效率與物理摩擦力。
+*   **JSON 剛性結構**：
+```json
+{
+  "compliance_status": {              // 【全域合規信封】
+    "is_compliant": true,
+    "checked_at": "2026-05-26T18:42:00Z",
+    "missing_fields": [],
+    "validation_message": "All fields valid"
+  },
+  "host_name": "String",              // 實踐測試的主機名稱 (例如 'Habars_Mac Studio')
+  "author_name": "String",            // 實作者/驗證者姓名 (例如 'wuulong')
+  "execution_duration_sec": "Real",   // 實測執行或模擬耗時 (秒)
+  "calibration_status": "String",     // 校準狀態：'CALIBRATED' (已校準) | 'UNCALIBRATED' (未校準)
+  "environment_conditions": {         // 實作時的物理或網路環境
+    "network_latency_ms": "Real",     // 實測網路延遲
+    "allowed_friction_threshold": "Real" // 物理守恆所允許的誤差臨界值
+  }
+}
+```
+
+##### 📌 red_team_logs (紅軍自審與品位裁決日誌表 - meta_data)
+*   **用途**：記錄紅軍自審時所使用的 LLM 評審模型與消耗之 Token 資源。
+*   **JSON 剛性結構**：
+```json
+{
+  "compliance_status": {              // 【全域合規信封】
+    "is_compliant": true,
+    "checked_at": "2026-05-26T18:42:00Z",
+    "missing_fields": [],
+    "validation_message": "All fields valid"
+  },
+  "judge_model": "String",            // 扮演紅軍的 LLM 評審模型名稱 (如 'Gemini_1.5_Pro')
+  "prompt_tokens": "Integer",         // 消耗的 Input Token 數
+  "completion_tokens": "Integer",     // 消耗的 Output Token 數
+  "temperature": "Real",              // 執行的 LLM 溫度參數
+  "audit_signature": "String"         // AI 代理人或學術安全簽章
+}
+```
+
+##### 📌 exploration_tasks (探勘與採集任務日誌表 - meta_data)
+*   **用途**：追溯外部資料進入資料庫的「數位基因與血統（Data Lineage）」。
+*   **JSON 剛性結構**：
+```json
+{
+  "compliance_status": {              // 【全域合規信封】
+    "is_compliant": true,
+    "checked_at": "2026-05-26T18:42:00Z",
+    "missing_fields": [],
+    "validation_message": "All fields valid"
+  },
+  "host_os": "String",                // 執行此任務的系統環境 (如 'macOS 15.4')
+  "cli_flags": ["String"],            // 執行探勘時帶入的參數清單 (如 ["--ingest", "--limit=10"])
+  "api_endpoint": "String",           // 使用的搜尋 API 端點
+  "search_statistics": {              // 探勘統計
+    "total_results_found": "Integer", // 線上符合查詢的總筆數
+    "api_response_time_ms": "Integer" // API 回傳耗時
+  }
+}
+```
+
+##### 📌 my_manuscripts (主權手稿表 - meta_data)
+*   **用途**：記錄研究生自我創造論文手稿的版本控制與寫作平台關聯。
+*   **JSON 剛性結構**：
+```json
+{
+  "compliance_status": {              // 【全域合規信封】
+    "is_compliant": true,
+    "checked_at": "2026-05-26T18:42:00Z",
+    "missing_fields": [],
+    "validation_message": "All fields valid"
+  },
+  "overleaf_url": "String",           // 關聯的 Overleaf 線上協同寫作專案網址
+  "git_commit_hash": "String",        // 當前寫作版本所對應的本地 Git commit hash
+  "target_journal": "String",         // 預計發表的目標期刊或學術會議名稱
+  "words_count": "Integer"            // 目前草稿的實體總字數
+}
+```
+
+#### 4. 資料品質約束與自動化審計
+*   **自動化審計與打標**：透過呼叫 `audit_brain_compliance.py` 自動掃描大腦，比對每筆 `meta_data` JSON 的 Key。若缺少必填 Key，腳本會將 `is_compliant` 標記為 `false`，並在 `missing_fields` 中記錄缺失的 Key 路徑，最後回寫回資料庫。
+*   **一鍵 SQL 盲檢合規率**：導師可使用 SQLite 一鍵查詢大腦目前的資料品質合規率：
+    ```sql
+    SELECT 
+      COUNT(*) as total,
+      SUM(CASE WHEN json_extract(meta_data, '$.compliance_status.is_compliant') = 1 THEN 1 ELSE 0 END) as compliant_count,
+      ROUND(AVG(CASE WHEN json_extract(meta_data, '$.compliance_status.is_compliant') = 1 THEN 1.0 ELSE 0.0 END) * 100, 2) as compliance_rate_pct
+    FROM papers;
+    ```
+
+---
+
+### 2.3 學術文獻關聯本體規格書 (Relation Ontology Spec)
+
+**定錨手稿編號**：`ms_sovereign_research_2026`  
+**目的**：定義本地 SQLite 大腦資料庫中 `paper_relations` 表格的關係分類體系。透過這套本體（Ontology），研究者與 AI 協同器能將平面堆疊的文獻庫升格為立體、有向演化、具備批判張力的「學術演化有向無環圖 (DAG)」，作為撰寫高品質文獻綜述（Literature Review）與論點溯源的物理依據。
+
+#### 1. 五大分區與八種核心關係定義 (The 8 Relation Types)
+在 `paper_relations` 資料表中，每一筆關係由 `source_paper_id` (起點/新文獻) 指向 `target_paper_id` (終點/被引用之舊文獻)，其關係類型 `relation_type` 強制約束為以下八種之一：
+
+##### 🔴 第一分區：繼承與技術演進類 (Inheritance & Evolution)
+*本分區代表知識的累積、技術樹的向下紮根與向上伸展。*
+
+1.  **`GROUNDED_ON` (基於 / 理論地墊)**
+    *   **定義**：$A$ 論文的核心方法、關鍵理論或數學公式，是直接建立在 $B$ 論文開創的核心模型或基礎設施之上的。
+    *   **資料契約範例**：LLaVA [@zotero_Liu_2023_471] `GROUNDED_ON` CLIP (視覺) 與 Vicuna (語言)。
+2.  **`IMPROVES` (改進 / 技術擴展)**
+    *   **定義**：$A$ 論文保留了 $B$ 論文的核心框架，但針對 $B$ 的特定缺陷（如運算延遲、極限精準度不足、長尾邊界失效）進行了改良或局部技術擴作。
+    *   **資料契約範例**：DPO (Direct Preference Optimization) `IMPROVES` RLHF。
+3.  **`SIMPLIFIES` (簡化 / 降維極簡)**
+    *   **定義**：$A$ 指出 $B$ 的系統架構過於昂貴、複雜或冗贅，並提出一套極致簡化的替代技術，且效能或精度幾乎無損。
+    *   **資料契約範例**：CAG (快取增強生成) [@zotero_Chan_2024_671] `SIMPLIFIES` RAG。
+
+##### 🔵 第二分區：批判與對抗邊界類 (Critique & Boundary)
+*本分區代表學術上的反駁、限縮與認識警覺性的喚醒。*
+
+4.  **`REFUTES` (反駁 / 理論挑戰)**
+    *   **定義**：$A$ 論文通過嚴密的實證觀測、代數推導或反例，證實 $B$ 論文的核心結論在特定條件下是錯誤的、存在致命漏洞，或其物理假設完全不成立。
+    *   **資料契約範例**：*Lost in the Middle* (2023) `REFUTES` 長文本大模型具備完美無摩擦檢索的宣稱。
+5.  **`LIMITS` (限縮 / 定義臨界失效)**
+    *   **定義**：$A$ 並非完全否定 $B$，而是界定了 $B$ 的方法或理論在真實物理世界中的「適用邊界與臨界失效點 (Breakdown Point)」。
+    *   **資料契約範例**：我們的主權協作研究手稿 `LIMITS` RAGAS 評估 [@zotero_Es_2023_4]（指出 RAGAS 完全依賴大模型裁判在缺乏實體現地真值約束時會發生成幻覺自指失效）。
+
+##### 🟢 第三分區：平行競爭與替代類 (Competition & Alternatives)
+*本分區代表同一技術戰壕中，平行學術路線的對立。*
+
+6.  **`COMPETES` (競爭 / 平行替代方案)**
+    *   **定義**：$A$ 與 $B$ 針對同一個核心痛點，提出了完全不同、平行且互不隸屬的技術解決路徑。
+    *   **資料契約範例**：Transformer `COMPETES` Mamba (狀態空間模型)；RAG `COMPETES` 參數微調 (Fine-tuning)。
+
+##### 🟡 第四分區：跨界融合與雜交類 (Synthesis & Hybridization)
+*本分區代表高維度的典範創新，將兩個平行宇宙進行合流。*
+
+7.  **`SYNTHESIZES` (融合 / 跨界雜交)**
+    *   **定義**：$A$ 論文將原本平行獨立、甚至互不相干的 $B$ 論文與 $C$ 論文進行跨界雜交合流，孕育出全新研究物種。
+    *   **資料契約範例**：我們的主權協作研究方法論 `SYNTHESIZES` SQLite 關係代數（代數與關係約束）與 大語言模型推理（高維語意空間）。
+
+##### 🟣 第五分區：實證與垂直落地類 (Empirical & Realization)
+*本分區代表理論向實踐現場的下沉，與物理真值的強制對位。*
+
+8.  **`APPLIES` (應用 / 垂直落地)**
+    *   **定義**：$A$ 論文是 $B$ 論文（通常是通用理論、大一統框架或基礎模型）在特定垂直領域、現地實務中的具體應用與實證。
+    *   **資料契約範例**：BioBERT `APPLIES` BERT 於生醫文獻；我們在曾文溪流域的水文數值模擬 `APPLIES` 了 Saint-Venant 降雨逕流偏微分方程。
+
+#### 2. SQLite DTO 關聯註冊格式規範 (JSON DTO Schema)
+當關係被寫入 `paper_relations.meta_data` 時，應採用標準的 JSON 封套，以支援品質審計與體檢：
+
+```json
+{
+  "compliance_status": {
+    "is_compliant": true,
+    "checked_at": "2026-05-27T00:15:00Z",
+    "missing_fields": [],
+    "validation_message": "Relation compliant and verified"
+  },
+  "provenance_details": {
+    "assertion_chapter": "第 2.1 節",
+    "cognitive_sovereignty_level": "RED_TEAM_VERIFIED",
+    "empirical_evidence_linked": "ev_taxonomy_tree_2026"
+  }
+}
+```
+
+---
+
+### ⚖️ 2.4 物理摩擦計量 (Physical Friction Measure)
 
 在 `empirical_evidences` 中，特別設計了 **`friction_percentage`（物理摩擦偏離度）** 欄位：
 $$\text{Friction \%} = \left| \frac{\text{本地實測/模擬真值} - \text{背景文獻理論值}}{\text{背景文獻理論值}} \right| \times 100\%$$
 
-* **本體價值**：AI 常在「完美理論」中編織謊言。當我們將肉身實作的物理摩擦力數值化、結構化記錄在大腦中時，這個偏離度便是我們擊碎 AI 虛擬幻覺、彰顯原創突破性（Gap Analysis）的鐵證！
+* **本體價值**：AI 常在「完美理論」中編織謊言。當我們將肉身實作的物理摩擦力數值化、結構化記錄在大腦中時，這個偏離度便是我們擊碎 AI 虛擬幻想、彰顯原創突破性（Gap Analysis）的鐵證！
 * **聯覺裁決**：透過 `artifact_visual_path` 指向本地實測的波形圖、線路圖，教授可在一秒內行使人類最直觀的「視覺聯覺裁決」，引領研究方向，拒絕被 AI 牽著鼻子走。
 
 ---
@@ -259,24 +519,24 @@ $$\text{MCI} = (\text{聯邦文件成熟度分} \times 0.50) + (\text{大腦 Gro
   * **紅軍對抗綜合得分 (20%)**：
     $$\text{紅軍得分} = (\text{自審覆蓋率} \times 0.6) + (\text{自審 PASS 率} \times 0.4)$$
     引進「覆蓋率(60%) + PASS率(40%)」的綜合模型，覆蓋率不足會受到強力制約，逼迫研究生對更多 Claims 展開對抗答辯。
-  * **Claims Grounding 完整率 (10%)**：確保 100% 的 Claims 皆擁有 STAGE_2_DEEP 頂級引文或本地 Evidence 的支持，消滅紅色空洞警告。
+  * **Claims Grounding 完整率 (10%)**：確保 100% 的 Claims 皆擁有 STAGE_2_DEEP 頂級引文或本地 Evidence 的支援，消滅紅色空洞警告。
 
 ---
 
 ### 📊 3.2 MPM (元自證成熟度指數)
 
-用於評估方法論本身作為新型科研範式的實體可用性與自指閉環度，目標值達 **`90.00% (🟢 Elite)`**：
+用於評估方法論本身作為新型科研典範的實體可用性與自指完整鏈結度，目標值達 **`90.00% (🟢 Elite)`**：
 $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦率} \times 0.30) + (\text{手稿自指自證度} \times 0.30)$$
 
 * **SQLite 有效性 (40%)**：PRAGMA foreign_key_check 檢驗與 Topics 三位一體合龍率。這證明底層資料庫實體確實完備無異常。
 * **工具鏈無摩擦率 (30%)**：檢測本機 8 大核心支援 Python 腳本的存在率與無錯編譯可用性，物理確保這套系統隨時可以被他人無摩擦地跑通與重現，拒絕概念泡沫。
-* **手稿自指自證度 (30%)**：盲檢手稿論點地圖中是否確實包含了 `Research_Artifacts.db` 的純文字 DTO JSON 數據指紋。這向整個學術評審團物理自證——「這篇論文的骨架與數據正是用這套系統 100% 物理長出來的」，達成範式的終極自洽！
+* **手稿自指自證度 (30%)**：盲檢手稿論點地圖中是否確實包含了 `Research_Artifacts.db` 的純文字 DTO JSON 資料指紋。這向整個學術評審團物理自證——「這篇論文的骨架與資料正是用這套系統 100% 物理長出來的」，達成典範的終極自洽！
 
 ---
 
 ## 🎬 4. 自指自證實戰心流：《AI 時代 of 學術革命》手稿誕生與發表接力賽
 
-為了讓初學者一眼看穿這套大腦的動態協同機理，我們將拋棄假設性故事，直接以**「這篇論文手稿本體 (手稿代碼 `sovereign_research`)」**從無到有、在主權大腦中孕育、自審答辯直至發表的**真實生命週期**，為您完整展開一場驚心動魄的「實戰時序接力賽」：
+為了讓初學者一眼看穿這套大腦的動態協同機理，我們將拋棄假設性故事，直接以**「這篇論文手稿本體 (手稿程式碼 `sovereign_research`)」**從無到有、在主權大腦中孕育、自審答辯直至發表的**真實生命週期**，為您完整展開一場驚心動魄的「實戰時序接力賽」：
 
 ### 📅 階段一：痛點探索、數位考古與 Staging 靠泊 (2026/05/10 - 2026/05/11)
 * **起源現場**：導師 (wuulong) 為了破解實驗室「學生怎麼做研究、老師怎麼叮、知識資產怎麼傳承」三大戰壕痛點，於 5/10 博班交流會前向 AI 拋出關鍵的「問題起點考古提問 (Q1.6)」。
@@ -289,21 +549,21 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
 * **起源現場**：導師受邀於 5/20 給研究生演講，將方法論初步概念寫入《個人AI賦能》書籍第 14 章。大腦資料庫由單一 papers 表急劇演進為十一表鋼鐵 Schema。
 * **大腦時序流轉**：
   1. **Stage 2 穿透解構**：導師下達 `!paper_digest` 指令，Navigator 再次接棒，引導 AI 深度穿透 Snell2024 與 Denkin2024 的理論骨架，高精降維提取 **10 大核心學術因子**（包含核心理論衝突、實證研究邊界與失效率）寫入 `papers.meta_data` 的 JSON 信封中，文獻狀態正式升級為頂級的 **`STAGE_2_DEEP`** (Layer 2)。
-  2. **肉身實驗實體對合**：導師在開發此套工具鏈時遭遇的實體摩擦力（例如：Zotero 同步時部分 metadata 欄位需要人工手動 UPDATE 校正），被 `academic-paper-builder` 作為「現地實踐真值數據」，剛性註冊至 `empirical_evidences`，自動計算出偏離誤差，為論文尋求 Gap 突破口提供了實體證據。
+  2. **肉身實驗實體對合**：導師在開發此套工具鏈時遭遇的實體摩擦力（例如：Zotero 同步時部分 metadata 欄位需要人工手動 UPDATE 校正），被 `academic-paper-builder` 作為「現地實踐真值資料」，剛性註冊至 `empirical_evidences`，自動計算出偏離誤差，為論文尋求 Gap 突破口提供了實體證據。
 
 ### 📅 階段三：論點地圖合龍、紅軍教授突擊與 Verdict Lock 鎖定 (2026/05/26 - 2026/06/03)
 * **起源現場**：5/25 第二次分享，方法論完全成熟，黃金 9 天衝刺發動！導師與大佬約定於 2026/06/05 進行硬核審查。研究生必須在會面前用這套大腦本身，把這篇方法論手稿物理編譯出來。
 * **大腦時序流轉**：
   1. **一鍵骨架初始化**：導師下達 `!paper_init sovereign_research`，`academic-paper-builder` 秒級在 `my_manuscripts` 註冊本篇手稿，並物理生成 11 大聯邦檔案骨架。
-  2. **APM 雙向合龍**：導師在寫作主稿的過程中，建構論點地圖（`sovereign_research_06_argument_map.md`），下達 `!paper_map`。Paper-Builder 強制將手稿中的 12 個核心主張（Claims，如「十一表 SQLite 資料庫能物理對合引文」）與資料庫中 `papers` 表的 `STAGE_2_DEEP` 欄位以及 `empirical_evidences` 的實測數據進行外鍵強烈 JOIN，寫入 `manuscript_citations`。
+  2. **APM 雙向合龍**：導師在寫作主稿的過程中，建構論點地圖（`sovereign_research_06_argument_map.md`），下達 `!paper_map`。Paper-Builder 強制將手稿中的 12 個核心主張（Claims，如「十一表 SQLite 資料庫能物理對合引文」）與資料庫中 `papers` 表的 `STAGE_2_DEEP` 欄位以及 `empirical_evidences` 的實測資料進行外鍵強烈 JOIN，寫入 `manuscript_citations`。
   3. **紅軍靈魂拷問襲擊**：為了防止人類在極速寫作中產生自我認知漂移或被 AI 掏空思考，導師下達 `!paper_grill` 指令。
-  4. **Verdict Lock 合併阻斷**：紅軍 Skill `academic-advisor-auditor` 瞬間被物理喚醒，扮演最刻薄的哈教授發起猛烈攻勢：「*你宣稱這套科研範式能 100% 物理自指自證，那麼本手稿中是否確實包含了 Research_Artifacts.db 本身實體數據指紋的 DTO 記錄？若無，則自指純屬空談！*」
+  4. **Verdict Lock 合併阻斷**：紅軍 Skill `academic-advisor-auditor` 瞬間被物理喚醒，扮演最刻薄的哈教授發起猛烈攻勢：「*你宣稱這套科研典範能 100% 物理自指自證，那麼本手稿中是否確實包含了 Research_Artifacts.db 本身實體資料指紋的 DTO 記錄？若無，則自指純屬空談！*」
   5. Auditor 將此攻勢寫入 `red_team_logs`，狀態判定為 **`VULNERABLE`**。**Verdict Lock (合併鎖) 瞬間啟動，剛性阻斷手稿合龍與編譯輸出！**
 
 ### 📅 階段四：剛性答辯解鎖、一鍵拼裝與 06/05 實體釋出 (2026/06/03 - 2026/06/05)
 * **起源現場**：大限臨近，手稿必須在 Verdict PASS 的綠色狀態下才能通過盲檢，提交給資深學術前輩。
 * **大腦時序流轉**：
-  1. **剛性物理答辯**：導師拒絕任何口頭投機。他運行 `!paper_rebuild`，將本地 SQLite 資料庫的全部結構與 Row 狀態一鍵導出為純文字 DTO `contribution.json` 並生成數據指紋。導師將此實體指紋物理寫入論文手稿的第 15 章內，並於 `student_defense` 寫下剛性物理答辯軌跡。
+  1. **剛性物理答辯**：導師拒絕任何口頭投機。他運行 `!paper_rebuild`，將本地 SQLite 資料庫的全部結構與 Row 狀態一鍵導出為純文字 DTO `contribution.json` 並生成資料指紋。導師將此實體資料指紋物理寫入論文手稿的第 15 章內，並於 `student_defense` 寫下剛性物理答辯軌跡。
   2. **合併鎖解鎖**：Auditor 重新掃描手稿與 DTO，確認自指合龍度已達 100%，手動將 Verdict 更新為 **`PASS`**， Verdict Lock 隨即物理打開，解鎖編譯限制！
   3. **MCI/MPM 雙看板盲檢**：`sovereign-poc-verifier` 啟動，PRAGMA 掃描資料庫實體完整度無摩擦，檢測本機 8 大 Python 腳本 100% 可用。MPM 自證度錄得 `92.50% (🟢 Elite)`，手稿 MCI 錄得 `91.80% (🟢 Elite)`。
   4. **一鍵 BibTeX 拼裝與主稿發表**：Paper-Builder 掃描手稿中所有的 `@cite_key`，從資料庫中自動抓取 BibTeX 條目，一鍵拼裝產出完美的 `sovereign_research_04_references.bib`，並自動編譯回寫主稿。

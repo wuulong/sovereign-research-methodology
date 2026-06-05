@@ -6,25 +6,23 @@
 
 ## 🧬 為什麼我們需要這些規格書？(The System Why)
 
-在傳統的研究方法中，研究的流程往往是隨意的、機率性的。在使用生成式 AI 協作時，研究者如果不提供剛性的「物理框架約束」，LLM 就會像脫韁野馬一樣胡亂生成，導致代碼或手稿在編譯時爆發嚴重的 domain-knowledge 耦合衝突。
+在傳統的研究方法中，研究的流程往往是隨意的、機率性的。在使用生成式 AI 協作時，研究者如果不提供剛性的「物理框架約束」，LLM 就會像脫韁野馬一樣胡亂生成，導致程式碼或手稿在編譯時爆發嚴重的 domain-knowledge 耦合衝突。
 
 本目錄下的規格說明書（01-04）構成了主權科研大腦的**「憲法與骨架」**。它們剛性定義了十一表 SQLite 資料庫的欄位約束與外鍵關係本體，強制讓 AI 在我們劃定的「主權格子」內進行高精細度的填充，保證人機共建的可靠與自洽。
 
 ---
 
-## 📂 4 大方法論規格檔矩陣 (The Specification Matrix)
+## 📂 2 大方法論規格檔矩陣 (The Specification Matrix)
 
 ### 1. [01] 系統需求與目標：`methodology_01_requirements.md`
 *   **Why it exists**: 明確宣示主權大腦的設計目標，界定「思維主權邊界」與「防範認知空洞化」的頂層需求。
 
-### 2. [02] 十一表元資料 Schema 規格：`methodology_02_metadata_schema_spec.md`
-*   **Why it exists**: 詳細規範 SQLite 中 papers、literature_records、red_team_logs 等十一張表的 DDL 格式。**這是防範 AI 隨意更改資料結構的最高物理鐵幕**。
-
-### 3. [03] 關係本體定義：`methodology_03_relation_ontology.md`
-*   **Why it exists**: 剛性規範文獻間、主張間的交叉關係演化有向邊（如 `IMPROVES`, `REFUTES`, `GROUNDED_ON`）。**這是大腦能進行 BFS 算分、判定根系浮空的代數基礎**。
-
-### 4. [04] 大腦運作與自審手冊：`methodology_04_system_architecture_navigator.md`
-*   **Why it exists**: 說明 Navigator 與 Auditor 等技能的物理運作工序，指導研究者如何進行 Ingestion 靠泊、Rebuild 與自審阻斷，是操作主權大腦的實戰手冊。
+### 2. [02] 系統架構、中繼資料 Schema 與本體規格手冊：`methodology_02_system_architecture_navigator.md`
+*   **Why it exists**: 這是主權科研大腦的運行憲章，系統性整合了：
+    1. **四星協同運作模型**：四大主權 Skill（Navigator, Auditor, Builder, Verifier）的運作工序與規則。
+    2. **十一表中繼資料 Schema 規格**：剛性定義 `meta_data` 的 JSON 規格，是自主品質治理的底層鐵幕。
+    3. **文獻關聯本體規格**：定義 `paper_relations` 的八大關係，是 BFS 算分與判定理論根系浮空的代數基礎。
+    4. **實戰心流與物理摩擦**：記錄手稿誕生實戰生命週期與物理偏離度計量。
 
 ---
 

@@ -16,4 +16,4 @@
 
 ### 3. `downloaded_papers` & `pdfs` (Relative Symlinks)
 *   **Why it exists**: 符號連結（Symbolic Links），指向 Repo 外部的實體 PDF 與預萃取 Markdown 資料夾。
-*   **隱私與效能平衡**：確保版權/大體積 PDF 檔案不進入 GitHub 倉庫，同時確保代碼可無摩擦地在本地尋路讀取。
+*   **隱私與效能平衡**：確保版權/大體積 PDF 檔案不進入 GitHub 倉庫，同時確保程式碼可無摩擦地在本地尋路讀取。

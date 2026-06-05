@@ -22,7 +22,7 @@
 ### 2. 為什麼需要「元自證成熟度指數 (MPM)」與「物理摩擦」？
 *   **痛點**：傳統學術評估流於「語意交鋒」，甚至使用 AI 評估 AI（如 RAGAS），容易產生自欺欺人的「自指幻覺共謀」。
 *   **MPM 的救贖**：
-    我們在 [scripts/verify_poc_completeness.py](scripts/README.md) 中打破了語意閉環，強行引入「非語意物理約束」——**「現地實測偏離度 (friction_percentage)」**。
+    我們在 [scripts/verify_poc_completeness.py](scripts/README.md) 中打破了語意完整鏈結，強行引入「非語意物理約束」——**「現地實測偏離度 (friction_percentage)」**。
     在 MPM 指數（40% 資料庫完整性 + 30% 工具鏈高可用 + 30% 手稿自指自證度）中，剛性要求手稿論點地圖中**必須包含資料庫實體 DTO JSON 的純文字指紋**。這向學術評審團物理證明了「這篇論文的論點與資料庫完全對合，是由這套系統物理長出來的」。
 
 ### 3. 為什麼需要「純文字 JSON 貢獻包 (DTO)」與「軟連結入庫」？

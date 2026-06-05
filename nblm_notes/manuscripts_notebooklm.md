@@ -1,6 +1,6 @@
 # NotebookLM Asset Pack - events/my_research/sovereign-research-methodology/manuscripts
 - **Source Folder**: `events/my_research/sovereign-research-methodology/manuscripts`
-- **Generated At**: 2026-06-06 07:08:31
+- **Generated At**: 2026-06-06 07:37:50
 
 ---
 
@@ -51,13 +51,13 @@
 *   **Why it exists**: 由 `verify_manuscript_maturity.py` 自動產出的評估報告。**以 60% 覆蓋率與 40% PASS 率剛性制約學生的投機自審**，量化大腦成熟度。
 
 ### 9. [10] 元自證成熟度報告 (MPM)：`sovereign_research_10_poc_proof_report.md`
-*   **Why it exists**: 由 `verify_poc_completeness.py` 物理產出的自證報告。**打破 AI 語意自評閉環**，以資料庫實體完整度與三位一體合龍率進行剛性自指自證。
+*   **Why it exists**: 由 `verify_poc_completeness.py` 物理產出的自證報告。**打破 AI 語意自評完整鏈結**，以資料庫實體完整度與三位一體合龍率進行剛性自指自證。
 
 ### 10. [11] 紅軍自審與答辯日誌：`sovereign_research_11_audit_report.md`
 *   **Why it exists**: 記錄歷次進度會議上，導師（或自審腦分身）拋出的尖銳批判 Feedback，以及學生的物理防禦答辯與 Verdict 軌跡。**這是學術誠信的物理鐵證**。
 
 ### 11. [12] 建構歷程與實體自證報告：`sovereign_research_12_evolution_history.md`
-*   **Why it exists**: 如實記錄大腦從無到有螺旋演進的五個關鍵演化里程碑與 Git Commit 物理對合軌跡，是證明整個科研範式「非語意物理自指」的歷史鐵證。
+*   **Why it exists**: 如實記錄大腦從無到有螺旋演進的五個關鍵演化里程碑與 Git Commit 物理對合軌跡，是證明整個科研典範「非語意物理自指」的歷史鐵證。
 
 ---
 
@@ -108,12 +108,12 @@
 
 ### ❓ 1. 為什麼文獻必須經歷 Stage 2 深度解構（降維 10 大學術因子）？
 *   **學術痛點**：快餐式的「未讀先引」與 LLM「自動摘要」是現代學術泡沫的重災區。研究者往往只讓 LLM 給一個 200 字摘要就塞進引用，這導致論點引用極度浮空，完全經不起學術拷問。
-*   **WHY 的本體價值**：在 `sovereign_research_03_deconstruction.md` 中，每一篇文獻都必須經歷剛性的 Stage 2 深度解構，手動或引導 AI 降維提取 **10 大核心因子**（包含：核心理論衝突、實證研究邊界、核心 DTO 設計、失效率等）。這迫使我們「穿透文獻的血肉，直擊其理論骨架」。唯有將其降維存檔並註冊為大腦中的 `STAGE_2_DEEP`，才能將文獻轉化為我們手稿中「無懈可擊的理論支持點」，消除認識泡沫。
+*   **WHY 的本體價值**：在 `sovereign_research_03_deconstruction.md` 中，每一篇文獻都必須經歷剛性的 Stage 2 深度解構，手動或引導 AI 降維提取 **10 大核心因子**（包含：核心理論衝突、實證研究邊界、核心 DTO 設計、失效率等）。這迫使我們「穿透文獻的血肉，直擊其理論骨架」。唯有將其降維存檔並註冊為大腦中的 `STAGE_2_DEEP`，才能將文獻轉化為我們手稿中「無懈可擊的理論支援點」，消除認識泡沫。
 
 ### ❓ 2. 為什麼核心主張 (Claims) 必須與 SQLite 資料庫 DTO 進行物理自指合龍？
-*   **學術痛點**：傳統論文的論點（Claims）是散裝在 PDF 或 Word 字裡行間的。審查人與讀者除了「相信作者的誠實」外，無法以任何實體物理手段驗證這些數據與論點是怎麼來的，這為 AI 幻想和學術造假提供了巨大的漏洞。
+*   **學術痛點**：傳統論文的論點（Claims）是散裝在 PDF 或 Word 字裡行間的。審查人與讀者除了「相信作者的誠實」外，無法以任何實體物理手段驗證這些資料與論點是怎麼來的，這為 AI 幻想和學術造假提供了巨大的漏洞。
 *   **WHY 的本體價值**：`sovereign_research_06_argument_map.md` (論點地圖) 強制要求所有的 Claims 必須與十一表資料庫的 DTO 物理合龍。
-    *   這意味著：每一個學術主張，都必須在 `empirical_evidences` 中有對應的「現地實踐真值數據」，在 `papers` 中有對應的「已消化引文定錨」。
+    *   這意味著：每一個學術主張，都必須在 `empirical_evidences` 中有對應的「現地實踐真值資料」，在 `papers` 中有對應的「已消化引文定錨」。
     *   這物理證明了「這篇論文的論點不是 AI 散裝黑話拼貼，而是從本地 SQLite 資料庫 100% 物理長出來的」。這種雙向自指，達成了無懈可擊的學術信度。
 
 ### ❓ 3. 為什麼要引入 Socratic 自審對抗與「Verdict Lock (合併鎖)」？
@@ -144,19 +144,19 @@ Grounding 綜合分是由大腦資料庫自動掃描比對後產出的剛性分�
 - **紅軍對抗綜合得分 (20% 權重)**：
   *   $$\text{紅軍得分} = (\text{自審覆蓋率} \times 0.6) + (\text{自審 PASS 率} \times 0.4)$$
   *   **[WHY 防投機防巧算法]**：若研究者只對一兩篇文獻建立自審並 PASS 得到 100% PASS 率，這在學術自律中屬於「投機行為」。大腦引進「覆蓋率(60%) + PASS率(40%)」的綜合模型，覆蓋率不足會受到強力制約，逼迫研究生對更多 Claims 展開對抗答辯。
-- **Claims Grounding 完整率 (10% 權重)**：確保 100% 的 Claims 皆擁有 STAGE_2_DEEP 頂級引文或本地 Evidence 的支持，消滅紅色空洞警告。
+- **Claims Grounding 完整率 (10% 權重)**：確保 100% 的 Claims 皆擁有 STAGE_2_DEEP 頂級引文或本地 Evidence 的支援，消滅紅色空洞警告。
 
 ---
 
 ### 📊 指標二：MPM (Meta-Proof Maturity, 元自證成熟度指數)
-用於評估方法論本身作為新型科研範式的「實體可用性」與「自指閉環度」，目標須達 **`90.00% (🟢 Elite)`**：
+用於評估方法論本身作為新型科研典範的「實體可用性」與「自指完整鏈結度」，目標須達 **`90.00% (🟢 Elite)`**：
 $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦率} \times 0.30) + (\text{手稿自指自證度} \times 0.30)$$
 
 #### ❓ 為什麼方法論需要量化「元自證（Meta-Proof）」？
-*   **WHY 的本體價值**：主權方法論宣稱能「軟體定義科研，以物理數據強制自證」。那麼「方法論本身」就必須作為 100% 的**「自指自證（Self-Referential Proof）」原型**。
+*   **WHY 的本體價值**：主權方法論宣稱能「軟體定義科研，以物理資料強制自證」。那麼「方法論本身」就必須作為 100% 的**「自指自證（Self-Referential Proof）」原型**。
     *   **SQLite 有效性 (40%)**：PRAGMA foreign_key_check 檢驗與 Topics 三位一體合龍率。這證明底層資料庫實體確實完備無異常。
     *   **工具鏈無摩擦率 (30%)**：檢測本機 8 大核心支援 Python 腳本的存在率與無錯編譯可用性，物理確保這套系統隨時可以被他人無摩擦地跑通與重現，拒絕概念泡沫。
-    *   **手稿自指自證度 (30%)**：盲檢手稿論點地圖中是否確實包含了 `Research_Artifacts.db` 的純文字 DTO JSON 數據指紋。這向整個學術評審團物理自證——「這篇論文的骨架與數據正是用這套系統 100% 物理長出來的」，達成範式的終極自洽！
+    *   **手稿自指自證度 (30%)**：盲檢手稿論點地圖中是否確實包含了 `Research_Artifacts.db` 的純文字 DTO JSON 資料指紋。這向整個學術評審團物理自證——「這篇論文的骨架與資料正是用這套系統 100% 物理長出來的」，達成典範的終極自洽！
 
 ---
 *手稿寫作與品質審計手冊・Manuscript Guide 物理固化*
@@ -215,7 +215,7 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
 ---
 
 ### 📝 【戰術三：補齊手稿 Claims 定錨引用，消滅紅色警告】
-目前在論點地圖中，核心【主張 3】、【主張 6】與【主張 12】缺乏已消化（STAGE_2_DEEP）頂級引文的支持，造成 Grounding 完整率的紅色扣分警告。
+目前在論點地圖中，核心【主張 3】、【主張 6】與【主張 12】缺乏已消化（STAGE_2_DEEP）頂級引文的支援，造成 Grounding 完整率的紅色扣分警告。
 
 *   **行動指引**：
     1.  開啟手稿論點地圖 `sovereign_research_09_argument_map.md`。
@@ -253,8 +253,8 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
 *   **1.2 背景與核心命題：生產力爆炸下的「認知空洞化」與人類思維主權**
     *   `[寫作意圖]`：引渡全球科研因過度卸載思考給 AI 導致手感喪失與信任崩塌的危機，界定人機協作邊界。
     *   `[實體地基]`：文獻 `zotero_Listgarten_2024_635`（ChatGPT 帶來的科學干擾論戰）與哈爸心流。
-*   **1.3 非主流科研範式：實踐先行的「建構式行動研究」與手稿「概念驗證 (PoC) 自證」**
-    *   `[寫作意圖]`：大膽宣告本論文特殊的「先實踐、後論證」非主流寫作範式。闡述方法論雖建構完畢，但唯有「實際用該方法寫出一篇論文」始能完成真實 PoC。本論文的成功編譯，即是整套方法論行解合一的終極自證。
+*   **1.3 非主流科研典範：實踐先行的「建構式行動研究」與手稿「概念驗證 (PoC) 自證」**
+    *   `[寫作意圖]`：大膽宣告本論文特殊的「先實踐、後論證」非主流寫作典範。闡述方法論雖建構完畢，但唯有「實際用該方法寫出一篇論文」始能完成真實 PoC。本論文的成功編譯，即是整套方法論行解合一的終極自證。
     *   `[實體地基]`：本論文撰寫過程的十一表實體資料庫物理匯出與 SMMCAP 審計日誌。
 
 ---
@@ -294,9 +294,9 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
     *   `[實體地基]`：[sync_zotero_to_staging.py](file:///Users/wuulong/github/bmad-pa/events/my_research/scripts/sync_zotero_to_staging.py) 與實體 202 筆落庫資料。
 *   **4.2 肉身實踐與真值定錨：模擬實測與物理誤差比對**
     *   `[寫作意圖]`：闡述 `empirical_evidences` 與 `friction_percentage` 對防範 AI 虛假幻想的科學作用。
-    *   `[實體地基]`：資料庫中的曾文溪流量估算偏離度 (`12.5%`) 實測數據。
-*   **4.3 師徒自審閉環：`red_team_logs` 脆弱點防禦與物理合併鎖**
-    *   `[寫作意圖]`：介紹 Feedback 考古解析與預設 `'VULNERABLE'` 阻斷合併的閉環控制。
+    *   `[實體地基]`：資料庫中的曾文溪流量估算偏離度 (`12.5%`) 實測資料。
+*   **4.3 師徒自審完整鏈結：`red_team_logs` 脆弱點防禦與物理合併鎖**
+    *   `[寫作意圖]`：介紹 Feedback 考古解析與預設 `'VULNERABLE'` 阻斷合併的完整鏈結控制。
     *   `[實體地基]`：[harvest_flow_to_db.py](file:///Users/wuulong/github/bmad-pa/events/my_research/scripts/harvest_flow_to_db.py) 與實物自審日誌。
 
 ---
@@ -310,11 +310,11 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
     *   `[實體地基]`：神經符號對合實測與 [render_taxonomy_tree.py](file:///Users/wuulong/github/bmad-pa/events/my_research/scripts/render_taxonomy_tree.py) 拓撲渲染。
 *   **5.3 自審防線之剛性優勢：實測誤差與實體 Verdict 鎖的不可替代性**
     *   `[寫作意圖]`：對比目前科研工具缺乏自審反思、容易流於 LLM 「自指幻覺共謀」的痛點，論證引入本地 `friction_percentage` 實測物理誤差與 `red_team_logs` Verdict Lock 對死守思考主權的不可替代價值。
-    *   `[實體地基]`：`red_team_logs` 與 `empirical_evidences` 的對合統計數據。
+    *   `[實體地基]`：`red_team_logs` 與 `empirical_evidences` 的對合統計資料。
 
 ---
 
-### 🗺️ 第六章：實驗室治理與集體知識遺傳範式
+### 🗺️ 第六章：實驗室治理與集體知識遺傳典範
 *   **6.1 「哈教授」的 30 秒 SQL 照妖鏡四大檢核**
     *   `[寫作意圖]`：展示指導教授如何利用 4 大 SQL 盲檢學生進度真實性、研究強度與資產完整性，防範交差。
     *   `[實體地基]`：哈爸心流（老師該怎麼帶實驗室），以及 `README.md` 中的 SQL 照妖鏡指令。
@@ -330,12 +330,12 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
 ### 🗺️ 第七章：遞迴自指驗證：以本方法論撰寫本論文之優劣實測與元反思
 *   **7.1 實踐過程中的 Pros & Cons 定量紀錄**
     *   `[寫作意圖]`：實地記錄用這套大腦寫這篇論文時，在 Ingestion、Feedback 考古與重定向上的物理摩擦力。
-    *   `[實體地基]`：資料庫元反思實測 `sim_meta_reflection_2026` 數據。
+    *   `[實體地基]`：資料庫元反思實測 `sim_meta_reflection_2026` 資料。
 *   **7.2 系統失效臨界點分析：以 rebuild 專案骨架與熱修復實例為例**
     *   `[寫作意圖]`：透過本實踐中發現的重建骨架 Bug 與「永恆基底骨架」熱修復實例，論證系統是如何在臨界失效中完成演化突變。
     *   `[實體地基]`：`setup_research_db.py` 四大專案預載的架構變更。
 *   **7.3 專書大一統合流與《個人 AI 賦能》第 15 章的合流實踐**
-    *   `[寫作意圖]`：論證本論文如何作為最強實證，合流至《個人 AI 賦能與裝備化》書籍全新第 15 章中，完成「一個月極速突變」的知識繁衍閉環。
+    *   `[寫作意圖]`：論證本論文如何作為最強實證，合流至《個人 AI 賦能與裝備化》書籍全新第 15 章中，完成「一個月極速突變」的知識繁衍完整鏈結。
     *   `[實體地基]`：哈爸心流之元反思、書籍第 15 章草稿與大一統全書拼裝程式碼。
 
 ---
@@ -597,7 +597,7 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
     *   **上下文精準度 (Context Precision)**：檢索到的 context 中真實相關資訊的佔比。
 *   **與本手稿的辯證關係 (Relevance & Synthesis)**：
     *   **[ Stage 2 Grounded ]**：做為第三章 3.1 節『他者客觀知識海』與第五章 5.1 節『實踐過程元反思』的技術對合點。
-    *   **辯證轉化**：RAGAS 提供了無 Ground-Truth 情況下利用 LLM 自動評估的範式，但這本質上仍是「以 AI 評估 AI」的自指閉環，依然存在潛在的共謀幻覺。哈爸大腦的方法論在此處完成了重大的**「現地真值對合超越」**：我們在 `empirical_evidences` 中引入了「研究生肉身實測與物理觀測（如水文實測流量或硬體量測波形）」作為最高裁決標準。透過計算理論與本地實測的物理偏離度，我們將 RAGAS 的語意評估擴展為具備物理特徵的實質評估。
+    *   **辯證轉化**：RAGAS 提供了無 Ground-Truth 情況下利用 LLM 自動評估的典範，但這本質上仍是「以 AI 評估 AI」的自指完整鏈結，依然存在潛在的共謀幻覺。哈爸大腦的方法論在此處完成了重大的**「現地真值對合超越」**：我們在 `empirical_evidences` 中引入了「研究生肉身實測與物理觀測（如水文實測流量或硬體量測波形）」作為最高裁決標準。透過計算理論與本地實測的物理偏離度，我們將 RAGAS 的語意評估擴展為具備物理特徵的實質評估。
 
 ---
 
@@ -607,34 +607,34 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
 | 編號 | 文獻 cite_key | 發表年份 | 論文標題 | 🎯 論文 ToC 對合節點 | 💡 大膽猜想與潛在關聯 (Staging Guess) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1** | `arxiv_Tamura_2026_2604` | 2026 | Large Language Model Counterarguments in Older Adults: Cognitive Offloading or Vulnerability | **2.1 節** 認知卸載與思維主權 | 本文探討老年人在 LLM 對話中的依賴度。大膽猜想：可在論文中作為「認知脆弱性」的對比，論證即使是極客研究生，在缺乏大腦主權工具時，亦會退化為如同老年人般的認知被動體。 |
-| **2** | `arxiv_Aslan_2026_2603` | 2026 | Adaptation and Validation of the Turkish Version of the Large Language Model Dependency Scale | **2.1 節** 認知卸載與思維主權 | 本文開發了 LLM 依賴量表。大膽猜想：可用於支持本研究關於「依賴度熵增」的判斷，作為量化研究生思維被掏空程度的背景指標。 |
+| **2** | `arxiv_Aslan_2026_2603` | 2026 | Adaptation and Validation of the Turkish Version of the Large Language Model Dependency Scale | **2.1 節** 認知卸載與思維主權 | 本文開發了 LLM 依賴量表。大膽猜想：可用於支援本研究關於「依賴度熵增」的判斷，作為量化研究生思維被掏空程度的背景指標。 |
 | **3** | `arxiv_Yu_2026_2605` | 2026 | Cognitive offloading and the speedup illusion in human-AI interaction | **1.1 節** 加速幻覺與認知空洞 | 本文揭示了人機協作中的加速幻覺（假性提速）。大膽猜想：可用於痛擊學術界追求「多快好省生成論文」的浮躁風氣，論證缺乏重構與實測的提速本質上是科學負債。 |
-| **4** | `zotero_Chan_2024_671` | 2024 | Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks | **3.1 節** 他者客觀知識海 (CAG vs RAG) | 本文大膽主張以 CAG (快取增強生成) 取代 RAG。大膽猜想：可用於支持哈爸大腦的 `prj_sync` 緩衝區設計，論證直接將 Zotero 緩衝落庫為 staging 實體表，類似於將大腦置於極高頻的 CAG 態，消除即時檢索的延遲。 |
+| **4** | `zotero_Chan_2024_671` | 2024 | Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks | **3.1 節** 他者客觀知識海 (CAG vs RAG) | 本文大膽主張以 CAG (快取增強生成) 取代 RAG。大膽猜想：可用於支援哈爸大腦的 `prj_sync` 緩衝區設計，論證直接將 Zotero 緩衝落庫為 staging 實體表，類似於將大腦置於極高頻的 CAG 態，消除即時檢索的延遲。 |
 | **5** | `zotero_Park_2023_640` | 2023 | Generative Agents: Interactive Simulacra of Human Behavior | **4.3 節** 實驗室跳躍式知識遺傳 | 本文為 Generative Agents 的奠基之作。大膽猜想：可用於論證「指導教授 AI 分身（哈教授）」的理論可行性，說明如何透過 Memory Stream 與自審 Prompt 讓 AI 模擬嚴厲審稿人。 |
 | **6** | `zotero_Chen_2024_5` | 2024 | Benchmarking Large Language Models in Retrieval-Augmented Generation | **3.1 節** 他者客觀知識海 | 本文對 RAG 進行了基準測試。大膽猜想：可用於分析不同 LLM 核心在處理複雜水文或醫療資料檢索時的極限能力，為哈爸大腦的 Model Selection 提供資料 baseline。 |
 | **7** | `zotero_Salemi_2024_6` | 2024 | Evaluating Retrieval Quality in Retrieval-Augmented Generation | **3.1 節** 他者客觀知識海 | 本文探討檢索品質評估。大膽猜想：可引渡用於論證為什麼「動態引渡靠泊」能提高檢索精準度，因為人為的 topic_id 對位相當於注入了完美的人類先驗知識。 |
 | **8** | `zotero_Guu_2020_8` | 2020 | REALM: Retrieval-Augmented Language Model Pre-Training | **3.1 節** 他者客觀知識海 | 本文為 RAG 早期經典。大膽猜想：可用於追溯 RAG 理論的演化基因，證明去中心化聯邦大腦雖然加入了主權防禦，但在底層檢索模型上依然繼承了 REALM 的科學基因。 |
 | **9** | `zotero_Fatehkia_2024_10` | 2024 | T-RAG: Lessons from the LLM Trenches | **3.1 節** 他者客觀知識海 | 本文探討在真實戰壕中的 RAG 實踐教訓。大膽猜想：可用於對比哈爸大腦在實際物理流域學實踐中的優缺點，論證在真實戰壕中，「物理現地真值對合」比單純語意對齊更重要。 |
 | **10** | `zotero_Ru_2024_22` | 2024 | RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation | **5.1 節** 元反思定量評估 | 本文提供了細粒度的 RAG 診斷框架。大膽猜想：可用於分析哈爸大腦在 Ingestion 過程中的錯誤（如 metadata 亂碼或路徑失效），引導 Agent 發動自我診斷。 |
-| **11** | `zotero_Padlewski_2024_26` | 2024 | Vibe-Eval: A hard evaluation suite for measuring progress of multimodal language models | **5.1 節** 元反思定量評估 | 本文提出了專門針對硬題目的 Vibe-Eval。大膽猜想：可用於支持本研究中「紅軍自審 red_team_logs」的難度設計，論證唯有設計 Vibe-Eval 等級的尖銳質問，方能逼出學生的真實防禦實力。 |
+| **11** | `zotero_Padlewski_2024_26` | 2024 | Vibe-Eval: A hard evaluation suite for measuring progress of multimodal language models | **5.1 節** 元反思定量評估 | 本文提出了專門針對硬題目的 Vibe-Eval。大膽猜想：可用於支援本研究中「紅軍自審 red_team_logs」的難度設計，論證唯有設計 Vibe-Eval 等級的尖銳質問，方能逼出學生的真實防禦實力。 |
 | **12** | `zotero_Kazemi_2024_201` | 2024 | Geomverse: A systematic evaluation of large models for geometric reasoning | **5.2 節** 系統失效臨界點分析 | 本文評估幾何推理能力。大膽猜想：幾何推理極度依賴嚴格的空間約束。這可用於論證為何「GIS 資料準備」需要 QGIS 樣式的硬編碼注入，因為 AI 無法憑空進行複雜的幾何與拓撲推理。 |
 | **13** | `zotero_Mañas_2024_278` | 2024 | Improving automatic vqa evaluation using large language models | **3.2 節** 肉身實踐與真值定錨 | 本文用 LLM 改善視覺問答評估。大膽猜想：可用於論證「主權多模態」實測波形圖/熱分佈圖相對路徑的分析方法，說明如何利用視覺 AI 輔助比對波形差異。 |
 | **14** | `zotero_Jones_1972_632` | 1972 | A statistical interpretation of term specificity and its application in retrieval | **3.1 節** 他者客觀知識海 | 這是 TF-IDF 理論的鼻祖文獻。大膽猜想：用於致敬經典檢索理論，說明不論 AI 技術如何演進，檢索的核心物理統計特徵依然定錨在 1972 年 Jones 的數學公式之上。 |
-| **15** | `zotero_He_2024_650` | 2024 | Memory-Augmented Large Multimodal Model for Long-Term Video Understanding | **3.2 節** 肉身實踐與真值定錨 | 本文探討長影片理解的記憶增強模型。大膽猜想：可用於支持「曾文溪水文模擬資料」的時序分析，說明如何透過時序記憶緩衝，讓大腦理解長達數十年的極端流量變化。 |
+| **15** | `zotero_He_2024_650` | 2024 | Memory-Augmented Large Multimodal Model for Long-Term Video Understanding | **3.2 節** 肉身實踐與真值定錨 | 本文探討長影片理解的記憶增強模型。大膽猜想：可用於支援「曾文溪水文模擬資料」的時序分析，說明如何透過時序記憶緩衝，讓大腦理解長達數十年的極端流量變化。 |
 | **16** | `zotero_Fu_2024_652` | 2024 | Video-MME: The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video | **5.1 節** 元反思定量評估 | 本文是長影片評估基準。大膽猜想：可對照於哈爸流域學中「無人機空拍河流影片分析」的評估，作為無人機水文視覺 Ingestion 的效能 Baseline。 |
 | **17** | `zotero_Li_2023_227` | 2023 | CAMEL: Communicative agents for ”mind” exploration of large language model society | **4.3 節** 實驗室跳躍式知識遺傳 | 本文為多 Agent 溝通的先驅。大膽猜想：可用於論證「研究生大腦、指導教授大腦與 AI Agent」三方在十一表大腦中，如何透過 pure-text JSON DTO 進行無衝突的知識演化合流。 |
 | **18** | `arxiv_Ilkou_2022_2203` | 2022 | Personal Knowledge Graphs: Use Cases in e-learning Platforms | **3.0 章 / 4.0 章** 個人知識圖譜協同合流 | 本文探討個人知識圖譜 (PKG) 在個人知識管理中的應用。大膽猜想：本論文可將其做為「十一表 SQLite 大腦」做為個人主權知識圖譜 PKG 科學定位的理論 Baseline，並用於論證實驗室多人 DTO 共有大腦合流，本質上是多個個人知識圖譜協同合流 (Collaborative PKG Merging) 的物理實踐！ |
 | **19** | `arxiv_Li_2025_2508` | 2025 | In-situ Value-aligned Human-Robot Interactions with Physical Constraints | **3.2 節** 肉身實踐與真值定錨 | 本文探討結合物理約束的『現地 (In-situ) 真值對齊』評估。大膽猜想：本論文可完美借鑑其『現地真值約束』概念，作為我們將本地實測偏離度 (discrepancy_percentage) 寫入大腦十一表的理論支撐，證明非語意物理約束校準 LLM 幻覺的必要性。 |
 | **20** | `arxiv_Kim_2026_2602` | 2026 | SPOC: Safety-Aware Planning Under Partial Observability And Physical Constraints | **3.2 節** 肉身實踐與真值定錨 | 本文研究物理約束下的安全規劃。大膽猜想：可用於論證為何在複雜水文或生醫系統中，大腦必須設定 empirical_results 等硬性限制，防止 AI 生成越過物理邊界造成系統崩塌。 |
-| **21** | `arxiv_Zeng_2026_2604` | 2026 | Generative Discovery of Magnetic Insulators under Competing Physical Constraints | **3.2 節** 肉身實踐與真值定錨 | 本文探討競爭物理約束下的生成式發現。大膽猜想：可用於支持本論文在 Saint-Venant 水文方程式中引導 AI 修正公式的實踐，證明 AI 生成必須在競爭的物理守恆約束下進行謬誤剪枝。 |
-| **22** | `arxiv_Ardito_2023_2312` | 2023 | Contra generative AI detection in higher education assessments | **4.1 節** 哈教授的 SQL 照妖鏡 | 本文論證目前的高等教育評估中，單純依賴語意/自動化 AI 抄襲檢測是行不通的（容易被反繞過）。大膽猜想：這完美支持了本論文『不能指望簡單 AI 檢測，而必須建立實體 SQLite 大腦 blind audit 盲檢機制』的學術論點，為照妖鏡提供了強大戰術支撐。 |
+| **21** | `arxiv_Zeng_2026_2604` | 2026 | Generative Discovery of Magnetic Insulators under Competing Physical Constraints | **3.2 節** 肉身實踐與真值定錨 | 本文探討競爭物理約束下的生成式發現。大膽猜想：可用於支援本論文在 Saint-Venant 水文方程式中引導 AI 修正公式的實踐，證明 AI 生成必須在競爭的物理守恆約束下進行謬誤剪枝。 |
+| **22** | `arxiv_Ardito_2023_2312` | 2023 | Contra generative AI detection in higher education assessments | **4.1 節** 哈教授的 SQL 照妖鏡 | 本文論證目前的高等教育評估中，單純依賴語意/自動化 AI 抄襲檢測是行不通的（容易被反繞過）。大膽猜想：這完美支援了本論文『不能指望簡單 AI 檢測，而必須建立實體 SQLite 大腦 blind audit 盲檢機制』的學術論點，為照妖鏡提供了強大戰術支撐。 |
 | **23** | `arxiv_Chukwuere_2024_2403` | 2024 | The future of generative AI chatbots in higher education | **4.1 節** 哈教授的 SQL 照妖鏡 | 本文探討 AI 普及給高等教育帶來的誠信與誠實度挑戰。大膽猜想：可用於襯托指導教授在 AI 時代所面臨的『無腦交差』現實危機，為本方法論的實驗室防禦控制鏈提供緊迫性的背景描述。 |
 | **24** | `arxiv_Denkin_2024_2405` | 2024 | On Perception of Prevalence of Cheating and Usage of Generative AI | **4.1 節** 哈教授的 SQL 照妖鏡 | 本文調查了學生利用生成式 AI 進行學術舞弊的普遍認知與危機。大膽猜想：可用於提供定量背景，證明在缺乏大腦主權工具時，集體學術誠信的退化是不可避免的，證實建立主權大腦控制鏈的正當性。 |
 | **25** | `arxiv_AgenticScience_2025_14111` | 2025 | From AI for Science to Agentic Science: A Survey on Autonomous Scientific Discovery | **2.3 節** AI 雙重定位與 SOTA 比對 | 本文是 2025 年最新、最權威的『自主科學發現代理 (Agentic Science)』SOTA 綜述。大膽猜想：可用於作為整篇論文的核心對比 Baseline，深入論證現有 SOTA 框架（如 STORM, ChemCrow, GPT-Researcher）在完全委派 (Black Box Full Delegation) 下造成的『研究生認知空洞化』與『思維主權喪失』，進而襯托出哈爸大腦『死守主權、Socratic 自審答辯與 Verdict Lock 品位裁決』的終極優勢。 |
 | **26** | `zotero_Besta_2025_682` | 2025 | Reasoning Language Models: A Blueprint | **2.3 節** AI 雙重定位 / **5.2 節** 臨界分析 | 本文是探討推理型語言模型（Reasoning Models）前沿架構的藍圖論文。大膽猜想：可用於論證大腦 SQLite 設計在 Reasoning 世代的必然性，展示如何藉由結構化 DTO 實現超越單純 Text-based CoT 的多維推理合流。 |
 | **27** | `zotero_NVIDIA_2025_674` | 2025 | Cosmos World Foundation Model Platform for Physical AI | **3.2 節** 肉身實踐與真值定錨 | 本文介紹 NVIDIA 用於 Physical AI 的 Cosmos 世界模型平台。大膽猜想：可完美呼應本論文『現地物理約束』的核心主張，論證即便是世界級大廠在推進 AI 時也必須引入物理世界模擬以對齊真值，證明哈爸大腦將水文現地實測偏離度作為 Verdict Lock 的學術前瞻性。 |
-| **28** | `zotero_Snell_2024_520` | 2024 | Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model | **5.1 節** 元反思定量評估 | 本文探討 Test-Time Compute (測試時運算) 的優化。大膽猜想：可用於為哈爸大腦中『Socratic 自審與 verdict lock 反覆答辯』提供強大的計算理論支撐，證明在寫作自審階段投入推理 Token（而非一次性生成）能使最終論文品位產生非線性的質變。 |
-| **29** | `zotero_Trinh_2024_345` | 2024 | Solving olympiad geometry without human demonstrations | **2.1 節** 認知卸載與思維主權 | 這是 AlphaGeometry 經典論文，展示在無人類演示下，如何以合成數據與符號約束解決極端困難的推理。大膽猜想：可用於證明『形式化約束與驗證引擎』對防範大腦依賴的必要性，作為本方法論中『十一表 blind audit 盲檢』以代數/關聯式資料庫硬性剪枝 AI 幻覺的學術對照。 |
+| **28** | `zotero_Snell_2024_520` | 2024 | Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model | **5.1 節** 元反思定量評估 | 本文探討 Test-Time Compute (測試時運算) 的最佳化。大膽猜想：可用於為哈爸大腦中『Socratic 自審與 verdict lock 反覆答辯』提供強大的計算理論支撐，證明在寫作自審階段投入推理 Token（而非一次性生成）能使最終論文品位產生非線性的質變。 |
+| **29** | `zotero_Trinh_2024_345` | 2024 | Solving olympiad geometry without human demonstrations | **2.1 節** 認知卸載與思維主權 | 這是 AlphaGeometry 經典論文，展示在無人類演示下，如何以合成資料與符號約束解決極端困難的推理。大膽猜想：可用於證明『形式化約束與驗證引擎』對防範大腦依賴的必要性，作為本方法論中『十一表 blind audit 盲檢』以代數/關聯式資料庫硬性剪枝 AI 幻覺的學術對照。 |
 
 
 ================================================================================
@@ -904,7 +904,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
         *   *前人理論*：Maynard 指出 LLMs 的高度流暢性會在神經層面麻痺大腦審查，誘發認識警覺度塌方；Tamura 等人（2026）則通過雙盲對照實驗定量證實，被試在面對 LLM 道德說服時的觀點偏離率高達 65%。
         *   *本論文重構*：我們完全繼承其警示，但更進一步指出**「純粹語意環境無法自我覺醒」**。我們論證，為了打破特洛伊木馬的麻痺效應，人類大腦必須在協作工具鏈中強制加入「非語意」的硬性物理約束（如 SQLite 資料庫定錨與實測誤差百分比），迫使研究者強行喚醒其認識警覺。
 
-*   #### 【核心主張 2】：AI 雖然縮短了初期的代碼與文字生成時間，但後續的「幻覺除錯債」呈非線性暴增，實質產生假性加速。
+*   #### 【核心主張 2】：AI 雖然縮短了初期的程式碼與文字生成時間，但後續的「幻覺除錯債」呈非線性暴增，實質產生假性加速。
     *   **證明路徑 (Provenance)**：🟢 `[Stage 2 Grounded]` ➔ 由 SQLite `papers` 中 `arxiv_Yu_2026_2605`（速度幻覺與認知卸載倒 U 曲線）之 Stage 2 DTO 實體證明。
     *   **辯證與重構邏輯**：
         *   *前人理論*：Yu 等人透過大規模人類被試實驗證實，AI 輔助組的速度帳面提升了 40%，但論點的 Grounding 漏洞率飆升了 300%，且研究人員普遍陷入過度自信的認知盲區。
@@ -941,7 +941,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 *   #### 【核心主張 4】：劃定嚴格的「思維主權邊界」，並以「Socratic 自審頻率 ($F_s$)」指標與 Test-Time Compute 量化主權防禦。
     *   **證明路徑 (Provenance)**：🟢 `[Stage 2 Grounded]` ➔ 由 SQLite `papers` 中 `arxiv_Aslan_2026_2603` (LLM-D12 依賴量表) 與 `zotero_Snell_2024_520` (Scaling LLM Test-Time Compute Optimally) 共同對合證明。
     *   **辯證與重構邏輯**：
-        *   *前人理論*：Aslan 等人量化了人對 LLM 的依賴邊界；Snell 等人 (2024) 則證明在推理測試時投入額外運算（Test-Time Compute）優化，其效果遠勝盲目擴大模型參數。
+        *   *前人理論*：Aslan 等人量化了人對 LLM 的依賴邊界；Snell 等人 (2024) 則證明在推理測試時投入額外運算（Test-Time Compute）最佳化，其效果遠勝盲目擴大模型參數。
         *   *本論文重構*：我們提出**「Socratic 自審頻率 ($F_s$)」**。我們論證，自審答辯本質上就是一種 Test-Time Compute 的物理展現，透過在寫作自審階段注入高密度推理 Token 進行反覆辯論，能使論文品位質變。同時，我們藉由十一表 SQLite 的盲檢（Blind Audit）完整性約束，即是發揮關聯式邏輯「硬性裁剪」AI 語意幻覺的物理驗證引擎，確保認知主權不崩塌。
 
 ---
@@ -949,10 +949,10 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 ### 📌 3.4 重新定義 AI 時代的「原創性」：人類的「品位選擇與除錯判定」
 
 *   #### 【核心主張 5】：生成式 AI 時代的原創性，本質上是人類基於品位所進行的『特徵選擇』與『謬誤剪枝』，並以本地實測「現地真值 (Ground Truth)」強行對合。
-    *   **證明路徑 (Provenance)**：🟢 `[Empirical Grounded]` ➔ 由 SQLite 表 `empirical_evidences` 中 `ev_cli_friction_verification_2026`（大腦工具鏈執行與 python 側通道掃描實證）之 DTO 數據，結合 `zotero_Listgarten_2024_635`（合成數據崩潰與外部實體數據注入）共同證明。
+    *   **證明路徑 (Provenance)**：🟢 `[Empirical Grounded]` ➔ 由 SQLite 表 `empirical_evidences` 中 `ev_cli_friction_verification_2026`（大腦工具鏈執行與 python 側通道掃描實證）之 DTO 資料，結合 `zotero_Listgarten_2024_635`（合成資料崩潰與外部實體資料注入）共同證明。
     *   **辯證與重構邏輯**：
-        *   *前人理論*：Listgarten 指出合成數據的永動機困境，唯有向系統中注入新鮮的、外部的「實體真值資訊」才能避免模型崩潰與空轉。
-        *   *本論文重構*：我們將此實體化。AI 可生成海量代碼與文字，但無法感知跨系統執行時的「物理摩擦」。人類的原創性體現在：1) **品位選擇**：一眼看穿 AI 語意代理的空洞性，拒絕無腦委派，主動選擇十一表 SQLite 與二進位 PB 智慧逆向探針進行二進位對合；2) **除錯判定**：在發現大腦 system crash（如 rebuild 清空 staging、Fkey 約束失敗、全域 tools MCI 命名耦合等物理摩擦）時，能精準定位到 schema 約束與變量耦合點，指揮 AI 精確重構代碼，消除摩擦，完成除錯。
+        *   *前人理論*：Listgarten 指出合成資料的永動機困境，唯有向系統中注入新鮮的、外部的「實體真值資訊」才能避免模型崩潰與空轉。
+        *   *本論文重構*：我們將此實體化。AI 可生成海量程式碼與文字，但無法感知跨系統執行時的「物理摩擦」。人類的原創性體現在：1) **品位選擇**：一眼看穿 AI 語意代理的空洞性，拒絕無腦委派，主動選擇十一表 SQLite 與二進位 PB 智慧逆向探針進行二進位對合；2) **除錯判定**：在發現大腦 system crash（如 rebuild 清空 staging、Fkey 約束失敗、全域 tools MCI 命名耦合等物理摩擦）時，能精準定位到 schema 約束與變量耦合點，指揮 AI 精確重構程式碼，消除摩擦，完成除錯。
 
 ---
 
@@ -972,19 +972,19 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 
 ### 📌 5.1 SOTA 研究與開源專案地圖：我們在哪裡？
 
-*   #### 【核心主張 11】：相較於現有 SOTA 自主科學發現代理（如 STORM、GPT-Researcher、FutureHouse ChemCrow），本方法論實施的「主權與 Verdict Lock 結合現地物理誤差強對合」架構，是真實戰壕研究中保障大腦思維主權的唯一有效範式。
+*   #### 【核心主張 11】：相較於現有 SOTA 自主科學發現代理（如 STORM、GPT-Researcher、FutureHouse ChemCrow），本方法論實施的「主權與 Verdict Lock 結合現地物理誤差強對合」架構，是真實戰壕研究中保障大腦思維主權的唯一有效典範。
     *   **證明路徑 (Provenance)**：🟢 `[Stage 2 Grounded]` ➔ 由 SQLite `papers` 中 `arxiv_AgenticScience_2025_14111` (Agentic Science SOTA 綜述) 之 Stage 2 DTO 實體證明。
     *   **辯證與重構邏輯**：
-        *   *現有 SOTA 架構*：現有的 AI 代理科學工具均朝向「無人化自主發現」演進，人類完全被排除在生成閉環之外（完全委派），這引發嚴重的認識警覺崩塌。
-        *   *本論文重構*：我們對這種「無人化代理」發動了學術批判。我們論證：人機協作的終極目的，絕非消滅人類的思考，而是「以 AI 淬煉人類的品位與思考」。我們的方法論不追求無腦全自動，而是將 AI 定位為高精百官，死守人類君王的 Verdict Lock。透過將論點地圖與本地實測數據進行 Stage 2 物理對合，在卸載低階認知負荷的同時，將人類的學術品位與主體性推向了最高巔峰。
+        *   *現有 SOTA 架構*：現有的 AI 代理科學工具均朝向「無人化自主發現」演進，人類完全被排除在生成完整鏈結之外（完全委派），這引發嚴重的認識警覺崩塌。
+        *   *本論文重構*：我們對這種「無人化代理」發動了學術批判。我們論證：人機協作的終極目的，絕非消滅人類的思考，而是「以 AI 淬煉人類的品位與思考」。我們的方法論不追求無腦全自動，而是將 AI 定位為高精百官，死守人類君王的 Verdict Lock。透過將論點地圖與本地實測資料進行 Stage 2 物理對合，在卸載低階認知負荷的同時，將人類的學術品位與主體性推向了最高巔峰。
 
 ---
 
-## 🗺️ 第六章：實驗室治理與集體知識遺傳範式
+## 🗺️ 第六章：實驗室治理與集體知識遺傳典範
 
 ### 📌 6.1 「哈教授」的 30 秒 SQL 照妖鏡四大檢核
 
-*   #### 【核心主張 10】：本方法論提出「從語意檢測退後到物理盲檢」的新教育評估範式，重建了指導教授與研究生之間破裂的學術信任。
+*   #### 【核心主張 10】：本方法論提出「從語意檢測退後到物理盲檢」的新教育評估典範，重建了指導教授與研究生之間破裂的學術信任。
     *   **證明路徑 (Provenance)**：🟢 `[Stage 2 Grounded]` ➔ 由 SQLite `papers` 中 `arxiv_Chukwuere_2024_2403`（高等教育 AI 掏空與過程審計）之 Stage 2 DTO 實體證明。
     *   **辯證與重構邏輯**：
         *   *現有 SOTA 缺點*：現有的 AI 寫作工具完全忽略了「指導教授與實驗室治理」的現實痛點，加劇了學生敷衍交差與教授信任破裂的全球教育學危機。
@@ -997,7 +997,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 *   #### 【核心主張 8】：以「純文字 JSON 貢獻包」做為去中心化 DTO 載體，消滅了資料庫 Git 合併衝突，實現了實驗室共有大腦的「跳躍式知識遺傳」傳承。
     *   **證明路徑 (Provenance)**：🟢 `[Stage 2 Grounded]` ➔ 由 SQLite `papers` 中 `arxiv_Ilkou_2022_2203` (去中心化知識繁衍與 DTO 協作) 之 Stage 2 DTO 實體證明。
     *   **辯證與重構邏輯**：
-        *   *現有 SOTA 缺點*：目前的 AI 寫作工具皆為「單兵、封閉環境下的玩具」，完全無法應對多人協作時的 Git 資料庫二進位衝突、以及學長姐畢業後科研資產與 Skills 流失的傳承痛點。
+        *   *現有 SOTA 缺點*：目前的 AI 寫作工具皆為「單兵、封完整鏈結境下的玩具」，完全無法應對多人協作時的 Git 資料庫二進位衝突、以及學長姐畢業後科研資產與 Skills 流失的傳承痛點。
         *   *本論文重構*：我們將其解構為「協同個人知識圖譜的協同合流」實踐。我們實作了 `export_contributions.py`，將學生的個人主權 PKG 導出為純文字 JSON DTO，徹底消滅了 Git 合併衝突；當學弟妹加入實驗室時，只需執行 `rebuild_lab_brain.py` 一鍵重建，新進人員瞬間繼承歷代學長姐被紅軍質問並答辯Verdict PASS的戰役軌跡，實現「跳躍式知識遺傳」與高頻演化。
 
 ---
@@ -1006,11 +1006,11 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 
 ### 📌 7.3 專書大一統合流與《個人 AI 賦能》第 15 章的合流實踐
 
-*   #### 【核心主張 12】：本論文最無懈可擊的科學與工程佐證，正是這篇論文被撰寫出來的完整「實體歷程與大腦資料庫物理匯出」，這構成了 100% 行解合一的「終極自指自證真值」，雙向螺旋回寫厚化專書第 15 章，達成學術與工程演化的完美閉環。
+*   #### 【核心主張 12】：本論文最無懈可擊的科學與工程佐證，正是這篇論文被撰寫出來的完整「實體歷程與大腦資料庫物理匯出」，這構成了 100% 行解合一的「終極自指自證真值」，雙向螺旋回寫厚化專書第 15 章，達成學術與工程演化的完美完整鏈結。
     *   **證明路徑 (Provenance)**：🟢 `[Stage 2 Grounded]` ➔ `my_manuscripts.ms_sovereign_research_2026` 演化鏈，以及 `Research_Artifacts.db` 的實體物理匯出（SQL Dump & JSON DTO），強烈對合專書最新第 14, 15 章內容；並定錨 @arxiv_Ilkou_2022_2203 作為個人知識圖譜 (PKG) 自我繁衍與知識遺傳之理論地基。
     *   **辯證與重構邏輯**：
-        *   *傳統寫作範式*：方法論論文僅進行簡陋的抽象文字描述，其背後的研究歷程與自審答辯過程完全隱藏在黑箱中，無法重現，極易誘發學術空洞黑話。
-        *   *本論文自指重構*：本論文最無懈可擊的「物理證據」，就是整個寫作歷程沉澱下來的十一表大腦 SQLite 資料庫 (`Research_Artifacts.db`)。任何人皆可下載我們開源的 SQL DUMP 檔案，一鍵 `rebuild` 重現這 7 篇引文的定錨、`empirical_evidences` 的實測物理誤差，以及紅軍 Verdict PASS 的全部自審答辯軌跡。書本方法引導論文，論文歷程實體厚化專書，達成了學術與工程上前所未有的「雙向螺旋演化與終極自指閉環」！
+        *   *傳統寫作典範*：方法論論文僅進行簡陋的抽象文字描述，其背後的研究歷程與自審答辯過程完全隱藏在黑箱中，無法重現，極易誘發學術空洞黑話。
+        *   *本論文自指重構*：本論文最無懈可擊的「物理證據」，就是整個寫作歷程沉澱下來的十一表大腦 SQLite 資料庫 (`Research_Artifacts.db`)。任何人皆可下載我們開源的 SQL DUMP 檔案，一鍵 `rebuild` 重現這 7 篇引文的定錨、`empirical_evidences` 的實測物理誤差，以及紅軍 Verdict PASS 的全部自審答辯軌跡。書本方法引導論文，論文歷程實體厚化專書，達成了學術與工程上前所未有的「雙向螺旋演化與終極自指完整鏈結」！
 
 ---
 
@@ -1022,7 +1022,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
     *   **證明路徑 (Provenance)**：🟢 `[Stage 2 Grounded]` ➔ 由 SQLite `papers` 中 `zotero_Es_2023_4` (RAGAS 評估框架) 之 Stage 2 DTO 實體證明。
     *   **辯證與重構邏輯**：
         *   *現有 SOTA 缺點*：現有的科研 Agent 寫作工具缺乏自律度量與對合檢驗，容易導致 AI 進行自指評估與幻覺共謀。
-        *   *本論文重構*：我們提出 SMMCAP v1.0 剛性成熟度審計協定。引渡 RAGAS 自動化評估指標，設計手稿文本、SQLite Grounding、Citations 就位率、自審覆蓋率多維盲檢，首創產出真實不注水的 MCI 成熟度報告。這引導了我們在第八章規劃的「未來迭代藍圖」（如 Zotero API 自動重定向、根據當前學術重力 Ga 動態偏置優化自審、以及去中心化 P2P 聯邦同步協定），強制消除任何 AI 的語意泡沫，實現學術演化的自主突變。
+        *   *本論文重構*：我們提出 SMMCAP v1.0 剛性成熟度審計協定。引渡 RAGAS 自動化評估指標，設計手稿文本、SQLite Grounding、Citations 就位率、自審覆蓋率多維盲檢，首創產出真實不注水的 MCI 成熟度報告。這引導了我們在第八章規劃的「未來迭代藍圖」（如 Zotero API 自動重定向、根據當前學術重力 Ga 動態偏置最佳化自審、以及去中心化 P2P 聯邦同步協定），強制消除任何 AI 的語意泡沫，實現學術演化的自主突變。
 
 
 ================================================================================
@@ -1047,14 +1047,14 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
     *   *結果*：零匹配。現有學術誠信研究全部聚焦於「自動化語意檢測 (如 GPTZero, Turnitin)」，且 Ardito 等人已證明其在高等教育評估中的破滅；從未有任何研究提出「利用關聯式資料庫的 blind audit（物理盲檢）來重建導師與學生間的科研信任」。
 3.  **檢索語句 C (實驗室 DTO 共有大腦與 Git 衝突消滅)**：
     *   *Query*：`"decentralized collaborative knowledge" AND "Git merger" AND "pure-text JSON"`
-    *   *結果*：極低關聯。現有去中心化協作研究聚焦於「語意網 RDF 合流或聯邦學習」，其運作極為繁瑣；從未有開源項目實施以「純文字 JSON 貢獻包 DTO」重建資料庫 (Rebuild DB) 的敏捷工序，用以在消滅 Git 合併衝突的同時，實現「跳躍式知識遺傳」與 Skills 封裝傳承。
+    *   *結果*：極低關聯。現有去中心化協作研究聚焦於「語意網 RDF 合流或聯邦學習」，其運作極為繁瑣；從未有開源專案實施以「純文字 JSON 貢獻包 DTO」重建資料庫 (Rebuild DB) 的敏捷工序，用以在消滅 Git 合併衝突的同時，實現「跳躍式知識遺傳」與 Skills 封裝傳承。
 
 *自證結論：本方法論在檢索空間中處於 100% 的學術與工程真空地基，原創首創優先權無可置疑。*
 
 ---
 
 ## 📊 第二部分：開源頂級專案與學術 SOTA 功能特徵比對 (SOTA Repo Feature Matrix)
-我們將本方法論的 4 大特色，與全球最紅、最具代表性的開源科研/寫作/Agent 項目（如 Stanford STORM, GPT-Researcher, FutureHouse ChemCrow）進行逐項功能特徵橫向對比：
+我們將本方法論的 4 大特色，與全球最紅、最具代表性的開源科研/寫作/Agent 專案（如 Stanford STORM, GPT-Researcher, FutureHouse ChemCrow）進行逐項功能特徵橫向對比：
 
 | ⚔️ 比較維度 | 🌐 Stanford STORM <br>(Stanford Co-operative Writing) | 🌐 GPT-Researcher <br>(Open Source Search Agent) | 🌐 FutureHouse ChemCrow <br>(Autonomous Science Agent) | 👑 哈爸的「主權聯邦大腦」方法論 <br>(《個人AI賦能》第14章及本地實踐) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -1139,7 +1139,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 *   **對合 Claims 定位**：【核心主張 11】批判 fully autonomous AI 導致的「完全卸載」與學術黑箱。
 *   **批判性思考與展開**：
     *   *前人發現*：系統梳理了從 AI for Science 到 Agentic Science（自動化代理科學）的前沿架構。
-    *   *本論文重構*：我們以此作為 SOTA 對比 Baseline。我們指出，現有 SOTA（如 STORM, ChemCrow）均朝向「無人化自主發現」演進，人類完全被排除在生成閉環之外（完全委派），這雖然極大提升了速度，但本質上是加劇了科學負債、摧毀了教育評估，並引發認識警覺崩塌。本論文以此為靶子，襯托出哈爸大腦「死守主權、Socratic 自審答辯與 Verdict Lock」的終極優勢。在此處，我們進一步利用**「學術重力場評估公式 ($G_a$)」**：
+    *   *本論文重構*：我們以此作為 SOTA 對比 Baseline。我們指出，現有 SOTA（如 STORM, ChemCrow）均朝向「無人化自主發現」演進，人類完全被排除在生成完整鏈結之外（完全委派），這雖然極大提升了速度，但本質上是加劇了科學負債、摧毀了教育評估，並引發認識警覺崩塌。本論文以此為靶子，襯托出哈爸大腦「死守主權、Socratic 自審答辯與 Verdict Lock」的終極優勢。在此處，我們進一步利用**「學術重力場評估公式 ($G_a$)」**：
         $$G_a = (\text{被引用數} \times 0.40) + (\text{載體分值 Tier} \times 0.40) + (\text{年份懲罰衰減} \times 0.20)$$
         將 Agentic Science 對於公海文獻的盲目拉取，重構為基於學術重力評估的高優先級「穿透式洗滌」靠泊，確保地基百分之百來自高重力頂刊（Top-Tier Venues），從源頭擊碎資訊垃圾。
 
@@ -1153,10 +1153,10 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
     *   *前人發現*：提出在軟體開發中，透過開發者每小時主動發動編譯與測試的頻率 $F_v$，來量化認知卸載指數 (COI)。
     *   *本論文重構*：我們將此「軟體工程」指標跨界外推至**「學術研究工序」**，提出**「Socratic 自審頻率 ($F_s$)」**：在每次 AI 協作中，人類發起 SQL 盲檢、物理誤差比對、脆弱點答辯與 Verdict Lock 的次數。若 $F_s = 0$（無腦拷貝），主權喪失率為 100%；唯有 $F_s \ge 3$ 時，方能確保認知主權。
 
-#### 📌 5. [zotero_Snell_2024_520] 測試時運算 (Test-Time Compute) 的優化 Scaling
+#### 📌 5. [zotero_Snell_2024_520] 測試時運算 (Test-Time Compute) 的最佳化 Scaling
 *   **對合 Claims 定位**：【核心主張 4】自審與 Verdict Lock 反覆答辯的計算理論支撐。
 *   **批判性思考與展開**：
-    *   *前人發現*：證實在推理測試時投入額外運算（Test-Time Compute）優化，其效果遠勝盲目擴大模型參數。
+    *   *前人發現*：證實在推理測試時投入額外運算（Test-Time Compute）最佳化，其效果遠勝盲目擴大模型參數。
     *   *本論文重構*：這為哈爸大腦中「多輪紅軍對抗自審」提供了堅實的計算理論根基。自審答辯本質上就是一種 Test-Time Compute 的物理展現，透過在寫作自審階段投入推理 Token（而非一次性生成）進行反覆辯論，能使論文品位產生非線性的質變。
 
 #### 📌 6. [zotero_Trinh_2024_345] AlphaGeometry幾何推理符號剪枝
@@ -1189,7 +1189,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 
 ---
 
-### 🗺️ 第四章：實驗室治理與集體知識遺傳範式
+### 🗺️ 第四章：實驗室治理與集體知識遺傳典範
 
 #### 📌 10. [arxiv_Ardito_2023_2312] 反高等教育生成式 AI 抄襲檢測
 *   **對合 Claims 定位**：【核心主張 10】證明簡單語意/AI 抄襲檢測完全失效，論證物理資料庫盲檢照妖鏡的必然性。
@@ -1214,10 +1214,10 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 ### 🗺️ 第五章：遞迴自指驗證：優劣實測與臨界失效元反思
 
 #### 📌 13. [zotero_Es_2023_4] RAGAS: 自動化評估無 Ground-Truth 檢索增強生成
-*   **對合 Claims 定位**：【核心主張 12】批判 RAGAS 自動語意評估的「自指閉環」，以實測真值對合超越之。
+*   **對合 Claims 定位**：【核心主張 12】批判 RAGAS 自動語意評估的「自指完整鏈結」，以實測真值對合超越之。
 *   **批判性思考與展開**：
     *   *前人發現*：提出利用 LLM 作為裁判，無須 ground-truth 即可自動評估 Faithfulness 等指標。
-    *   *本論文重構*：RAGAS 本質上仍是「以 AI 評估 AI」的自指閉環，依然存在共謀幻覺。哈爸大腦的方法論在此處完成了重大的「現地真值對合超越」：我們在 `empirical_evidences` 中引入了「研究生肉身實測與物理觀測（如水文實測流量或硬體量測波形）」作為最高裁決標準，透過計算理論與本地實測的物理偏離度，將 RAGAS 的語意評估擴展為具備物理特徵的實質評估。
+    *   *本論文重構*：RAGAS 本質上仍是「以 AI 評估 AI」的自指完整鏈結，依然存在共謀幻覺。哈爸大腦的方法論在此處完成了重大的「現地真值對合超越」：我們在 `empirical_evidences` 中引入了「研究生肉身實測與物理觀測（如水文實測流量或硬體量測波形）」作為最高裁決標準，透過計算理論與本地實測的物理偏離度，將 RAGAS 的語意評估擴展為具備物理特徵的實質評估。
 
 #### 📌 14. [zotero_Besta_2025_682] 推理語言模型 (Reasoning Models) 藍圖
 *   **對合 Claims 定位**：【核心主張 7】推理模型世代下，利用 SQLite 結構化 DTO 導引與合流強大推理鏈。
@@ -1228,8 +1228,8 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 #### 📌 15. [zotero_Ru_2024_22] RAGChecker: 細粒度 RAG 診斷與分析
 *   **對合 Claims 定位**：【核心主張 12】作為我們 Ingestion 及 rebuild 骨架臨界失效自我診斷與自適應之對照。
 *   **批判性思考與展開**：
-    *   *前人發現*：提供了極細粒度的 RAG 組件診斷與失效判定框架。
-    *   *本論文重構*：RAGChecker 專注於語意失效的診斷；本論文將其跨界推廣至「系統工程與代數約束失效診斷」。以我們在 rebuild 時因骨架流失觸發的實體臨界失效為例，我們利用 SQLite 關聯邏輯進行代數剪枝與修復，引入「永恆基底配置」保護 projects 與 topics 領土。我們以此剛性自證，結合 SQLite foreign_key_check 與實時 rebuild，計算出三者權重極為剛性的 MPM（元自證成熟度指數），物理自證「手稿是 100% 從本資料庫物理長出來的」，達成範式的終極自洽。
+    *   *前人發現*：提供了極細粒度的 RAG 元件診斷與失效判定框架。
+    *   *本論文重構*：RAGChecker 專注於語意失效的診斷；本論文將其跨界推廣至「系統工程與代數約束失效診斷」。以我們在 rebuild 時因骨架流失觸發的實體臨界失效為例，我們利用 SQLite 關聯邏輯進行代數剪枝與修復，引入「永恆基底配置」保護 projects 與 topics 領土。我們以此剛性自證，結合 SQLite foreign_key_check 與實時 rebuild，計算出三者權重極為剛性的 MPM（元自證成熟度指數），物理自證「手稿是 100% 從本資料庫物理長出來的」，達成典範的終極自洽。
 
 ---
 
@@ -1245,7 +1245,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 *   **對合 Claims 定位**：【核心主張 10】學生利用 AI 舞弊的普遍認知背景。
 *   **批判性思考與展開**：
     *   *前人發現*：定量調查了學生利用生成式 AI 進行學術舞弊的普遍認知與危機。
-    *   *本論文重構*：我們以此資料支持我們關於「集體學術誠信退化已不可避免」的判斷，證明在缺乏主權控制鏈（Socratic 自審）時，研究生會被動墮入認知空洞化，這強烈印證了主權學者防衛控制鏈的急迫性。
+    *   *本論文重構*：我們以此資料支援我們關於「集體學術誠信退化已不可避免」的判斷，證明在缺乏主權控制鏈（Socratic 自審）時，研究生會被動墮入認知空洞化，這強烈印證了主權學者防衛控制鏈的急迫性。
 
 #### 📌 18. [arxiv_Tamura_2026_2604] LLM對白中的認知卸載與脆弱性
 *   **對合 Claims 定位**：【核心主張 4】作為主權學者防衛與領主宣言的終極警鐘。
@@ -1259,7 +1259,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 ================================================================================
 
 # 🕵️‍♂️ 哈教授手稿全景成熟度與可信度審計報告 (SMMCAP Audit Report)
-*評估時間戳記：2026-06-06 06:38:59* | *定錨手稿代碼：`sovereign_research`*
+*評估時間戳記：2026-06-06 06:38:59* | *定錨手稿程式碼：`sovereign_research`*
 
 > [!NOTE]
 > 本報告由哈教授「SMMCAP 1.0 審計引擎」物理產出。它剛性掃描了「八大聯邦手稿資產」的完備性，
@@ -1346,7 +1346,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 2. **防堵紅軍投機漏洞**：若紅軍對抗覆蓋率過低，請針對手稿中未對抗的核心主張（Claims）以及頂級引用（Citations）在 `red_team_logs` 中建立自審對抗，並答辯解鎖，以強拉紅軍覆蓋率分數。
 3. **補齊未註冊的幽靈引文**：若存在 unregistered 的引文，請使用 `scout_semantic_scholar.py` 探勘落庫。
 4. **修補遞迴閱讀鏈**：若偵測到 `GROUNDED_ON` 基底斷裂，請對應 Ingestion 目標文獻，厚化理論地墊。
-5. **消滅 TODO 與 Claims 漏洞**：清除手稿中的所有 `TODO`，並為所有 Claim 地圖中無引用的主張補充頂級文獻支持。
+5. **消滅 TODO 與 Claims 漏洞**：清除手稿中的所有 `TODO`，並為所有 Claim 地圖中無引用的主張補充頂級文獻支援。
 
 *本報告基於 SMMCAP 1.0 自動化審計协议生成，特此證明。*
 
@@ -1356,7 +1356,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 ================================================================================
 
 # 🕵️‍♂️ 哈爸主權方法論 PoC 實體驗證與自指自證報告 (SMPRR Audit Report)
-*評估時間戳記：2026-06-06 06:57:53* | *定錨手稿代碼：`sovereign_research`*
+*評估時間戳記：2026-06-06 07:28:48* | *定錨手稿代碼：`sovereign_research`*
 
 > [!NOTE]
 > 本報告由 `sovereign-poc-verifier`（主權自證驗證器技能）物理產出。  
@@ -1442,7 +1442,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 > 強制校對其在大腦資料庫中的註冊狀態與 Stage 2 深度解構合規性，以肉身實測與物理硬度剪枝 AI 八股幻想。
 
 ## 📊 1. 學術硬度與大腦對合體檢看板
-| 體檢項目 | 數量 | 比例 / 合規率 | 狀態判定 |
+| 體檢專案 | 數量 | 比例 / 合規率 | 狀態判定 |
 | :--- | :---: | :---: | :---: |
 | 聯邦提取總引用數 | 20 篇 | 100% | - |
 | 資料庫已註冊文獻 | 20 篇 | 100.00% | 🟢 正常 |
@@ -1463,10 +1463,10 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 | 📌 3.1 認知卸載 (Cognitive Offloading) 與思維主權邊界 | 【核心主張 4】：劃定嚴格的「思維主權邊界」，並以「Socratic 自審頻率 ($F_s$)」指標與 Test-Time Compute 量化主權防禦。 | `@arxiv_Aslan_2026_2603`, `@zotero_Snell_2024_520` | arxiv_Aslan_2026_2603: ⚠️ PENDING DIGESTION<br>zotero_Snell_2024_520: ⚠️ PENDING DIGESTION |
 | 📌 3.4 重新定義 AI 時代的「原創性」：人類的「品位選擇與除錯判定」 | 【核心主張 5】：生成式 AI 時代的原創性，本質上是人類基於品位所進行的『特徵選擇』與『謬誤剪枝』，並以本地實測「現地真值 (Ground Truth)」強行對合。 | `@zotero_Listgarten_2024_635` | zotero_Listgarten_2024_635: ⚠️ PENDING DIGESTION |
 | 📌 4.2 肉身實踐與真值定錨：模擬實測與物理誤差比對 | 【核心主張 7】：以「個人知識圖譜 (Personal Knowledge Graph, PKG)」與十一表大腦作為實體架構，能有效解決向量資料庫的「語意漂移 (Semantic Drift)」缺陷。 | `@arxiv_Ilkou_2022_2203` | arxiv_Ilkou_2022_2203: ⚠️ PENDING DIGESTION |
-| 📌 5.1 SOTA 研究與開源專案地圖：我們在哪裡？ | 【核心主張 11】：相較於現有 SOTA 自主科學發現代理（如 STORM、GPT-Researcher、FutureHouse ChemCrow），本方法論實施的「主權與 Verdict Lock 結合現地物理誤差強對合」架構，是真實戰壕研究中保障大腦思維主權的唯一有效範式。 | `@arxiv_AgenticScience_2025_14111` | arxiv_AgenticScience_2025_14111: 💚 FULLY PROVED |
-| 📌 6.1 「哈教授」的 30 秒 SQL 照妖鏡四大檢核 | 【核心主張 10】：本方法論提出「從語意檢測退後到物理盲檢」的新教育評估範式，重建了指導教授與研究生之間破裂的學術信任。 | `@arxiv_Denkin_2024_2405` | arxiv_Denkin_2024_2405: ⚠️ PENDING DIGESTION |
+| 📌 5.1 SOTA 研究與開源專案地圖：我們在哪裡？ | 【核心主張 11】：相較於現有 SOTA 自主科學發現代理（如 STORM、GPT-Researcher、FutureHouse ChemCrow），本方法論實施的「主權與 Verdict Lock 結合現地物理誤差強對合」架構，是真實戰壕研究中保障大腦思維主權的唯一有效典範。 | `@arxiv_AgenticScience_2025_14111` | arxiv_AgenticScience_2025_14111: 💚 FULLY PROVED |
+| 📌 6.1 「哈教授」的 30 秒 SQL 照妖鏡四大檢核 | 【核心主張 10】：本方法論提出「從語意檢測退後到物理盲檢」的新教育評估典範，重建了指導教授與研究生之間破裂的學術信任。 | `@arxiv_Denkin_2024_2405` | arxiv_Denkin_2024_2405: ⚠️ PENDING DIGESTION |
 | 📌 6.2 去中心化聯邦 DTO 重建：以純文字 JSON 消滅資料庫 Git 衝突 | 【核心主張 8】：以「純文字 JSON 貢獻包」做為去中心化 DTO 載體，消滅了資料庫 Git 合併衝突，實現了實驗室共有大腦的「跳躍式知識遺傳」傳承。 | `@arxiv_Ilkou_2022_2203` | arxiv_Ilkou_2022_2203: ⚠️ PENDING DIGESTION |
-| 📌 7.3 專書大一統合流與《個人 AI 賦能》第 15 章的合流實踐 | 【核心主張 12】：本論文最無懈可擊的科學與工程佐證，正是這篇論文被撰寫出來的完整「實體歷程與大腦資料庫物理匯出」，這構成了 100% 行解合一的「終極自指自證真值」，雙向螺旋回寫厚化專書第 15 章，達成學術與工程演化的完美閉環。 | ⚠️ 無引用！ | 🔴 缺乏理論地墊 |
+| 📌 7.3 專書大一統合流與《個人 AI 賦能》第 15 章的合流實踐 | 【核心主張 12】：本論文最無懈可擊的科學與工程佐證，正是這篇論文被撰寫出來的完整「實體歷程與大腦資料庫物理匯出」，這構成了 100% 行解合一的「終極自指自證真值」，雙向螺旋回寫厚化專書第 15 章，達成學術與工程演化的完美完整鏈結。 | ⚠️ 無引用！ | 🔴 缺乏理論地墊 |
 | 📌 8.2 Socratic 面試與紅軍對審的「動態 Prompt 偏置」最佳化 | 【核心主張 9】：建立「手稿全景成熟度與可信度自審審計協定 (SMMCAP)」，以此剛性品質治理指標，引導下一步「未來演化與迭代藍圖」的自動化突變。 | `@zotero_Es_2023_4` | zotero_Es_2023_4: 💚 FULLY PROVED |
 
 ---
@@ -1586,7 +1586,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 | 2026-05-20 09:15:00 | 移植最佳化 | 10 表聯邦與跨裝置移植性解決（T260520-HHH01） | 建構 paper_scout.py 與 academic-research-navigator。為了平抑不同電腦的環境路徑斷線噩夢，導入 directory_roots 目錄抽象解耦設計，並加入 Duffing 實測物理誤差資料，對位專書第 14 章。 | `N/A` |
 | 2026-05-26 11:00:00 | 自審對抗 | 十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01） | 升級為十一表大腦，建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊資料殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。 | `N/A` |
 | 2026-06-05 18:00:00 | 事實修正 | 06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續） | 原定與教授之 face-to-face 盲檢會面因故推遲。於 06/06 先行進行去中心化整理、獨立開源 Repo 分離與公開發表，並將正式面談審查留待下一個階段。 | `N/A` |
-| 2026-06-06 23:59:59 | Git Submodule | 程式碼提交 | 當日完成多項更新： Initial commit；Initialize sovereign-research-methodology repository with assets and symlinks；Fix import and base directory paths for root-level rebuild script；Fix path variables in verify_poc_completeness.py for self-contained repository usage；Update DB with fresh rebuild data, publish maturity & poc reports, and update gitignore；docs(refactor): 重構主 README、厚化各目錄說明書並調整論文手稿結構；docs(refactor): 重構 README、厚化說明書，並新增大腦演化建構歷程自證手稿 | `bc5a281` |
+| 2026-06-06 23:59:59 | Git Submodule | 程式碼提交 | 當日完成多項更新： Initial commit；Initialize sovereign-research-methodology repository with assets and symlinks；Fix import and base directory paths for root-level rebuild script；Fix path variables in verify_poc_completeness.py for self-contained repository usage；Update DB with fresh rebuild data, publish maturity & poc reports, and update gitignore；docs(refactor): 重構主 README、厚化各目錄說明書並調整論文手稿結構；docs(refactor): 重構 README、厚化說明書，並新增大腦演化建構歷程自證手稿；docs(refactor): 厚化第四代演進歷程手稿，並升級歷程提煉工具；docs(refactor): 厚化第四代演進歷程，並完整開源釋出四大主權核心技能；sync | `1511345` |
 
 <!-- END_EVOLUTION_TABLE -->
 

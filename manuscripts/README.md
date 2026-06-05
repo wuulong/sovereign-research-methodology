@@ -41,13 +41,13 @@
 *   **Why it exists**: 由 `verify_manuscript_maturity.py` 自動產出的評估報告。**以 60% 覆蓋率與 40% PASS 率剛性制約學生的投機自審**，量化大腦成熟度。
 
 ### 9. [10] 元自證成熟度報告 (MPM)：`sovereign_research_10_poc_proof_report.md`
-*   **Why it exists**: 由 `verify_poc_completeness.py` 物理產出的自證報告。**打破 AI 語意自評閉環**，以資料庫實體完整度與三位一體合龍率進行剛性自指自證。
+*   **Why it exists**: 由 `verify_poc_completeness.py` 物理產出的自證報告。**打破 AI 語意自評完整鏈結**，以資料庫實體完整度與三位一體合龍率進行剛性自指自證。
 
 ### 10. [11] 紅軍自審與答辯日誌：`sovereign_research_11_audit_report.md`
 *   **Why it exists**: 記錄歷次進度會議上，導師（或自審腦分身）拋出的尖銳批判 Feedback，以及學生的物理防禦答辯與 Verdict 軌跡。**這是學術誠信的物理鐵證**。
 
 ### 11. [12] 建構歷程與實體自證報告：`sovereign_research_12_evolution_history.md`
-*   **Why it exists**: 如實記錄大腦從無到有螺旋演進的五個關鍵演化里程碑與 Git Commit 物理對合軌跡，是證明整個科研範式「非語意物理自指」的歷史鐵證。
+*   **Why it exists**: 如實記錄大腦從無到有螺旋演進的五個關鍵演化里程碑與 Git Commit 物理對合軌跡，是證明整個科研典範「非語意物理自指」的歷史鐵證。
 
 ---
 

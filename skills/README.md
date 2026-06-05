@@ -16,8 +16,8 @@
 
 3. **[academic-advisor-auditor](academic-advisor-auditor/SKILL.md) (學術自審審計師)**
    * **目標**：防堵人機協作中人類思維被 AI 語意泡沫掏空、以及師徒間進度誠信崩塌的危機。
-   * **機制**：建立紅軍自審脆弱點防線，導師/自審腦 Feedback 自動寫入 `red_team_logs`。若狀態為 `'VULNERABLE'` 則發動 **「合併阻斷鎖 (Verdict Lock)」** 阻斷代碼與資料合流，答辯通過改為 `'PASS'` 後始能解鎖。
+   * **機制**：建立紅軍自審脆弱點防線，導師/自審腦 Feedback 自動寫入 `red_team_logs`。若狀態為 `'VULNERABLE'` 則發動 **「合併阻斷鎖 (Verdict Lock)」** 阻斷程式碼與資料合流，答辯通過改為 `'PASS'` 後始能解鎖。
 
 4. **[sovereign-poc-verifier](sovereign-poc-verifier/SKILL.md) (主權 PoC 驗證器)**
-   * **目標**：打破 AI 自評估的語意幻覺閉環，以本地工具鏈的執行狀況與資料庫物理一致性進行剛性自證。
+   * **目標**：打破 AI 自評估的語意幻覺完整鏈結，以本地工具鏈的執行狀況與資料庫物理一致性進行剛性自證。
    * **機制**：盲檢底層 SQLite 資料庫的參照完整性與「主題三位一體對合率」，計算 MPM (元自證成熟度) 指標並物理產出 SMPRR 驗證報告。

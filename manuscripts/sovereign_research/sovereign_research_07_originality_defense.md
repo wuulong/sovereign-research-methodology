@@ -16,14 +16,14 @@
     *   *結果*：零匹配。現有學術誠信研究全部聚焦於「自動化語意檢測 (如 GPTZero, Turnitin)」，且 Ardito 等人已證明其在高等教育評估中的破滅；從未有任何研究提出「利用關聯式資料庫的 blind audit（物理盲檢）來重建導師與學生間的科研信任」。
 3.  **檢索語句 C (實驗室 DTO 共有大腦與 Git 衝突消滅)**：
     *   *Query*：`"decentralized collaborative knowledge" AND "Git merger" AND "pure-text JSON"`
-    *   *結果*：極低關聯。現有去中心化協作研究聚焦於「語意網 RDF 合流或聯邦學習」，其運作極為繁瑣；從未有開源項目實施以「純文字 JSON 貢獻包 DTO」重建資料庫 (Rebuild DB) 的敏捷工序，用以在消滅 Git 合併衝突的同時，實現「跳躍式知識遺傳」與 Skills 封裝傳承。
+    *   *結果*：極低關聯。現有去中心化協作研究聚焦於「語意網 RDF 合流或聯邦學習」，其運作極為繁瑣；從未有開源專案實施以「純文字 JSON 貢獻包 DTO」重建資料庫 (Rebuild DB) 的敏捷工序，用以在消滅 Git 合併衝突的同時，實現「跳躍式知識遺傳」與 Skills 封裝傳承。
 
 *自證結論：本方法論在檢索空間中處於 100% 的學術與工程真空地基，原創首創優先權無可置疑。*
 
 ---
 
 ## 📊 第二部分：開源頂級專案與學術 SOTA 功能特徵比對 (SOTA Repo Feature Matrix)
-我們將本方法論的 4 大特色，與全球最紅、最具代表性的開源科研/寫作/Agent 項目（如 Stanford STORM, GPT-Researcher, FutureHouse ChemCrow）進行逐項功能特徵橫向對比：
+我們將本方法論的 4 大特色，與全球最紅、最具代表性的開源科研/寫作/Agent 專案（如 Stanford STORM, GPT-Researcher, FutureHouse ChemCrow）進行逐項功能特徵橫向對比：
 
 | ⚔️ 比較維度 | 🌐 Stanford STORM <br>(Stanford Co-operative Writing) | 🌐 GPT-Researcher <br>(Open Source Search Agent) | 🌐 FutureHouse ChemCrow <br>(Autonomous Science Agent) | 👑 哈爸的「主權聯邦大腦」方法論 <br>(《個人AI賦能》第14章及本地實踐) |
 | :--- | :--- | :--- | :--- | :--- |
