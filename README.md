@@ -45,6 +45,8 @@
     - 存放高度整合、物理定錨的 Bundle 檔案。避開 Context 碎片化對 LLM 造成的語意盲區，提供 15 大大師級 Prompt。
 *   📁 **[scripts/](scripts/README.md) (大腦運轉、自審與驗證核心腳本庫)**
     - 存放驅動大腦 SQLite 運轉與 MCI、MPM 指標計量的 Python 自治工具鏈。
+*   📁 **[skills/](skills/README.md) (四大主權核心 Skill 規格分區)**
+    - 存放 Navigator、Builder、Auditor、Verifier 四大主權 Skill 的規格檔，是方法論對 AI 進行物理約束的控制本體。
 *   📁 **[data/](data/README.md) (實體資料庫與 DTO 貢獻信封)**
     - 存放實體 SQLite 資料庫 `Research_Artifacts.db` 與純文字 DTO json 貢獻信封。
 
