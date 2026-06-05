@@ -14,11 +14,11 @@
 *   **核心突破**：
     提出「三層 Ingestion 流水線」（Layer 0 緩衝、Layer 1 靠泊、Layer 2 深度消化）概念。定義了「學術重力場評估公式（Academic Gravity Formula）」，強制根據被引用數與年份衰減對文獻排序。確立了「原創力 = 意圖 + 架構 + 品位裁決」的頂層核心主張，奠定主權領地的思想基礎。
 
-### 2️⃣ 第二代：實踐應用與資料庫大腦雛形 (2026/05/14)
+### 2️⃣ 第二代：資料定錨與資料庫大腦雛形 (2026/05/14)
 *   **背景與痛點**：
-    為了將方法論落實於實際的組織與協作場景，大腦在某製造業企業的 AI 輔導專案中展開了實踐。然而，企業內部資料涉及高度商業機密，無法直接對外公開，且多部門協作容易導致 Context 碎片化。
+    為了將方法論落實於實際的協作與知識管理場景，需要建立一個結構化的核心。然而，多個不同的資料源在聚合時容易導致 Context 碎片化與版本混亂，且缺乏統一的資料追蹤機制。
 *   **核心突破**：
-    引進「去識別化編碼（ID-Prefix）」與「模擬實踐資料（SIM）」的設計，將真實業務解耦，死守資料保密底線。首次在本地建構 SQLite 知識資料庫原型，設計 L1-L4 知識架構，證明了「軟體定義科研方法論」在實際組織中的可執行性。
+    引進「標準編碼（ID-Prefix）」設計，規範多源資料聚合與版本定錨。首次在本地建構 SQLite 知識資料庫原型，設計基礎知識分層分類，證明了「軟體定義科研方法論」在實際知識管理中的可執行性。
 
 ### 3️⃣ 第三代：10 表聯邦與跨裝置移植性解決 (2026/05/20)
 *   **背景與痛點**：
@@ -55,11 +55,13 @@
 
 | 時間戳記 | 紀錄來源 | 演化事件 | 實體歷程與 Why 設計意圖 | 實體指紋 (Git Commit) |
 | :--- | :--- | :--- | :--- | :--- |
-| 2026-05-10 14:00:00 | 計畫起源 | QMEMS 實驗室學術痛點挖掘（T260510-HHH03） | 提出研究生濫用 AI 導致認知掏空的問題。確立 Layer 0-1-2 三層靠泊 Ingestion 流水線、學術重力場 Ga 排序公式以及最初的學者領主宣言草案。 | `N/A` |
-| 2026-05-14 10:30:00 | 企業轉型 | 某製造業企業 AI 實踐與資料庫大腦原型（T260514-HHH01） | 導入 ID-Prefix 標準編碼與模擬實踐資料（SIM）設計以保護企業隱私。首度在 SQLite 中實作大腦資料庫化與 L1-L4 知識分層架構。 | `N/A` |
+| 2026-05-10 14:00:00 | 計畫起源 | QMEMS 實驗室學術痛點挖掘（T260510-HHH03） | 提出研究生濫用 AI 導致認知掏空的問題。確立三層靠泊 Ingestion 流水線、學術重力場 Ga 排序公式以及最初的學者領主宣言草案。 | `N/A` |
+| 2026-05-14 10:30:00 | 大腦原型 | 大腦知識大腦概念原型與單一資料表實作（T260514-HHH01） [v0.1] | 導入 ID-Prefix 標準編碼，規範多源資料聚合與版本定錨。首度在 SQLite 中實作大腦資料庫化（單一資料表，版本 v0.1）與基礎知識分層。 | `N/A` |
 | 2026-05-20 09:15:00 | 移植最佳化 | 10 表聯邦與跨裝置移植性解決（T260520-HHH01） | 建構 paper_scout.py 與 academic-research-navigator。為了平抑不同電腦的環境路徑斷線噩夢，導入 directory_roots 目錄抽象解耦設計，並加入 Duffing 實測物理誤差資料，對位專書第 14 章。 | `N/A` |
-| 2026-05-26 11:00:00 | 自審對抗 | 十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01） | 升級為十一表大腦，建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊資料殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。 | `N/A` |
-| 2026-06-05 18:00:00 | 事實修正 | 06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續） | 原定與教授之 face-to-face 盲檢會面因故推遲。於 06/06 先行進行去中心化整理、獨立開源 Repo 分離與公開發表，並將正式面談審查留待下一個階段。 | `N/A` |
-| 2026-06-06 23:59:59 | Git Submodule | 程式碼提交 | 當日完成多項更新： Initial commit；Initialize sovereign-research-methodology repository with assets and symlinks；Fix import and base directory paths for root-level rebuild script；Fix path variables in verify_poc_completeness.py for self-contained repository usage；Update DB with fresh rebuild data, publish maturity & poc reports, and update gitignore；docs(refactor): 重構主 README、厚化各目錄說明書並調整論文手稿結構；docs(refactor): 重構 README、厚化說明書，並新增大腦演化建構歷程自證手稿；docs(refactor): 厚化第四代演進歷程手稿，並升級歷程提煉工具；docs(refactor): 厚化第四代演進歷程，並完整開源釋出四大主權核心技能；sync | `1511345` |
+| 2026-05-26 11:00:00 | 自審對抗 | 十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01） [v0.1.1] | 大腦資料庫 Schema 升級為十一表（版本 v0.1.1），建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊資料殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。 | `N/A` |
+| 2026-06-05 18:00:00 | 事實修正 | 06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續） [v0.2] | 原定與教授之面談盲檢因故推遲。於 06/06 先行進行去中心化整理，將大腦資產（包含四大核心主權技能、手稿與工具鏈，版本 v0.2）移出並獨立為開源 Repo，且於主專案中註冊為 Submodule。 | `N/A` |
+| 2026-06-05 23:52:05 | SQLite DB | 紅軍對抗 (crit_haba_1) | 紅軍質疑: 哈教授指出：『利用 GPT-4V 進行流量特徵與流路辨識時，枯水期的泥沙淤積極易被誤判為水流通道。若缺乏現地尺規與 Wa... \| 學生答辯: 哈爸進行品位裁決後防禦：『我們導入了枯水期影像對比濾鏡，並結合本地 WalkGIS 實地走讀的航跡點進行 DEM 高程校... [判決: PASS] | `N/A` |
+| 2026-06-06 07:30:00 | 版本定錨 | 主權技能本土化完整釋出與方法論大合流（T260526-HHH01 延續） [v0.2.1] | 於子 Repo 完整釋出四大主權核心技能（skills/）並清理中國用語；將 02 中繼資料規格與 03 關係本體規格合流併入 02 系統規格手冊；重建 NotebookLM 封包，升級大腦與工具控制體系為 v0.2.1 完整合流開源版。 | `N/A` |
+| 2026-06-06 23:59:59 | Git Submodule | 程式碼提交 | 當日完成多項更新： Initial commit；Initialize sovereign-research-methodology repository with assets and symlinks；Fix import and base directory paths for root-level rebuild script；Fix path variables in verify_poc_completeness.py for self-contained repository usage；Update DB with fresh rebuild data, publish maturity & poc reports, and update gitignore；docs(refactor): 重構主 README、厚化各目錄說明書並調整論文手稿結構；docs(refactor): 重構 README、厚化說明書，並新增大腦演化建構歷程自證手稿；docs(refactor): 厚化第四代演進歷程手稿，並升級歷程提煉工具；docs(refactor): 厚化第四代演進歷程，並完整開源釋出四大主權核心技能；sync；prepare nblm contents | `4c6b767` |
 
 <!-- END_EVOLUTION_TABLE -->

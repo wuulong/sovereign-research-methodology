@@ -1102,8 +1102,8 @@ def auto_classify_and_tag_paper(conn, paper_id, title, cite_key):
         ("LLaVA", "AI應用/個人賦能/主權治理", ["Visual Instruction Tuning", "LLaVA", "Multimodal"]),
         ("CAMEL", "AI應用/個人賦能/角色交談", ["Communicative Agents", "CAMEL", "Role-Playing"]),
         ("DeepSeek-R1", "AI應用/推理模型/強化學習", ["DeepSeek-R1", "Reinforcement Learning", "Reasoning"]),
-        ("CAG", "AI應用/企業轉型/CAG快取", ["CAG", "Cache-Augmented Generation", "KV Cache"]),
-        ("RAGAS", "AI應用/企業轉型/RAG評估", ["RAGAS", "Retrieval-Augmented Generation", "Evaluation"]),
+        ("CAG", "AI應用/知識工程/CAG快取", ["CAG", "Cache-Augmented Generation", "KV Cache"]),
+        ("RAGAS", "AI應用/知識工程/RAG評估", ["RAGAS", "Retrieval-Augmented Generation", "Evaluation"]),
         ("Cosmos", "水文河流/多模態觀測/世界模型", ["Cosmos", "World Model", "Physical Simulator"]),
         ("WalkGIS", "水文河流/GIS圖資/現地走讀", ["WalkGIS", "DEM", "River basin"])
     ]
@@ -1371,7 +1371,7 @@ if __name__ == "__main__":
 🧠 主權科研大腦：歷程還原與自證表格提取工具 (extract_evolution_history.py)
 ----------------------------------------------------------------------
 本腳本為大腦「自治自證」之核心工具，負責：
-1. 靜態定錨五大關鍵演化代（已進行去識別化保密過濾，不含敏感企業與特定細節）。
+1. 靜態定錨五大關鍵演化代（已進行去識別化保密過濾，不含敏感組織與特定細節）。
 2. 動態調用本地 Git log 提取本 Repo (Submodule) 的真實提交歷史。
 3. 動態讀取 SQLite 資料庫 (Research_Artifacts.db) 中的紅軍對抗自審 Verdict PASS 記錄。
 4. 自動對合時間線，編譯產出 Markdown 時間軸表格，並更新手稿第二章。
@@ -1425,11 +1425,11 @@ def taiwanize_content(content):
 
 # 敏感詞彙保密過濾器 (去識別化對照)
 SENSITIVE_PATTERNS = {
-    r"(?i)fusheng": "某製造業企業",
-    r"復盛": "某製造業企業",
+    r"(?i)organization": "組織",
+    r"組織": "組織",
     r"MET-00[0-9]": "系統架構模組",
     r"EXT-00[0-9]": "外部資訊模組",
-    r"SIM-00[0-9]": "模擬實踐資料",
+    r"SIM-00[0-9]": "實踐資料",
 }
 
 def clean_sensitive_text(text):
@@ -1453,9 +1453,9 @@ STATIC_MILESTONES = [
     },
     {
         "datetime": "2026-05-14 10:30:00",
-        "source": "企業轉型",
-        "event": "某製造業企業 AI 實踐與資料庫大腦原型（T260514-HHH01）",
-        "description": "導入 ID-Prefix 標準編碼與模擬實踐數據（SIM）設計以保護企業隱私。首度在 SQLite 中實作大腦資料庫化與 L1-L4 知識分層架構。",
+        "source": "組織轉型",
+        "event": "組織知識大腦概念原型與單一資料表實作（T260514-HHH01）",
+        "description": "導入 ID-Prefix 標準編碼與實踐資料設計以保護資料安全。首度在 SQLite 中實作大腦資料庫化與 知識分層架構。",
         "commit_hash": "N/A"
     },
     {
@@ -1469,7 +1469,7 @@ STATIC_MILESTONES = [
         "datetime": "2026-05-26 11:00:00",
         "source": "自審對抗",
         "event": "十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01）",
-        "description": "升級為十一表大腦，建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊數據殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。",
+        "description": "升級為十一表大腦，建立 empirical_evidences 替代舊實踐表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊數據殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。",
         "commit_hash": "N/A"
     },
     {
@@ -2513,8 +2513,8 @@ def auto_classify_and_tag_paper(conn, paper_id, title, cite_key):
         ("LLaVA", "AI應用/個人賦能/主權治理", ["Visual Instruction Tuning", "LLaVA", "Multimodal"]),
         ("CAMEL", "AI應用/個人賦能/角色交談", ["Communicative Agents", "CAMEL", "Role-Playing"]),
         ("DeepSeek-R1", "AI應用/推理模型/強化學習", ["DeepSeek-R1", "Reinforcement Learning", "Reasoning"]),
-        ("CAG", "AI應用/企業轉型/CAG快取", ["CAG", "Cache-Augmented Generation", "KV Cache"]),
-        ("RAGAS", "AI應用/企業轉型/RAG評估", ["RAGAS", "Retrieval-Augmented Generation", "Evaluation"]),
+        ("CAG", "AI應用/知識工程/CAG快取", ["CAG", "Cache-Augmented Generation", "KV Cache"]),
+        ("RAGAS", "AI應用/知識工程/RAG評估", ["RAGAS", "Retrieval-Augmented Generation", "Evaluation"]),
         ("Cosmos", "水文河流/多模態觀測/世界模型", ["Cosmos", "World Model", "Physical Simulator"]),
         ("WalkGIS", "水文河流/GIS圖資/現地走讀", ["WalkGIS", "DEM", "River basin"])
     ]
@@ -3622,7 +3622,7 @@ MOCK_PROJECTS = [
     {
         "project_id": "prj_ai_enablement",
         "project_name": "AI 應用與賦能研究專案",
-        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、企業 GenAI 轉型治理架構，以及 DeepSeek-R1 與推理時計算（Test-Time Compute）最佳化等前沿 AI 研究方法。",
+        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、組織級知識治理架構，以及 DeepSeek-R1 與推理時計算（Test-Time Compute）最佳化等前沿 AI 研究方法。",
         "search_spec": {
             "keywords": ["personal AI enablement", "enterprise GenAI", "DeepSeek-R1 reasoning", "CAG vs RAG", "test-time compute"],
             "exclude": ["hardware training", "asics"],
@@ -3703,13 +3703,13 @@ MOCK_TOPICS = [
     {
         "topic_id": "top_enterprise_transformation",
         "project_id": "prj_ai_enablement",
-        "topic_name": "企業 GenAI 轉型與 CAG vs RAG 知識架構評估",
+        "topic_name": "組織級知識庫架構與 CAG vs RAG 知識架構評估",
         "sequence_order": 2,
         "status": "ACTIVE",
         "focus_spec": {
             "focus_variables": ["CAG_retrieval_latency", "RAG_hallucination_rate"],
             "equations": ["Cache_Hit_Efficiency_Metric"],
-            "auto_tags": ["Enterprise-GenAI", "CAG-vs-RAG"]
+            "auto_tags": ["Knowledge-Engineering", "CAG-vs-RAG"]
         }
     },
     {
@@ -3828,12 +3828,12 @@ MOCK_PAPERS = [
             "max_context_tokens": 1000000,
             "retrieval_robustness": 98.2
         },
-        "abstract": "本論文探討在大模型長上下文（Context）與 KV Cache 爆發的時代，以快取增強生成 (CAG) 取代複雜 RAG 架構的可行性。CAG 將整個企業或個人的知識庫快取在 LLM 的 Context 中，大幅降低了傳統 RAG 中 chunking、embedding 與 vector search 所產生的誤差與延遲。這為企業 AI 轉型提供了極高可靠性、零檢索摩擦的全新知識治理路徑。",
+        "abstract": "本論文探討在大模型長上下文（Context）與 KV Cache 爆發的時代，以快取增強生成 (CAG) 取代複雜 RAG 架構的可行性。CAG 將整個組織或個人的知識庫快取在 LLM 的 Context 中，大幅降低了傳統 RAG 中 chunking、embedding 與 vector search 所產生的誤差與延遲。這為組織 AI 轉型提供了極高可靠性、零檢索摩擦的全新知識治理路徑。",
         "urls": [
             {"type": "arxiv_pdf", "link": "https://arxiv.org/pdf/2412.18000.pdf"},
             {"type": "local_pdf", "link": "file:///Users/wuulong/Zotero/storage/Dont_Do_RAG_2024.pdf"}
         ],
-        "tags": ["CAG-vs-RAG", "Enterprise-GenAI", "Sovereign-AI"]
+        "tags": ["CAG-vs-RAG", "Knowledge-Engineering", "Sovereign-AI"]
     }
 ]
 
@@ -3859,7 +3859,7 @@ MOCK_EVIDENCES = [
         "evidence_id": "evid_run_2",
         "paper_id": "zotero_dont_do_rag",
         "practice_scenario": {
-            "enterprise_doc_count": 500,
+            "knowledge_doc_count": 500,
             "total_token_size": 850000,
             "query_type": "complex_cross_referencing",
             "cag_kv_cache": True
@@ -6032,7 +6032,7 @@ PROJECTS_SEED = [
     {
         "project_id": "prj_ai_enablement",
         "project_name": "AI 應用與賦能研究專案",
-        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、企業 GenAI 轉型治理架構，以及 DeepSeek-R1 與推理時計算最佳化等前沿 AI 研究方法。",
+        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、組織級知識治理架構，以及 DeepSeek-R1 與推理時計算最佳化等前沿 AI 研究方法。",
         "search_spec": {"keywords": ["personal AI enablement", "enterprise GenAI", "DeepSeek-R1 reasoning"], "min_year": 2024},
         "architecture_spec": {"methodology_framework": "BMAD-method / Haba-Quadrilogy", "core_technologies": ["DeepSeek-R1", "CAG"]}
     },
@@ -6092,10 +6092,10 @@ TOPICS_SEED = [
     {
         "topic_id": "top_enterprise_transformation",
         "project_id": "prj_ai_enablement",
-        "topic_name": "企業 GenAI 轉型與 CAG vs RAG 知識架構評估",
+        "topic_name": "組織級知識庫架構與 CAG vs RAG 知識架構評估",
         "sequence_order": 2,
         "status": "ACTIVE",
-        "focus_spec": {"focus_variables": ["CAG_latency"], "equations": ["Cache_Hit_Efficiency"], "auto_tags": ["Enterprise-GenAI"]}
+        "focus_spec": {"focus_variables": ["CAG_latency"], "equations": ["Cache_Hit_Efficiency"], "auto_tags": ["Knowledge-Engineering"]}
     },
     {
         "topic_id": "top_reasoning_models",

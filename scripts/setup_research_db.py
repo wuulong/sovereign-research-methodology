@@ -34,8 +34,8 @@ PROJECTS_SEED = [
     {
         "project_id": "prj_ai_enablement",
         "project_name": "AI 應用與賦能研究專案",
-        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、企業 GenAI 轉型治理架構，以及 DeepSeek-R1 與推理時計算最佳化等前沿 AI 研究方法。",
-        "search_spec": {"keywords": ["personal AI enablement", "enterprise GenAI", "DeepSeek-R1 reasoning"], "min_year": 2024},
+        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、組織級知識治理架構，以及 DeepSeek-R1 與推理時計算最佳化等前沿 AI 研究方法。",
+        "search_spec": {"keywords": ["personal AI enablement", "organizational knowledge governance", "DeepSeek-R1 reasoning"], "min_year": 2024},
         "architecture_spec": {"methodology_framework": "BMAD-method / Haba-Quadrilogy", "core_technologies": ["DeepSeek-R1", "CAG"]}
     },
     {
@@ -92,12 +92,12 @@ TOPICS_SEED = [
         "focus_spec": {"focus_variables": ["skill_execution_friction"], "equations": ["BMAD_Entropy"], "auto_tags": ["Sovereign-AI"]}
     },
     {
-        "topic_id": "top_enterprise_transformation",
+        "topic_id": "top_organizational_knowledge",
         "project_id": "prj_ai_enablement",
-        "topic_name": "企業 GenAI 轉型與 CAG vs RAG 知識架構評估",
+        "topic_name": "組織級知識庫架構與 CAG vs RAG 知識架構評估",
         "sequence_order": 2,
         "status": "ACTIVE",
-        "focus_spec": {"focus_variables": ["CAG_latency"], "equations": ["Cache_Hit_Efficiency"], "auto_tags": ["Enterprise-GenAI"]}
+        "focus_spec": {"focus_variables": ["CAG_latency"], "equations": ["Cache_Hit_Efficiency"], "auto_tags": ["Knowledge-Engineering"]}
     },
     {
         "topic_id": "top_reasoning_models",
@@ -148,7 +148,7 @@ def setup_db():
         
     print("🚀 正在預先配置哈爸的環境路徑路由 (directory_roots)...")
     roots_to_insert = [
-        ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案代碼庫根目錄"}),
+        ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案程式碼庫根目錄"}),
         ("zotero_storage", "STUDENT_LOCAL", "haba", "/Users/wuulong/Zotero/storage/", {"description": "哈爸個人 Zotero 本地文獻 PDF 儲存目錄"}),
         ("lab_nas", "STUDENT_LOCAL", "haba", "/Volumes/VRES_NAS/archive/", {"description": "哈爸個人或實驗室 NAS 伺服器掛載路徑"}),
         ("remote_url", "GLOBAL_WEB", "internet", "", {"description": "網際網路線上遠端 HTTP 資源入口"})

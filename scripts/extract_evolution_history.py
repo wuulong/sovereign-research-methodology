@@ -4,7 +4,7 @@
 🧠 主權科研大腦：歷程還原與自證表格提取工具 (extract_evolution_history.py)
 ----------------------------------------------------------------------
 本腳本為大腦「自治自證」之核心工具，負責：
-1. 靜態定錨五大關鍵演化代（已進行去識別化保密過濾，不含敏感企業與特定細節）。
+1. 靜態定錨五大關鍵演化代（已進行去識別化保密過濾，不含敏感組織與特定細節）。
 2. 動態調用本地 Git log 提取本 Repo (Submodule) 的真實提交歷史。
 3. 動態讀取 SQLite 資料庫 (Research_Artifacts.db) 中的紅軍對抗自審 Verdict PASS 記錄。
 4. 自動對合時間線，編譯產出 Markdown 時間軸表格，並更新手稿第二章。
@@ -58,11 +58,8 @@ def taiwanize_content(content):
 
 # 敏感詞彙保密過濾器 (去識別化對照)
 SENSITIVE_PATTERNS = {
-    r"(?i)fusheng": "某製造業企業",
-    r"復盛": "某製造業企業",
     r"MET-00[0-9]": "系統架構模組",
     r"EXT-00[0-9]": "外部資訊模組",
-    r"SIM-00[0-9]": "模擬實踐資料",
 }
 
 def clean_sensitive_text(text):
@@ -81,14 +78,14 @@ STATIC_MILESTONES = [
         "datetime": "2026-05-10 14:00:00",
         "source": "計畫起源",
         "event": "QMEMS 實驗室學術痛點挖掘（T260510-HHH03）",
-        "description": "提出研究生濫用 AI 導致認知掏空的問題。確立 Layer 0-1-2 三層靠泊 Ingestion 流水線、學術重力場 Ga 排序公式以及最初的學者領主宣言草案。",
+        "description": "提出研究生濫用 AI 導致認知掏空的問題。確立三層靠泊 Ingestion 流水線、學術重力場 Ga 排序公式以及最初的學者領主宣言草案。",
         "commit_hash": "N/A"
     },
     {
         "datetime": "2026-05-14 10:30:00",
-        "source": "企業轉型",
-        "event": "某製造業企業 AI 實踐與資料庫大腦原型（T260514-HHH01）",
-        "description": "導入 ID-Prefix 標準編碼與模擬實踐數據（SIM）設計以保護企業隱私。首度在 SQLite 中實作大腦資料庫化與 L1-L4 知識分層架構。",
+        "source": "大腦原型",
+        "event": "大腦知識大腦概念原型與單一資料表實作（T260514-HHH01） [v0.1]",
+        "description": "導入 ID-Prefix 標準編碼，規範多源資料聚合與版本定錨。首度在 SQLite 中實作大腦資料庫化（單一資料表，版本 v0.1）與基礎知識分層。",
         "commit_hash": "N/A"
     },
     {
@@ -101,15 +98,22 @@ STATIC_MILESTONES = [
     {
         "datetime": "2026-05-26 11:00:00",
         "source": "自審對抗",
-        "event": "十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01）",
-        "description": "升級為十一表大腦，建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊數據殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。",
+        "event": "十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01） [v0.1.1]",
+        "description": "大腦資料庫 Schema 升級為十一表（版本 v0.1.1），建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊數據殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。",
         "commit_hash": "N/A"
     },
     {
         "datetime": "2026-06-05 18:00:00",
         "source": "事實修正",
-        "event": "06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續）",
-        "description": "原定與教授之 face-to-face 盲檢會面因故推遲。於 06/06 先行進行去中心化整理、獨立開源 Repo 分離與公開發表，並將正式面談審查留待下一個階段。",
+        "event": "06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續） [v0.2]",
+        "description": "原定與教授之面談盲檢因故推遲。於 06/06 先行進行去中心化整理，將大腦資產（包含四大核心主權技能、手稿與工具鏈，版本 v0.2）移出並獨立為開源 Repo，且於主專案中註冊為 Submodule。",
+        "commit_hash": "N/A"
+    },
+    {
+        "datetime": "2026-06-06 07:30:00",
+        "source": "版本定錨",
+        "event": "主權技能本土化完整釋出與方法論大合流（T260526-HHH01 延續） [v0.2.1]",
+        "description": "於子 Repo 完整釋出四大主權核心技能（skills/）並清理中國用語；將 02 中繼資料規格與 03 關係本體規格合流併入 02 系統規格手冊；重建 NotebookLM 封包，升級大腦與工具控制體系為 v0.2.1 完整合流開源版。",
         "commit_hash": "N/A"
     }
 ]

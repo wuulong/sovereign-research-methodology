@@ -620,7 +620,7 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
 | **12** | `zotero_Kazemi_2024_201` | 2024 | Geomverse: A systematic evaluation of large models for geometric reasoning | **5.2 節** 系統失效臨界點分析 | 本文評估幾何推理能力。大膽猜想：幾何推理極度依賴嚴格的空間約束。這可用於論證為何「GIS 資料準備」需要 QGIS 樣式的硬編碼注入，因為 AI 無法憑空進行複雜的幾何與拓撲推理。 |
 | **13** | `zotero_Mañas_2024_278` | 2024 | Improving automatic vqa evaluation using large language models | **3.2 節** 肉身實踐與真值定錨 | 本文用 LLM 改善視覺問答評估。大膽猜想：可用於論證「主權多模態」實測波形圖/熱分佈圖相對路徑的分析方法，說明如何利用視覺 AI 輔助比對波形差異。 |
 | **14** | `zotero_Jones_1972_632` | 1972 | A statistical interpretation of term specificity and its application in retrieval | **3.1 節** 他者客觀知識海 | 這是 TF-IDF 理論的鼻祖文獻。大膽猜想：用於致敬經典檢索理論，說明不論 AI 技術如何演進，檢索的核心物理統計特徵依然定錨在 1972 年 Jones 的數學公式之上。 |
-| **15** | `zotero_He_2024_650` | 2024 | Memory-Augmented Large Multimodal Model for Long-Term Video Understanding | **3.2 節** 肉身實踐與真值定錨 | 本文探討長影片理解的記憶增強模型。大膽猜想：可用於支援「曾文溪水文模擬資料」的時序分析，說明如何透過時序記憶緩衝，讓大腦理解長達數十年的極端流量變化。 |
+| **15** | `zotero_He_2024_650` | 2024 | Memory-Augmented Large Multimodal Model for Long-Term Video Understanding | **3.2 節** 肉身實踐與真值定錨 | 本文探討長影片理解的記憶增強模型。大膽猜想：可用於支援「曾文溪水文實踐資料」的時序分析，說明如何透過時序記憶緩衝，讓大腦理解長達數十年的極端流量變化。 |
 | **16** | `zotero_Fu_2024_652` | 2024 | Video-MME: The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video | **5.1 節** 元反思定量評估 | 本文是長影片評估基準。大膽猜想：可對照於哈爸流域學中「無人機空拍河流影片分析」的評估，作為無人機水文視覺 Ingestion 的效能 Baseline。 |
 | **17** | `zotero_Li_2023_227` | 2023 | CAMEL: Communicative agents for ”mind” exploration of large language model society | **4.3 節** 實驗室跳躍式知識遺傳 | 本文為多 Agent 溝通的先驅。大膽猜想：可用於論證「研究生大腦、指導教授大腦與 AI Agent」三方在十一表大腦中，如何透過 pure-text JSON DTO 進行無衝突的知識演化合流。 |
 | **18** | `arxiv_Ilkou_2022_2203` | 2022 | Personal Knowledge Graphs: Use Cases in e-learning Platforms | **3.0 章 / 4.0 章** 個人知識圖譜協同合流 | 本文探討個人知識圖譜 (PKG) 在個人知識管理中的應用。大膽猜想：本論文可將其做為「十一表 SQLite 大腦」做為個人主權知識圖譜 PKG 科學定位的理論 Baseline，並用於論證實驗室多人 DTO 共有大腦合流，本質上是多個個人知識圖譜協同合流 (Collaborative PKG Merging) 的物理實踐！ |
@@ -1395,7 +1395,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
   - `[Pending]` 主題: 河流流域 GIS 數據準備與 QGIS 樣式注入 (缺少: 文獻沉澱, 本地實體實證, 手稿產出)
   - `[Pending]` 主題: 多模態 AI 山區水文觀測與現地真值比對 (缺少: 本地實體實證, 手稿產出)
   - `[Pending]` 主題: 個人 AI 賦能與裝備化 Skill 封裝 (缺少: 文獻沉澱, 本地實體實證, 手稿產出)
-  - `[Pending]` 主題: 企業 GenAI 轉型與 CAG vs RAG 知識架構評估 (缺少: 本地實體實證, 手稿產出)
+  - `[Pending]` 主題: 組織級知識庫架構與 CAG vs RAG 知識架構評估 (缺少: 本地實體實證, 手稿產出)
   - `[Pending]` 主題: DeepSeek-R1 與推理時計算思考鏈擴展 (缺少: 本地實體實證, 手稿產出)
   - `[Pending]` 主題: 哈爸 Zotero 聯邦公海文獻緩衝區 (缺少: 文獻沉澱, 本地實體實證, 手稿產出)
 
@@ -1542,9 +1542,9 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 
 ### 2️⃣ 第二代：實踐應用與資料庫大腦雛形 (2026/05/14)
 *   **背景與痛點**：
-    為了將方法論落實於實際的組織與協作場景，大腦在某製造業企業的 AI 輔導專案中展開了實踐。然而，企業內部資料涉及高度商業機密，無法直接對外公開，且多部門協作容易導致 Context 碎片化。
+    為了將方法論落實於實際的組織與協作場景，大腦在組織的 AI 輔導專案中展開了實踐。然而，組織內部資料涉及高度商業機密，無法直接對外公開，且多部門協作容易導致 Context 碎片化。
 *   **核心突破**：
-    引進「去識別化編碼（ID-Prefix）」與「模擬實踐資料（SIM）」的設計，將真實業務解耦，死守資料保密底線。首次在本地建構 SQLite 知識資料庫原型，設計 L1-L4 知識架構，證明了「軟體定義科研方法論」在實際組織中的可執行性。
+    引進「去識別化編碼（ID-Prefix）」與「實踐資料」的設計，將真實業務解耦，死守資料保密底線。首次在本地建構 SQLite 知識資料庫原型，設計  知識架構，證明了「軟體定義科研方法論」在實際組織中的可執行性。
 
 ### 3️⃣ 第三代：10 表聯邦與跨裝置移植性解決 (2026/05/20)
 *   **背景與痛點**：
@@ -1554,7 +1554,7 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 
 ### 4️⃣ 第四代：十一表 Schema 與紅軍 Verdict Lock 戰役 (2026/05/26 - 2026/06/04)
 *   **背景與痛點**：
-    隨著論文主手稿撰寫進入深水區，師生協作面臨了「投機自審」的誠信危機（研究生在自審時極易採取投機態度，僅對少數無關痛癢的文獻進行自審，便聲稱達到 100% 進度）。同時，本地工具鏈在進行 Rebuild 重建測試時遭遇了 Bug，導致部分舊的 SMMCAP 報告資料殘留（Stale 報告問題），造成了不真實的評估指標。這促使大腦將 Schema 升級為十一表，全面引進 `empirical_evidences`（實體舉證與實踐表）以取代過去的模擬資料。
+    隨著論文主手稿撰寫進入深水區，師生協作面臨了「投機自審」的誠信危機（研究生在自審時極易採取投機態度，僅對少數無關痛癢的文獻進行自審，便聲稱達到 100% 進度）。同時，本地工具鏈在進行 Rebuild 重建測試時遭遇了 Bug，導致部分舊的 SMMCAP 報告資料殘留（Stale 報告問題），造成了不真實的評估指標。這促使大腦將 Schema 升級為十一表，全面引進 `empirical_evidences`（實體舉證與實踐表）以取代過去的實踐資料。
 *   **四大核心主權 Skill 的螺旋誕生歷程**：
     為了解決上述寫作與自證的物理屏障，四大主權 Skill 在這場戰役中相繼誕生並完成全域部署：
     1.  **學術研究導航員 (academic-research-navigator)**：在文獻 Ingestion 靠泊與 BFS 拓撲演化圖譜的基礎上，於 `2026/05/28` (Commit `99143cd`) 正式部署文獻關係本體規格與自動勾稽引擎 (`scout_paper_relations.py`)，解決了海量文獻中探勘時的「根系浮空」痛點，強制透過學術重力 $G_a$ 來定錨深度文獻的 Stage 2 消化。
@@ -1582,9 +1582,9 @@ AI 時代的科學發現代理（Agentic Science）[@arxiv_AgenticScience_2025_1
 | 時間戳記 | 紀錄來源 | 演化事件 | 實體歷程與 Why 設計意圖 | 實體指紋 (Git Commit) |
 | :--- | :--- | :--- | :--- | :--- |
 | 2026-05-10 14:00:00 | 計畫起源 | QMEMS 實驗室學術痛點挖掘（T260510-HHH03） | 提出研究生濫用 AI 導致認知掏空的問題。確立 Layer 0-1-2 三層靠泊 Ingestion 流水線、學術重力場 Ga 排序公式以及最初的學者領主宣言草案。 | `N/A` |
-| 2026-05-14 10:30:00 | 企業轉型 | 某製造業企業 AI 實踐與資料庫大腦原型（T260514-HHH01） | 導入 ID-Prefix 標準編碼與模擬實踐資料（SIM）設計以保護企業隱私。首度在 SQLite 中實作大腦資料庫化與 L1-L4 知識分層架構。 | `N/A` |
+| 2026-05-14 10:30:00 | 組織轉型 | 組織知識大腦概念原型與單一資料表實作（T260514-HHH01） | 導入 ID-Prefix 標準編碼與實踐資料設計以保護資料安全。首度在 SQLite 中實作大腦資料庫化與 知識分層架構。 | `N/A` |
 | 2026-05-20 09:15:00 | 移植最佳化 | 10 表聯邦與跨裝置移植性解決（T260520-HHH01） | 建構 paper_scout.py 與 academic-research-navigator。為了平抑不同電腦的環境路徑斷線噩夢，導入 directory_roots 目錄抽象解耦設計，並加入 Duffing 實測物理誤差資料，對位專書第 14 章。 | `N/A` |
-| 2026-05-26 11:00:00 | 自審對抗 | 十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01） | 升級為十一表大腦，建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊資料殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。 | `N/A` |
+| 2026-05-26 11:00:00 | 自審對抗 | 十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01） | 升級為十一表大腦，建立 empirical_evidences 替代舊實踐表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊資料殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。 | `N/A` |
 | 2026-06-05 18:00:00 | 事實修正 | 06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續） | 原定與教授之 face-to-face 盲檢會面因故推遲。於 06/06 先行進行去中心化整理、獨立開源 Repo 分離與公開發表，並將正式面談審查留待下一個階段。 | `N/A` |
 | 2026-06-06 23:59:59 | Git Submodule | 程式碼提交 | 當日完成多項更新： Initial commit；Initialize sovereign-research-methodology repository with assets and symlinks；Fix import and base directory paths for root-level rebuild script；Fix path variables in verify_poc_completeness.py for self-contained repository usage；Update DB with fresh rebuild data, publish maturity & poc reports, and update gitignore；docs(refactor): 重構主 README、厚化各目錄說明書並調整論文手稿結構；docs(refactor): 重構 README、厚化說明書，並新增大腦演化建構歷程自證手稿；docs(refactor): 厚化第四代演進歷程手稿，並升級歷程提煉工具；docs(refactor): 厚化第四代演進歷程，並完整開源釋出四大主權核心技能；sync | `1511345` |
 

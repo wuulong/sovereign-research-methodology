@@ -53,9 +53,9 @@ MOCK_PROJECTS = [
     {
         "project_id": "prj_ai_enablement",
         "project_name": "AI 應用與賦能研究專案",
-        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、企業 GenAI 轉型治理架構，以及 DeepSeek-R1 與推理時計算（Test-Time Compute）最佳化等前沿 AI 研究方法。",
+        "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、組織級知識治理架構，以及 DeepSeek-R1 與推理時計算（Test-Time Compute）最佳化等前沿 AI 研究方法。",
         "search_spec": {
-            "keywords": ["personal AI enablement", "enterprise GenAI", "DeepSeek-R1 reasoning", "CAG vs RAG", "test-time compute"],
+            "keywords": ["personal AI enablement", "organizational knowledge governance", "DeepSeek-R1 reasoning", "CAG vs RAG", "test-time compute"],
             "exclude": ["hardware training", "asics"],
             "min_year": 2024
         },
@@ -132,15 +132,15 @@ MOCK_TOPICS = [
         }
     },
     {
-        "topic_id": "top_enterprise_transformation",
+        "topic_id": "top_organizational_knowledge",
         "project_id": "prj_ai_enablement",
-        "topic_name": "企業 GenAI 轉型與 CAG vs RAG 知識架構評估",
+        "topic_name": "組織級知識庫架構與 CAG vs RAG 知識架構評估",
         "sequence_order": 2,
         "status": "ACTIVE",
         "focus_spec": {
             "focus_variables": ["CAG_retrieval_latency", "RAG_hallucination_rate"],
             "equations": ["Cache_Hit_Efficiency_Metric"],
-            "auto_tags": ["Enterprise-GenAI", "CAG-vs-RAG"]
+            "auto_tags": ["Knowledge-Engineering", "CAG-vs-RAG"]
         }
     },
     {
@@ -241,7 +241,7 @@ MOCK_PAPERS = [
     {
         "paper_id": "zotero_dont_do_rag",
         "cite_key": "CAG2024RAG",
-        "topic_id": "top_enterprise_transformation",
+        "topic_id": "top_organizational_knowledge",
         "title": "不用做 RAG！當快取增強生成 (CAG) 成為知識任務之所需",
         "authors": "Sophia Yang, Tech Research Team",
         "year": 2024,
@@ -249,7 +249,7 @@ MOCK_PAPERS = [
         "bibtex": """@article{CAG2024RAG,
   author = {Yang, Sophia and Research, Tech},
   title = {Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks},
-  journal = {Journal of Enterprise AI Architectures},
+  journal = {Journal of Organizational Knowledge Architectures},
   year = {2024},
   volume = {3},
   pages = {45--58}
@@ -259,12 +259,12 @@ MOCK_PAPERS = [
             "max_context_tokens": 1000000,
             "retrieval_robustness": 98.2
         },
-        "abstract": "本論文探討在大模型長上下文（Context）與 KV Cache 爆發的時代，以快取增強生成 (CAG) 取代複雜 RAG 架構的可行性。CAG 將整個企業或個人的知識庫快取在 LLM 的 Context 中，大幅降低了傳統 RAG 中 chunking、embedding 與 vector search 所產生的誤差與延遲。這為企業 AI 轉型提供了極高可靠性、零檢索摩擦的全新知識治理路徑。",
+        "abstract": "本論文探討在大模型長上下文（Context）與 KV Cache 爆發的時代，以快取增強生成 (CAG) 取代複雜 RAG 架構的可行性。CAG 將整個組織或個人的知識庫快取在 LLM 的 Context 中，大幅降低了傳統 RAG 中 chunking、embedding 與 vector search 所產生的誤差與延遲。這為組織級知識治理與應用提供了極高可靠性、零檢索摩擦的全新知識路徑。",
         "urls": [
             {"type": "arxiv_pdf", "link": "https://arxiv.org/pdf/2412.18000.pdf"},
             {"type": "local_pdf", "link": "file:///Users/wuulong/Zotero/storage/Dont_Do_RAG_2024.pdf"}
         ],
-        "tags": ["CAG-vs-RAG", "Enterprise-GenAI", "Sovereign-AI"]
+        "tags": ["CAG-vs-RAG", "Knowledge-Engineering", "Sovereign-AI"]
     }
 ]
 
@@ -290,7 +290,7 @@ MOCK_EVIDENCES = [
         "evidence_id": "evid_run_2",
         "paper_id": "zotero_dont_do_rag",
         "practice_scenario": {
-            "enterprise_doc_count": 500,
+            "knowledge_doc_count": 500,
             "total_token_size": 850000,
             "query_type": "complex_cross_referencing",
             "cag_kv_cache": True
@@ -430,7 +430,7 @@ def clean_and_rebuild_mock(db_path):
         
         # 2. 寫入 directory_roots (如果 setup_research_db 沒載入則在此補載)
         roots_to_insert = [
-            ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案代碼庫根目錄"}),
+            ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案程式碼庫根目錄"}),
             ("zotero_storage", "STUDENT_LOCAL", "haba", "/Users/wuulong/Zotero/storage/", {"description": "哈爸個人 Zotero 本地文獻 PDF 儲存目錄"}),
             ("lab_nas", "STUDENT_LOCAL", "haba", "/Volumes/VRES_NAS/archive/", {"description": "哈爸個人或實驗室 NAS 伺服器掛載路徑"}),
             ("remote_url", "GLOBAL_WEB", "internet", "", {"description": "網際網路線上遠端 HTTP 資源入口"})

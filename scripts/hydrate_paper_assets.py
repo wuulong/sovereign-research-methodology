@@ -200,8 +200,8 @@ def auto_classify_and_tag_paper(conn, paper_id, title, cite_key):
         ("LLaVA", "AI應用/個人賦能/主權治理", ["Visual Instruction Tuning", "LLaVA", "Multimodal"]),
         ("CAMEL", "AI應用/個人賦能/角色交談", ["Communicative Agents", "CAMEL", "Role-Playing"]),
         ("DeepSeek-R1", "AI應用/推理模型/強化學習", ["DeepSeek-R1", "Reinforcement Learning", "Reasoning"]),
-        ("CAG", "AI應用/企業轉型/CAG快取", ["CAG", "Cache-Augmented Generation", "KV Cache"]),
-        ("RAGAS", "AI應用/企業轉型/RAG評估", ["RAGAS", "Retrieval-Augmented Generation", "Evaluation"]),
+        ("CAG", "AI應用/知識工程/CAG快取", ["CAG", "Cache-Augmented Generation", "KV Cache"]),
+        ("RAGAS", "AI應用/知識工程/RAG評估", ["RAGAS", "Retrieval-Augmented Generation", "Evaluation"]),
         ("Cosmos", "水文河流/多模態觀測/世界模型", ["Cosmos", "World Model", "Physical Simulator"]),
         ("WalkGIS", "水文河流/GIS圖資/現地走讀", ["WalkGIS", "DEM", "River basin"])
     ]
