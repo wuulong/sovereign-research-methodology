@@ -46,6 +46,9 @@
 ### 10. [11] 紅軍自審與答辯日誌：`sovereign_research_11_audit_report.md`
 *   **Why it exists**: 記錄歷次進度會議上，導師（或自審腦分身）拋出的尖銳批判 Feedback，以及學生的物理防禦答辯與 Verdict 軌跡。**這是學術誠信的物理鐵證**。
 
+### 11. [12] 建構歷程與實體自證報告：`sovereign_research_12_evolution_history.md`
+*   **Why it exists**: 如實記錄大腦從無到有螺旋演進的五個關鍵演化里程碑與 Git Commit 物理對合軌跡，是證明整個科研範式「非語意物理自指」的歷史鐵證。
+
 ---
 
 ## 🪐 線上 GitHub 導航

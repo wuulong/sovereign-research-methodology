@@ -31,6 +31,7 @@
 | `scripts/sync_zotero_to_staging.py` | **Why**: 繞過脆弱的線上 API 與 429 Rate Limit，直連 Zotero SQLite，自動解析 8 碼隨機金鑰，一鍵同步 PDF 至 staging。 | `papers`, `paper_urls` |
 | `scripts/scout_zotero_global_landscape.py`| **Why**: 站在四大理論支柱高度，在 staging 公海大腦中模糊檢索匹配文獻，以 SQL UPDATE 一鍵引渡重定向靠泊。 | `papers`, `topics` |
 | `scripts/anchor_manuscript_citations.py` | **Why**: 將主題下文獻與手稿進行物理繫結，並撈取 BibTeX 匯出為完璧 references.bib，確保引文與 SQLite 完全一致。 | `manuscript_citations`, `papers` |
+| `scripts/extract_evolution_history.py` | **Why**: 讀取本地資料庫的 `red_team_logs` 自審答辯軌跡與 Git Submodule Commit logs，去識別化自動提煉大腦螺旋建構歷程，寫回第二章手稿。 | `red_team_logs` |
 
 ---
 

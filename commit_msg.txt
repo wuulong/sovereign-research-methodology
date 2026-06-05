@@ -1,0 +1,7 @@
+docs(refactor): 重構 README、厚化說明書，並新增大腦演化建構歷程自證手稿
+
+- 重構主 README.md：聚焦於「為什麼（Why）」設計理念（MCI、MPM、DTO），並新增資料庫重建與驗證的快速開始指引。
+- 重組 sovereign_research_05_manuscript.md：調整為「方法論先行」，詳細描述驅動資料庫的四大核心蘇格拉底技能，並新增與現有 SOTA 典範的對照比較。
+- 新增 sovereign_research_12_evolution_history.md：詳細描述五個關鍵演化里程碑，去識別化保密處理敏感企業細節，並如實記錄 06/05 審查推遲、06/06 先行整理公開的真實歷史時序。
+- 新增 scripts/extract_evolution_history.py：實現自治的大腦歷史還原與自證工具，自動整合 Git Log 與 SQLite red_team_logs，具備保密名稱過濾器。
+- 於 ToC 以及 manuscripts/、scripts/ 目錄說明書中對合與註冊新檔案。
