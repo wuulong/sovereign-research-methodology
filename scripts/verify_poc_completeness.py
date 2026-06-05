@@ -154,7 +154,7 @@ def check_toolchain_friction(base_dir):
     missing_scripts = []
     
     for filename, desc in scripts_to_check.items():
-        script_path = os.path.join(base_dir, "events", "my_research", "scripts", filename)
+        script_path = os.path.join(base_dir, "scripts", filename)
         if os.path.exists(script_path):
             found_count += 1
             # 每個存在給 12.5 分
@@ -168,7 +168,7 @@ def check_toolchain_friction(base_dir):
         suggestions.append("💚 八大核心支援腳本實體全數就位，工具鏈存在率 100.00%！")
         
     # 可行性編譯與執行檢測：檢查 brain_cli.py 是否可無錯編譯執行
-    brain_cli_path = os.path.join(base_dir, "events", "my_research", "scripts", "brain_cli.py")
+    brain_cli_path = os.path.join(base_dir, "scripts", "brain_cli.py")
     if os.path.exists(brain_cli_path):
         try:
             import subprocess
@@ -196,13 +196,13 @@ def check_self_referentiality(base_dir, ms_code):
     score = 100.0
     suggestions = []
     
-    ms_subdir = os.path.join(base_dir, "events", "my_research", "manuscripts", ms_code)
+    ms_subdir = os.path.join(base_dir, "manuscripts", ms_code)
     if os.path.exists(ms_subdir) and os.path.isdir(ms_subdir):
         apm_path = os.path.join(ms_subdir, f"{ms_code}_06_argument_map.md")
         manuscript_path = os.path.join(ms_subdir, f"{ms_code}_05_manuscript.md")
     else:
-        apm_path = os.path.join(base_dir, "events", "my_research", "manuscripts", f"{ms_code}_06_argument_map.md")
-        manuscript_path = os.path.join(base_dir, "events", "my_research", "manuscripts", f"{ms_code}_05_manuscript.md")
+        apm_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_06_argument_map.md")
+        manuscript_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_05_manuscript.md")
     
     if not os.path.exists(apm_path):
         return 0.0, ["🔴 嚴重錯誤：找不到手稿論點地圖 argument_map.md，無法進行自指自證審計！"]
@@ -233,7 +233,7 @@ def check_self_referentiality(base_dir, ms_code):
         suggestions.append("💚 手稿聯邦無任何 TODO/Draft 標記，內容自洽完整。")
         
     # 3. 論文第 15 章自指自證度 (檢查 manuscript_citations 有無 topic_id = 'top_sovereign_methodology' 的靠泊文獻)
-    db_path = os.path.join(base_dir, "events", "my_research", "data", "Research_Artifacts.db")
+    db_path = os.path.join(base_dir, "data", "Research_Artifacts.db")
     if os.path.exists(db_path):
         try:
             conn = sqlite3.connect(db_path)
@@ -263,8 +263,8 @@ def check_self_referentiality(base_dir, ms_code):
     return score, suggestions
 
 def main():
-    base_dir = "/Users/wuulong/github/bmad-pa"
-    db_path = os.path.join(base_dir, "events", "my_research", "data", "Research_Artifacts.db")
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    db_path = os.path.join(base_dir, "data", "Research_Artifacts.db")
     
     ms_code = "sovereign_research"
     if len(sys.argv) > 1:
@@ -294,11 +294,11 @@ def main():
         verdict = "哈教授評語：致命警告！底層資料庫嚴重毀損，工具鏈癱瘓，手稿與資料庫完全斷線。此狀態下之方法論為空殼泡沫，無任何科學效度，不予通過！"
         
     # 3. 物理寫入報告
-    ms_subdir = os.path.join(base_dir, "events", "my_research", "manuscripts", ms_code)
+    ms_subdir = os.path.join(base_dir, "manuscripts", ms_code)
     if os.path.exists(ms_subdir) and os.path.isdir(ms_subdir):
         report_path = os.path.join(ms_subdir, f"{ms_code}_10_poc_proof_report.md")
     else:
-        report_path = os.path.join(base_dir, "events", "my_research", "manuscripts", f"{ms_code}_10_poc_proof_report.md")
+        report_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_10_poc_proof_report.md")
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     with open(report_path, 'w', encoding='utf-8') as f:
