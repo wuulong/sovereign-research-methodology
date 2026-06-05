@@ -20,7 +20,7 @@ def rebuild_database(db_path, contrib_dir):
     print(f"[*] 啟動一鍵重構主權聯邦資料庫：{db_path}")
     
     # 1. 呼叫 setup_research_db.py 進行全新初始化
-    scripts_dir = os.path.dirname(os.path.abspath(__file__))
+    scripts_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scripts")
     sys.path.append(scripts_dir)
     try:
         import setup_research_db
@@ -100,7 +100,7 @@ def rebuild_database(db_path, contrib_dir):
     print(f"[*] 實驗室「聯邦共有大腦」已成功在本地重建！您可立即開啟 SQL 照妖鏡進行查詢。\n")
 
 if __name__ == "__main__":
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     default_db = os.path.join(base_dir, "data", "Research_Artifacts.db")
     default_contrib = os.path.join(base_dir, "data", "contributions")
 
