@@ -4,56 +4,55 @@
 
 本專案是《個人 AI 賦能》專書第 15 章的開源實體示範 Repo。我們在此開源了「主權科研大腦（Sovereign Research Brain）」的完整方法論規格書、論文手稿、NotebookLM 整合封包以及自審/自證工具鏈。
 
-本專案最核心的哲學在於**「自指自證（Self-Referential Proof）」**：這篇論文本身，就是利用本 Repo 中的十一表 SQLite 資料庫與主權工具鏈，經過多輪紅軍自審、答辯與「現地真值對合」後，物理生成並編譯出來的。
+本專案最核心的學術價值與哲學在於**「自指自證（Self-Referential Proof）」**：這篇論文本身，就是利用本 Repo 中的十一表 SQLite 資料庫與主權工具鏈，經過多輪紅軍自審、答辯與「現地真值對合」後，物理生成並編譯出來的。
 
 ---
 
-## 🧬 核心解決痛點 (The Epistemic Defense)
+## 🧬 為什麼需要這套大腦指標與架構？(The Architecture Why)
 
-在傳統人機協作研究中，研究生與學者常面臨以下六大痛點：
-1. **認知空洞化**：無腦複製貼上 AI 生成的文字，失去思維主權。
-2. **幽靈引文警告**：LLM 幻想出來的非真實文獻污染 Overleaf/LaTeX。
-3. **未讀先引（根系浮空）**：引用了自己根本沒讀懂、沒消化過的公海文獻。
-4. **師徒信任危機**：指導教授無法在短時間內驗證學生大腦的「消化血統」與論文的真實度。
-5. **Git 二進位衝突**：多名研究人員共同協作 SQLite 資料庫時，二進位檔案造成嚴重的 merge 衝突。
-6. **環境移植障礙**：絕對路徑寫死，導致研究大腦換了電腦就無法 rebuild。
+當前人機協作科研大多面臨「AI 幻覺無法校準」與「學生思維空洞化」的致命危機。本系統從物理層面設計了硬性的代數與資料庫約束，以捍衛思維主權：
 
-本系統透過 **「十一表 SQLite 資料庫 + 純文字 JSON 貢獻包 (DTO) + 剛性自審指標 (MCI, MPM)」**，徹底解鎖上述痛點。
+### 1. 為什麼需要「手稿成熟與可信度指數 (MCI)」？
+*   **痛點**：研究生在使用 AI 協作自審時，極易採取「投機自審」——只針對 1 篇無關緊要的文獻進行自審，便宣告 100% 通過。
+*   **MCI 的救贖**：
+    我們在 [scripts/verify_manuscript_maturity.py](scripts/README.md) 中設計了剛性算分指標：
+    $$\text{MCI} = \text{文件完備分} \times 0.3 + \text{大腦定錨分} \times 0.7$$
+    其中大腦定錨分被剛性設定為 **「60% 自審文獻覆蓋率 + 40% 自審通過率」**。如果小明只自審了 1 篇論文，覆蓋率會極低，進而觸發剛性扣分限制，MCI 指標會跳出 `CAUTION` 警告。**這物理逼迫學生必須老老實實完成全局文獻自審與 Socratic 答辯**。
+
+### 2. 為什麼需要「元自證成熟度指數 (MPM)」與「物理摩擦」？
+*   **痛點**：傳統學術評估流於「語意交鋒」，甚至使用 AI 評估 AI（如 RAGAS），容易產生自欺欺人的「自指幻覺共謀」。
+*   **MPM 的救贖**：
+    我們在 [scripts/verify_poc_completeness.py](scripts/README.md) 中打破了語意閉環，強行引入「非語意物理約束」——**「現地實測偏離度 (friction_percentage)」**。
+    在 MPM 指數（40% 資料庫完整性 + 30% 工具鏈高可用 + 30% 手稿自指自證度）中，剛性要求手稿論點地圖中**必須包含資料庫實體 DTO JSON 的純文字指紋**。這向學術評審團物理證明了「這篇論文的論點與資料庫完全對合，是由這套系統物理長出來的」。
+
+### 3. 為什麼需要「純文字 JSON 貢獻包 (DTO)」與「軟連結入庫」？
+*   **痛點**：多名研究人員共同開發同一個研究大腦時，SQLite 二進位檔案在 push Git 時必然會發生無法自動 merge 的嚴重衝突；且版權 PDF 檔案因容量與隱私無法進入 Git 庫。
+*   **DTO 與軟連結的救贖**：
+    我們利用純文字的 [contributions/contrib_all.json](data/README.md) 信封包，實現了個人私有心流與聯邦大腦的解耦，完美抹平了 Git 二進位衝突。
+    同時，我們在 `data/` 下建立了指向外部實體大檔案的相對軟連結（Symbolic Links），並**直接 add 提交軟連結入庫**。這使得任何人在 clone 本 repo 後，軟連結能自動無摩擦指向本地外部 PDF，兼顧了「大檔案隱私隔離」與「克隆即對齊」的高可用性。
 
 ---
 
-## 📂 專案物理結構 (Directory Layout)
+## 📂 專案物理結構 (Directory Layout & Navigation)
 
-```
-sovereign-research-methodology/
-├── README.md                          # 本引導文件
-├── schema.sql                         # 十一表 SQLite 資料庫結構定義
-├── rebuild_lab_brain.py               # 一鍵重構大腦與 DTO 匯入腳本
-├── methodology/                       # 主權科研方法論規格說明書 (01-04)
-├── manuscripts/                       # 手稿主檔與 11 大自證評估報告 (01-11)
-│   ├── sovereign_research_05_manuscript.md   # 論文萬字主手稿
-│   ├── sovereign_research_06_argument_map.md # 論點地圖 (APM)
-│   └── sovereign_research_11_audit_report.md # 紅軍自審與答辯日誌
-├── nblm_notes/                        # NotebookLM 4 大綜合封包與 15 大互動 Prompt
-├── scripts/                           # 大腦運轉、爬蟲、自審與驗證核心腳本庫
-│   ├── brain_cli.py                   # 大腦互動 CLI 介面
-│   ├── audit_brain_compliance.py      # 物理盲檢與合規審計
-│   ├── verify_argument_provenance.py  # 論點地圖驗證
-│   ├── verify_manuscript_maturity.py  # 手稿成熟度與可信度指數 (MCI) 驗證
-│   └── verify_poc_completeness.py     # 現地真值 (POC) 完整度驗證
-└── data/
-    ├── Research_Artifacts.db          # 實體 SQLite 資料庫（含完整自證與答辯日誌）
-    ├── downloaded_papers              # [相對軟連結] 指向外部實體 PDF 目錄
-    ├── pdfs                           # [相對軟連結] 指向外部預萃取 Markdown 目錄
-    └── contributions/
-        └── contrib_all.json           # 純文字 DTO 聯邦貢獻包
-```
+點選以下目錄超連結，可直接查閱各分區的專屬詳細說明書（包含 Why 設計意圖）：
+
+*   📁 **[methodology/](methodology/README.md) (主權科研方法論規格書分區)**
+    - 存放系統需求規格書、元資料 schema 設計規範以及關係本體定義檔。構成大腦的「憲法與骨架」，防範 AI 隨意更改資料結構。
+*   📁 **[manuscripts/](manuscripts/README.md) (手稿主檔與自證報告分區)**
+    - 存放論文主手稿 [sovereign_research_05_manuscript.md](manuscripts/sovereign_research/sovereign_research_05_manuscript.md)、邏輯辯證地圖 APM 06、成熟度報告 MCI 09 以及元自證報告 MPM 10。將手稿產製物理級解構，消滅「未讀先引」。
+*   📁 **[nblm_notes/](nblm_notes/README.md) (NotebookLM 4 大綜合封包與 15 大 Prompt)**
+    - 存放高度整合、物理定錨的 Bundle 檔案。避開 Context 碎片化對 LLM 造成的語意盲區，提供 15 大大師級 Prompt。
+*   📁 **[scripts/](scripts/README.md) (大腦運轉、自審與驗證核心腳本庫)**
+    - 存放驅動大腦 SQLite 運轉與 MCI、MPM 指標計量的 Python 自治工具鏈。
+*   📁 **[data/](data/README.md) (實體資料庫與 DTO 貢獻信封)**
+    - 存放實體 SQLite 資料庫 `Research_Artifacts.db` 與純文字 DTO json 貢獻信封。
 
 ---
 
 ## 🚀 快速開始：一鍵重構與自指自審
 
-### 1. 克隆專案並建立大檔案連結
+### 1. 克隆專案並繼承軟連結
 ```bash
 git clone --recurse-submodules https://github.com/wuulong/sovereign-research-methodology.git
 cd sovereign-research-methodology
@@ -89,26 +88,10 @@ python scripts/verify_argument_provenance.py
 
 # 計算手稿成熟與可信度指數 (MCI)
 python scripts/verify_manuscript_maturity.py
+
+# 計算元自證成熟度 (MPM)
+python scripts/verify_poc_completeness.py
 ```
-
----
-
-## 🧠 NotebookLM 探索與發想大師指南
-
-為了方便您在 [NotebookLM](https://notebooklm.google/) 中剖析這套方法論，我們已在 `nblm_notes/` 底下打包了 4 大綜合封包：
-1. **01_SOVEREIGN_METHODOLOGY.md**：系統手冊與需求規格骨架。
-2. **02_SOVEREIGN_MANUSCRIPT_TOC_MAP.md**：論文主稿大綱與論點地圖。
-3. **03_SOVEREIGN_RESEARCH_GROUNDING.md**：文獻解構集與閱讀協議。
-4. **04_SOVEREIGN_QUALITY_AUDIT.md**：成熟度評估、自審報告與自證實踐。
-
-### 💬 頂級主題發想 Prompt
-在您的 NotebookLM 建立一個名為 **「Sovereign Research Brain」** 的筆記本，拖曳上傳這 4 個封包檔案，並嘗試輸入以下 Prompt 與大腦共振：
-*   > **六大痛點與關聯式資料庫的救贖**
-    > 「請分析上傳檔案中的六大傳統學術/人機協作痛點。底層 SQLite 資料庫的十一張表（特別是 `empirical_evidences`、`paper_relations` 與 `red_team_logs`）在架構設計上是如何精準對應並解鎖這些痛點的？請提供一份清晰的技術映射分析。」
-*   > **根系浮空懲罰與 BFS 演算法邏輯**
-    > 「在 `academic-research-navigator` 技能的運作邏輯中，『根系浮空懲罰』的判定規則是什麼？它是如何利用底層 `paper_relations` 的 `GROUNDED_ON` 有向邊與廣度優先搜尋（BFS）二層探針演算法，來對未消化的經典文獻進行剛性扣分，從而徹底消滅『未讀先引』的學術投機？」
-
-*(更多 Prompt 請詳閱 [nblm_notes/README.md](nblm_notes/README.md))*
 
 ---
 
