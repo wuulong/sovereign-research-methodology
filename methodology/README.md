@@ -12,7 +12,7 @@
 
 ---
 
-## 📂 3 大方法論規格檔矩陣 (The Specification Matrix)
+## 📂 4 大方法論規格檔矩陣 (The Specification Matrix)
 
 ### 1. [01] 系統需求與目標：`methodology_01_requirements.md`
 *   **Why it exists**: 明確宣示主權大腦的設計目標，界定「思維主權邊界」與「防範認知空洞化」的頂層需求。
@@ -26,6 +26,9 @@
 
 ### 3. [03] 學術手稿建構師與 11 大 SRCC 心流命令指南：`methodology_03_academic_paper_builder_skill.md`
 *   **Why it exists**: 詳細定義 `academic-paper-builder` 技能的角色定位，並提供 11 大 SRCC 心流命令的剛性規格、驅動腳本與 SOP 協同運作流程。
+
+### 4. [04] 主權大腦實體探勘命令列工具使用手冊：`methodology_04_brain_cli_manual.md`
+*   **Why it exists**: 詳細介紹 [brain_cli.py](file:///Users/wuulong/github/bmad-pa/events/my_research/sovereign-research-methodology/scripts/brain_cli.py) 的命令列參數、各看板的使用情境，以及引用樹與 10 大因子通讀的實戰範例。
 
 ---
 

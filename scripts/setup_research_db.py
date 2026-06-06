@@ -116,6 +116,37 @@ TOPICS_SEED = [
         "status": "ACTIVE",
         "focus_spec": {"focus_variables": ["sync_friction", "ingestion_volume"], "equations": [], "auto_tags": ["Zotero-Sync"]},
         "meta_data": "Zotero 原始同步文獻的公海收容所，用於動態靠泊重定向。"
+    },
+    # prj_ai_enablement 新增主題
+    {
+        "topic_id": "top_sovereign_methodology",
+        "project_id": "prj_ai_enablement",
+        "topic_name": "主權 AI 協作研究方法論與大腦 DTO 對合",
+        "sequence_order": 4,
+        "status": "ACTIVE",
+        "focus_spec": {"focus_variables": ["MCI_index", "SMMCAP_compliance"], "equations": ["MCI_formula"], "auto_tags": ["Sovereign-Research"]},
+        "meta_data": "本方法論的核心論文寫作主戰場。"
+    }
+]
+
+MANUSCRIPTS_SEED = [
+    {
+        "manuscript_id": "ms_conf_haba_2026",
+        "topic_id": "top_sovereign_methodology",
+        "title": "基於書-DB-遊記三位一體之台灣山區河流流域 AI 探索 PoC 實踐",
+        "cite_key": "Haba2026Conf",
+        "manuscript_type": "Conference",
+        "evolution_stage": "Published",
+        "previous_manuscript_id": None
+    },
+    {
+        "manuscript_id": "ms_sovereign_research_2026",
+        "topic_id": "top_sovereign_methodology",
+        "title": "AI 時代的學術革命：基於本地主權大腦、品位裁決與遞迴重構的人機協作研究方法論",
+        "cite_key": "ms_sovereign_research_2026",
+        "manuscript_type": "Journal",
+        "evolution_stage": "Writing",
+        "previous_manuscript_id": "ms_conf_haba_2026"
     }
 ]
 
@@ -185,6 +216,22 @@ def setup_db():
             json.dumps(t["focus_spec"], ensure_ascii=False),
             t["status"],
             json.dumps({"stage_notes": "哈爸專屬專案分期里程碑"}, ensure_ascii=False)
+        ))
+        
+    print("🚀 正在預先寫入哈爸手稿演化鏈種子資料...")
+    for m in MANUSCRIPTS_SEED:
+        cursor.execute("""
+        INSERT INTO my_manuscripts (manuscript_id, topic_id, title, cite_key, manuscript_type, evolution_stage, previous_manuscript_id, meta_data)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+        """, (
+            m["manuscript_id"],
+            m["topic_id"],
+            m["title"],
+            m["cite_key"],
+            m["manuscript_type"],
+            m["evolution_stage"],
+            m["previous_manuscript_id"],
+            json.dumps({"owner": "haba", "overleaf_url": "https://overleaf.com/project/ms_sovereign_2026"}, ensure_ascii=False)
         ))
         
     conn.commit()
