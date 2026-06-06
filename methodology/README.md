@@ -12,7 +12,7 @@
 
 ---
 
-## 📂 2 大方法論規格檔矩陣 (The Specification Matrix)
+## 📂 3 大方法論規格檔矩陣 (The Specification Matrix)
 
 ### 1. [01] 系統需求與目標：`methodology_01_requirements.md`
 *   **Why it exists**: 明確宣示主權大腦的設計目標，界定「思維主權邊界」與「防範認知空洞化」的頂層需求。
@@ -23,6 +23,9 @@
     2. **十一表中繼資料 Schema 規格**：剛性定義 `meta_data` 的 JSON 規格，是自主品質治理的底層鐵幕。
     3. **文獻關聯本體規格**：定義 `paper_relations` 的八大關係，是 BFS 算分與判定理論根系浮空的代數基礎。
     4. **實戰心流與物理摩擦**：記錄手稿誕生實戰生命週期與物理偏離度計量。
+
+### 3. [03] 學術手稿建構師與 11 大 SRCC 心流命令指南：`methodology_03_academic_paper_builder_skill.md`
+*   **Why it exists**: 詳細定義 `academic-paper-builder` 技能的角色定位，並提供 11 大 SRCC 心流命令的剛性規格、驅動腳本與 SOP 協同運作流程。
 
 ---
 
