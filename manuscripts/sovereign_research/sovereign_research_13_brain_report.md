@@ -1,5 +1,5 @@
 # 🧠 主權手稿全景探勘與大腦合龍審計報告 (Brain Report: ms_sovereign_research_2026)
-*評估時間戳記：`2026-06-06 19:06:36`* | *定錨手稿編號：`ms_sovereign_research_2026`*
+*評估時間戳記：`2026-06-06 19:31:18`* | *定錨手稿編號：`ms_sovereign_research_2026`*
 
 > [!IMPORTANT]
 > 本報告由主權大腦實體探勘工具自動生成。它將 SQLite 資料庫中所有與本手稿相關的「文獻定錨」、「十大學術因子」、「紅軍自審答辯日誌」以及「現地實踐真值」進行了全量對合匯出，旨在消滅資料庫檢索門檻，提供 100% 剛性 Grounding 的無死角學術體檢。
@@ -10,104 +10,104 @@
 - **引用鍵 (Cite Key)**: `ms_sovereign_research_2026`
 - **手稿類型 (Type)**: `Journal`
 - **演化階段 (Stage)**: `Writing`
-- **前代手稿 ID (Previous ID)**: `ms_conf_haba_2026`
+- **前代手稿 ID (Previous ID)**: `None`
 
 ## 🗺️ 2. 論點與引文地基對合看板 (Citations Grounding Ledger)
 本節列出本手稿在資料庫中物理定錨的所有引用文獻及其引用脈絡。
 
-| 序號 | 引用鍵 (Cite Key) | 大腦主鍵 (Paper ID) | 論文標題 (Title) | 消化狀態 (Stage) | 引用脈絡與關鍵說明 (Citation Context) |
-| :---: | :--- | :--- | :--- | :---: | :--- |
-| 1 | `arxiv_AgenticScience_2025_14111` | `arxiv_meta_2508.14111` | *From AI for Science to Agentic Science: ...* | 🟢 Stage 2 | 【主張】【核心主張 11】：相較於現有 SOTA 自主科學發現代理（如 STORM、GPT-Researcher、FutureHouse ChemCrow），本方法論實施的「主權與 Verdict Lock 結合現地物理誤差強對合」架構，是真實戰壕研究中保障大腦思維主權的唯一有效典範。<br>- 現有 SOTA 架構*：現有的 AI 代理科學工具均朝向「無人化自主發現」演進，人類完全被排除在生成完整鏈結之外（完全委派），這引發嚴重的認識警覺崩塌。<br>- 本論文重構*：我們對這種「無人化代理」發動了學術批判。我們論證：人機協作的終極目的，絕非消滅人類的思考，而是「以 AI 淬煉人類的品位與思考」。我們的方法論不追求無腦全自動，而是將 AI 定位為高精百官，死守人類君王的 Verdict Lock。透過將論點地圖與本地實測資料進行 Stage 2 物理對合，在卸載低階認知負荷的同時，將人類的學術品位與主體性推向了最高巔峰。<br>- <br>  ## 🗺️ 第六章：實驗室治理與集體知識遺傳典範<br>  ### 📌 6.1 「哈教授」的 30 秒 SQL 照妖鏡四大檢核 |
-| 2 | `arxiv_Aiersilan_2026_2601` | `arxiv_meta_2601.02410` | *The Vibe-Check Protocol: Quantifying Cog...* | 🟢 Stage 2 | 🎯 核心問題: 當 'Vibe Coding'（開發者僅用自然語言與 AI 代理協作而不直接碰代碼）成為編程教育與開發主流時，這究竟是培養了高階架構師，還是僅僅創造了表面能力的虛假繁榮（Illusion of Competence），實質上造成了嚴重的認知卸載與技能衰退？<br>🏆 獨特貢獻: 首創將 Vibe Coding 的認知代價予以數學公式化（$M_{CSR}, M_{HT}, E_{gap}$），為教育者與軟體工程經理提供了一個量化 Break-Even Point（效率增益 vs 技能衰退）的科學決策工具。<br>⚖️ 品位評判: Verdict PASS！Karpathy 吹捧的 Vibe Coding 終於有了清醒的數學解藥。特別是 Explainability Gap ($E_{gap}$) 的信息熵公式，以極度硬核的數學結構揭示了『代碼跑得通不等於你懂』的現實... |
-| 3 | `arxiv_Ardito_2023_2312` | `arxiv_meta_2312.05241` | *Contra generative AI detection in higher...* | 🟢 Stage 2 | 🎯 核心問題: 在生成式 AI 鋪天蓋地的時代，高等教育評估採用「AI 偵測器 (AI Detection Tools)」來維護學術誠信是否可行？它在技術、倫理與教學法上面臨哪些根本性的缺陷與挑戰？<br>🏆 獨特貢獻: 系統性解構了 AI 偵測器在技術與倫理上的不可行性，並以數學教育中「計算機引入」的成功轉型為例，為高等教育政策提供了一套從「事後防堵防禦」轉向「融入 AI 共創、強調人際互動與真實評估」的建設性轉型指引。<br>⚖️ 品位評判: Verdict PASS！Cesare Giulio Ardito 教授極具洞察力地指出了 AI 偵測器的「卡夫卡式審判（The Trial）」倫理荒謬性。這強烈 Grounding 了我們在「主權大腦」中拋棄 AI 自動打分、死守「十一表... |
-| 4 | `arxiv_Aslan_2026_2603` | `arxiv_meta_2603.26296` | *Adaptation and Validation of the Turkish...* | 🟢 Stage 2 | 【主張】【核心主張 4】：劃定嚴格的「思維主權邊界」，並以「Socratic 自審頻率 ($F_s$)」指標與 Test-Time Compute 量化主權防禦。<br>- 前人理論*：Aslan 等人量化了人對 LLM 的依賴邊界；Snell 等人 (2024) 則證明在推理測試時投入額外運算（Test-Time Compute）最佳化，其效果遠勝盲目擴大模型參數。<br>- 本論文重構*：我們提出**「Socratic 自審頻率 ($F_s$)」**。我們論證，自審答辯本質上就是一種 Test-Time Compute 的物理展現，透過在寫作自審階段注入高密度推理 Token 進行反覆辯論，能使論文品位質變。同時，我們藉由十一表 SQLite 的盲檢（Blind Audit）完整性約束，即是發揮關聯式邏輯「硬性裁剪」AI 語意幻覺的物理驗證引擎，確保認知主權不崩塌。<br>- <br>  ### 📌 3.4 重新定義 AI 時代的「原創性」：人類的「品位選擇與除錯判定」 |
-| 5 | `arxiv_Chukwuere_2024_2403` | `arxiv_meta_2403.13487` | *The future of generative AI chatbots in ...* | 🟢 Stage 2 | 【主張】【核心主張 10】：本方法論提出「從語意檢測退後到物理盲檢」的新教育評估典範，重建了指導教授與研究生之間破裂的學術信任。<br>- 現有 SOTA 缺點*：現有的 AI 寫作工具完全忽略了「指導教授與實驗室治理」的現實痛點，加劇了學生敷衍交差與教授信任破裂的全球教育學危機。<br>- 本論文重構*：我們提出全新的學術治理防線。我們論證：導師不應指望用軟體去檢測學生論文是否由 AI 生成，而應在 30 秒內直接下 SQL 盲檢（SQL Audit）學生十一表大腦中的實體軌跡──包括 Ingestion 採集任務血統、現地實測物理誤差 `friction_percentage`，以及在紅軍自審答辯日誌 `red_team_logs` 中的 Verdict PASS 防禦紀錄，直接重構師徒間的科研信任。<br>- <br>  ### 📌 6.2 去中心化聯邦 DTO 重建：以純文字 JSON 消滅資料庫 Git 衝突 |
-| 6 | `arxiv_Denkin_2024_2405` | `arxiv_meta_2405.18889` | *On Perception of Prevalence of Cheating ...* | 🟢 Stage 2 | 【主張】【核心主張 3】：解構採用「野性實踐先行 ➔ 論文寫作 PoC 自證 ➔ 理論回溯」的工序合理性，證明「先實踐、後論證」非主流建構式行動研究的合理性。<br>- 傳統科學流程*：強調「先進行文獻調查，再提出假設並驗證」的線性學院工序。<br>- 本論文重構*：我們大膽打破此陳規。我們論證：在快速變革的 AI 時代，這種「先實踐、後論證」非主流建構式行動研究，才是避免學術黑話與語意空轉的有效途徑。以肉身實踐（兩次分享、兩週蛻變）所淬煉出來的方法論，其合理性已在當場的實務操作中完成驗證。<br>- <br>  ### 📌 2.3 本地紅軍自審防線：思維主權防禦的剛性必要 |
-| 7 | `arxiv_Ilkou_2022_2203` | `arxiv_meta_2203.08507` | *Personal Knowledge Graphs: Use Cases in ...* | 🟢 Stage 2 | 【主張】【核心主張 7】：以「個人知識圖譜 (Personal Knowledge Graph, PKG)」與十一表大腦作為實體架構，能有效解決向量資料庫的「語意漂移 (Semantic Drift)」缺陷。<br>- 現有 SOTA 缺點*：現有的 AI 科研助理僅利用向量資料庫進行暫時性的語意相似度檢索（平面式 RAG），沒有任何實體資料庫結構定義，無法累積長期時序演化，使得研究資產退化為「一次性語意孤島」。<br>- 本論文重構*：我們設計 SQLite 十一表實體「主權大腦」數位孿生架構。在推理模型世代，我們的方法論不再是教 AI 怎麼寫字，而是藉由結構化 DTO 與 Verdict Lock 導引並合流其強大的推理鏈。本設計強行將「他者客觀文獻 (papers)」、「肉身實踐 (empirical_evidences)」與「手稿有向演化鏈 (my_manuscripts)」物理繫結，保證了研究者的知識資產具備 100% 跨電腦移植性，且每一次與 AI 激盪的戰役軌跡皆能按時間向量進行時序演化。<br>- <br>  ## 🗺️ 第五章：橫向對抗與原創防禦：與 SOTA 開放專案及學術文獻之對比論證<br>  ### 📌 5.1 SOTA 研究與開源專案地圖：我們在哪裡？<br>---<br>【主張】【核心主張 8】：以「純文字 JSON 貢獻包」做為去中心化 DTO 載體，消滅了資料庫 Git 合併衝突，實現了實驗室共有大腦的「跳躍式知識遺傳」傳承。<br>- 現有 SOTA 缺點*：目前的 AI 寫作工具皆為「單兵、封完整鏈結境下的玩具」，完全無法應對多人協作時的 Git 資料庫二進位衝突、以及學長姐畢業後科研資產與 Skills 流失的傳承痛點。<br>- 本論文重構*：我們將其解構為「協同個人知識圖譜的協同合流」實踐。我們實作了 `export_contributions.py`，將學生的個人主權 PKG 導出為純文字 JSON DTO，徹底消滅了 Git 合併衝突；當學弟妹加入實驗室時，只需執行 `rebuild_lab_brain.py` 一鍵重建，新進人員瞬間繼承歷代學長姐被紅軍質問並答辯Verdict PASS的戰役軌跡，實現「跳躍式知識遺傳」與高頻演化。<br>- <br>  ## 🗺️ 第七章：遞迴自指驗證：以本方法論撰寫本論文之優劣實測與元反思<br>  ### 📌 7.3 專書大一統合流與《個人 AI 賦能》第 15 章的合流實踐<br>---<br>【主張】【核心主張 12】：本論文最無懈可擊的科學與工程佐證，正是這篇論文被撰寫出來的完整「實體歷程與大腦資料庫物理匯出」，這構成了 100% 行解合一的「終極自指自證真值」，雙向螺旋回寫厚化專書第 15 章，達成學術與工程演化的完美完整鏈結。<br>- 傳統寫作典範*：方法論論文僅進行簡陋的抽象文字描述，其背後的研究歷程與自審答辯過程完全隱藏在黑箱中，無法重現，極易誘發學術空洞黑話。<br>- 本論文自指重構*：本論文最無懈可擊的「物理證據」，就是整個寫作歷程沉澱下來的十一表大腦 SQLite 資料庫 (`Research_Artifacts.db`)。任何人皆可下載我們開源的 SQL DUMP 檔案，一鍵 `rebuild` 重現這 7 篇引文的定錨、`empirical_evidences` 的實測物理誤差，以及紅軍 Verdict PASS 的全部自審答辯軌跡。書本方法引導論文，論文歷程實體厚化專書，達成了學術與工程上前所未有的「雙向螺旋演化與終極自指完整鏈結」！<br>- <br>  ## 🗺️ 第八章：未來演化與迭代藍圖：基於當前實證結果之下一步計畫<br>  ### 📌 8.2 Socratic 面試與紅軍對審的「動態 Prompt 偏置」最佳化 |
-| 8 | `arxiv_Kim_2026_2602` | `arxiv_meta_2602.21595` | *SPOC: Safety-Aware Planning Under Partia...* | 🟢 Stage 2 | 🎯 核心問題: 在不完全觀測（Partial Observability）與物理邊界約束的複雜不確定環境中，如何保障自主系統規劃的軌跡絕對不侵入危險邊界？<br>🏆 獨特貢獻: 在數學上實現了部分觀測 POMDP 框架下，100% 保障實體物理安全約束的 CBF 定軌導航演算法。<br>⚖️ 品位評判: 本質相通！這就是哈爸大腦『MCI / MPM 看板與 SQLite 照妖鏡』在自主導航領域的完美實踐。我們利用十一表 SQLite 剛性 Schema 來當作 CBF，實施外鍵錯誤清零與 Verdict Lock 阻斷，正是 SPOC 精神... |
-| 9 | `arxiv_Li_2025_2508` | `arxiv_meta_2508.07606` | *In-situ Value-aligned Human-Robot Intera...* | 🟢 Stage 2 | 🎯 核心問題: 在高度動態且具備物理邊界約束的真實人機互動 (HRI) 中，如何確保 AI 與人類的意圖、現地真值 (Ground Truth) 剛性價值對齊？<br>🏆 獨特貢獻: 成功將高層語意對齊與底層實體物理空間約束進行數學融合，提出 In-situ 物理現地真值對合演算法。<br>⚖️ 品位評判: 極具啟發！本文是哈爸大腦『物理摩擦 (friction_percentage)』概念的硬核學術對應。這證明了思維主權不能建構在虛浮的語意之上，而必須透過 SQLite 實體資料庫的外鍵、對應關係進行『現地真值校準』，拉起物理防線！ |
-| 10 | `arxiv_Maynard_2026_2601` | `arxiv_meta_2601.07085` | *The AI Cognitive Trojan Horse: How Large...* | 🟢 Stage 2 | 【主張】【核心主張 1】：AI 生成文字雖然流暢，但極易降低大腦的認識警覺度 (Epistemic Vigilance)，產生認知的「特洛伊木馬效應」與思考空洞化。<br>- 前人理論*：Maynard 指出 LLMs 的高度流暢性會在神經層面麻痺大腦審查，誘發認識警覺度塌方；Tamura 等人（2026）則通過雙盲對照實驗定量證實，被試在面對 LLM 道德說服時的觀點偏離率高達 65%。<br>- 本論文重構*：我們完全繼承其警示，但更進一步指出**「純粹語意環境無法自我覺醒」**。我們論證，為了打破特洛伊木馬的麻痺效應，人類大腦必須在協作工具鏈中強制加入「非語意」的硬性物理約束（如 SQLite 資料庫定錨與實測誤差百分比），迫使研究者強行喚醒其認識警覺。 |
-| 11 | `arxiv_Tamura_2026_2604` | `arxiv_meta_2604.22356` | *Large Language Model Counterarguments in...* | 🟢 Stage 2 | 【主張】【核心主張 1】：AI 生成文字雖然流暢，但極易降低大腦的認識警覺度 (Epistemic Vigilance)，產生認知的「特洛伊木馬效應」與思考空洞化。<br>- 前人理論*：Maynard 指出 LLMs 的高度流暢性會在神經層面麻痺大腦審查，誘發認識警覺度塌方；Tamura 等人（2026）則通過雙盲對照實驗定量證實，被試在面對 LLM 道德說服時的觀點偏離率高達 65%。<br>- 本論文重構*：我們完全繼承其警示，但更進一步指出**「純粹語意環境無法自我覺醒」**。我們論證，為了打破特洛伊木馬的麻痺效應，人類大腦必須在協作工具鏈中強制加入「非語意」的硬性物理約束（如 SQLite 資料庫定錨與實測誤差百分比），迫使研究者強行喚醒其認識警覺。 |
-| 12 | `arxiv_Yu_2026_2605` | `arxiv_meta_2605.23177` | *Cognitive offloading and the speedup ill...* | 🟢 Stage 2 | 【主張】【核心主張 2】：AI 雖然縮短了初期的程式碼與文字生成時間，但後續的「幻覺除錯債」呈非線性暴增，實質產生假性加速。<br>- 前人理論*：Yu 等人透過大規模人類被試實驗證實，AI 輔助組的速度帳面提升了 40%，但論點的 Grounding 漏洞率飆升了 300%，且研究人員普遍陷入過度自信的認知盲區。<br>- 本論文重構*：我們將此定義為**「科學負債 (Scientific Debt)」**。單純依賴 AI 進行瀑布式寫作必將面臨負債崩塌；唯有實施「V0.1 猜想 ➔ 自審對抗 ➔ 遞迴重構」的螺旋共演工序，將除錯與防禦化整為零併入每次對話，才能將「假性提速」轉化為「實質科學演化」。<br>- <br>  ## 🗺️ 第二章：逆向演進與主權自律：建構歷程與反饋收斂的合理性解構<br>  ### 📌 2.1 逆向建構的工序合理性：從現場實踐到理論回溯 |
-| 13 | `arxiv_Zeng_2026_2604` | `arxiv_meta_2604.21073` | *Generative Discovery of Magnetic Insulat...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 14 | `ms_sovereign_research_2026` | `ms_sovereign_research_2026` | *基於去中心化聯邦大腦與品位裁決之主權 AI 協作研究方法論* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 15 | `zotero_Abdin_2024_68` | `zotero_68` | *Phi-3 Technical Report: A Highly Capable...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 16 | `zotero_Alayrac_2022_651` | `zotero_651` | *Flamingo: a Visual Language Model for Fe...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 17 | `zotero_Bender_2021_625` | `zotero_625` | *On the dangers of stochastic parrots: Ca...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 18 | `zotero_Besta_2025_682` | `zotero_682` | *Reasoning Language Models: A Blueprint* | 🟢 Stage 2 | 【主張】【核心主張 6】：人機協作的物理本質是「君王與百官」的共生關係，人類手握最高否決權與合併鎖 (Verdict Lock) 以防範 AI 語意掏空。<br>- 傳統 AI 定位*：搜尋助手或寫作外掛。<br>- 本論文重構*：我們將 AI 重新解構為**「Socratic 智囊（討論諮詢）」**與**「實踐腳爪（高精執行殼層）」**。我們在工序中實施「君王與百官」架構：低階行政交給百官（AI 寫 SQL、讀 Zotero、排版），但所有政策與合併（Merge to Main Branch）必須經過君王御筆親批（Verdict PASS & Lock），從物理工具層面保障大腦主權永固，拒絕完全委派。<br>- <br>  ## 🗺️ 第三章：理論地基：AI 時代的「神經符號大腦」與人類品位裁決<br>  ### 📌 3.1 認知卸載 (Cognitive Offloading) 與思維主權邊界 |
-| 19 | `zotero_Brown_2020_122` | `zotero_122` | *Language models are few-shot learners* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 20 | `zotero_ChameleonTeam_2024_29` | `zotero_29` | *Chameleon: Mixed-Modal Early-Fusion Foun...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 21 | `zotero_Chan_2024_671` | `zotero_671` | *Don't Do RAG: When Cache-Augmented Gener...* | 🟢 Stage 2 | 🎯 核心問題: 在長文本 LLM 時代，檢索增強生成 (RAG) 帶來的高延遲、跨區段分塊摩擦與語意割裂，是否可透過將知識庫直接預載入 KV 快取（CAG）來消除？<br>🏆 獨特貢獻: 首次將外部知識檢索問題轉化為 LLM 內部注意力機制的快取定錨問題，提出去檢索化的『知識庫靠泊 (Cache Docking)』範式。<br>⚖️ 品位評判: 極具創見！完全呼應了哈爸大腦的『文獻引渡靠泊』概念。當我們把 Zotero 文獻與 SQLite 物理對合，其實就是一種 CAG 實踐——藉由消除動態模糊搜尋的摩擦，換取極致的主權 Grounding 可信度！ |
-| 22 | `zotero_Chen_2024_5` | `zotero_5` | *Benchmarking Large Language Models in Re...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 23 | `zotero_Chen_2024_63` | `zotero_63` | *Are We on the Right Way for Evaluating L...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 24 | `zotero_Chowdhery_2023_549` | `zotero_549` | *Palm: Scaling language modeling with pat...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 25 | `zotero_Dai_2023_148` | `zotero_148` | *InstructBLIP: Towards general-purpose vi...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 26 | `zotero_Driess_2023_158` | `zotero_158` | *Palm-e: an embodied multimodal language ...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 27 | `zotero_Driess_2023_643` | `zotero_643` | *PaLM-E: An Embodied Multimodal Language ...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 28 | `zotero_Duan_2024_49` | `zotero_49` | *VLMEvalKit: An Open-Source Toolkit for E...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 29 | `zotero_Es_2023_4` | `zotero_4` | *RAGAS: Automated Evaluation of Retrieval...* | 🟢 Stage 2 | 【主張】【核心主張 9】：建立「手稿全景成熟度與可信度自審審計協定 (SMMCAP)」，以此剛性品質治理指標，引導下一步「未來演化與迭代藍圖」的自動化突變。<br>- 現有 SOTA 缺點*：現有的科研 Agent 寫作工具缺乏自律度量與對合檢驗，容易導致 AI 進行自指評估與幻覺共謀。<br>- 本論文重構*：我們提出 SMMCAP v1.0 剛性成熟度審計協定。引渡 RAGAS 自動化評估指標，設計手稿文本、SQLite Grounding、Citations 就位率、自審覆蓋率多維盲檢，首創產出真實不注水的 MCI 成熟度報告。這引導了我們在第八章規劃的「未來迭代藍圖」（如 Zotero API 自動重定向、根據當前學術重力 Ga 動態偏置最佳化自審、以及去中心化 P2P 聯邦同步協定），強制消除任何 AI 的語意泡沫，實現學術演化的自主突變。 |
-| 30 | `zotero_Fatehkia_2024_10` | `zotero_10` | *T-RAG: Lessons from the LLM Trenches* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 31 | `zotero_Feng_2023_631` | `zotero_631` | *From pretraining data to language models...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 32 | `zotero_Fu_2024_652` | `zotero_652` | *Video-MME: The First-Ever Comprehensive ...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 33 | `zotero_Guu_2020_8` | `zotero_8` | *REALM: Retrieval-Augmented Language Mode...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 34 | `zotero_He_2024_650` | `zotero_650` | *MA-LMM: Memory-Augmented Large Multimoda...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 35 | `zotero_Howard_2018_546` | `zotero_546` | *Universal language model fine-tuning for...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 36 | `zotero_Hu_2022_182` | `zotero_182` | *LoRA: Low-rank adaptation of large langu...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 37 | `zotero_Huang_2023_185` | `zotero_185` | *Language is not all you need: Aligning p...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 38 | `zotero_Jones_1972_632` | `zotero_632` | *A statistical interpretation of term spe...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 39 | `zotero_Kadiyala_2024_638` | `zotero_638` | *The Implementation of Multimodal Large L...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 40 | `zotero_Kazemi_2024_201` | `zotero_201` | *Geomverse: A systematic evaluation of la...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 41 | `zotero_Kazemzadeh_2014_451` | `zotero_451` | *Referitgame: Referring to objects in pho...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 42 | `zotero_Koyejo_2022_76` | `zotero_76` | *Flamingo: a visual language model for fe...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 43 | `zotero_Koyejo_2022_99` | `zotero_99` | *Flamingo: a visual language model for fe...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 44 | `zotero_Laurençon_2024_46` | `zotero_46` | *Building and better understanding vision...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 45 | `zotero_Laurençon_2024_59` | `zotero_59` | *What matters when building vision-langua...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 46 | `zotero_Lee_2024_52` | `zotero_52` | *Meteor: Mamba-based Traversal of Rationa...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 47 | `zotero_Li_2023_227` | `zotero_227` | *CAMEL: Communicative agents for ”mind” e...* | 🟢 Stage 2 | 🎯 核心問題: 傳統基於語義交談的單體 LLM 在面對複雜真實世界多步任務時，極度依賴人類高頻率、高品位的 Prompt 引導與糾偏，導致協作的自動化上限極低且極度耗費人力。<br>🏆 獨特貢獻: 開創了基於「角色扮演與自動對話啟動提示 (Inception Prompting)」的多代理自主協作通信範式，並開源了首個支持大規模 AI Society 與 Code 協作數據生成的多智慧體框架。<br>⚖️ 品位評判: Verdict PASS。CAMEL 卓越地實現了 AI 角色扮演與 Inception 剛性控制。然而，我們的主權 AI 協作研究方法論在其基礎上發動了**重大科學突破**：我們不僅讓 Agent 扮演角色，更引入了 **『十一表 SQL... |
-| 48 | `zotero_Li_2023_228` | `zotero_228` | *Blip-2: bootstrapping language-image pre...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 49 | `zotero_Li_2023_236` | `zotero_236` | *Evaluating object hallucination in large...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 50 | `zotero_Liu_2024_406` | `zotero_406` | *MMBench: Is Your Multi-modal Model an Al...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 51 | `zotero_Lu_2024_272` | `zotero_272` | *Mathvista: Evaluating mathematical reaso...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 52 | `zotero_Maaz_2024_636` | `zotero_636` | *Video-ChatGPT: Towards Detailed Video Un...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 53 | `zotero_Mathew_2022_285` | `zotero_285` | *Infographicvqa* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 54 | `zotero_Mañas_2023_279` | `zotero_279` | *MAPL: Parameter-efficient adaptation of ...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 55 | `zotero_Mañas_2024_278` | `zotero_278` | *Improving automatic vqa evaluation using...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 56 | `zotero_Mirzadeh_2024_660` | `zotero_660` | *GSM-Symbolic: Understanding the Limitati...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 57 | `zotero_NVIDIA_2025_674` | `zotero_674` | *Cosmos World Foundation Model Platform f...* | 🟢 Stage 2 | 🎯 核心問題: 當前生成式 AI 缺乏對現實物理世界的邊界約束與動態守恆理解，易產生違反常識的幻覺與運動漂移。<br>🏆 獨特貢獻: 首次建立了具備物理守恆約束的自動化世界模擬平台，奠定了 AI 物理世界模型基礎。<br>⚖️ 品位評判: Verdict PASS。這強烈支持了我們將曾文溪實測 `12.5%` 誤差寫入 empirical_evidences 來物理剪枝 LLM 自指幻覺的戰略判斷！ |
-| 58 | `zotero_NVIDIA_2025_678` | `zotero_678` | *Cosmos World Foundation Model Platform f...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 59 | `zotero_Obeid_2020_295` | `zotero_295` | *Chart-to-text: Generating natural langua...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 60 | `zotero_Padlewski_2024_26` | `zotero_26` | *Vibe-Eval: A hard evaluation suite for m...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 61 | `zotero_Park_2023_640` | `zotero_640` | *Generative Agents: Interactive Simulacra...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 62 | `zotero_Radford_2021_303` | `zotero_303` | *Learning transferable visual models from...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 63 | `zotero_Rafailov_2024_304` | `zotero_304` | *Direct preference optimization: Your lan...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 64 | `zotero_Ren_2015_307` | `zotero_307` | *Exploring models and data for image ques...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 65 | `zotero_Ru_2024_22` | `zotero_22` | *RAGChecker: A Fine-grained Framework for...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 66 | `zotero_Salemi_2024_6` | `zotero_6` | *Evaluating Retrieval Quality in Retrieva...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 67 | `zotero_Schuhmann_2022_309` | `zotero_309` | *Laion-5b: An open large-scale dataset fo...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 68 | `zotero_Shayegani_2024_318` | `zotero_318` | *Jailbreak in pieces: Compositional adver...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 69 | `zotero_Shukor_2023_319` | `zotero_319` | *ep-alm: Efficient perceptual augmentatio...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 70 | `zotero_Singh_2019_322` | `zotero_322` | *Towards vqa models that can read* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 71 | `zotero_Singh_2019_486` | `zotero_486` | *Towards vqa models that can read* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 72 | `zotero_Singh_2022_321` | `zotero_321` | *Flava: A foundational language and visio...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 73 | `zotero_Singhal_2022_639` | `zotero_639` | *Large Language Models Encode Clinical Kn...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 74 | `zotero_Snell_2024_520` | `zotero_520` | *Scaling LLM Test-Time Compute Optimally ...* | 🟢 Stage 2 | 【主張】【核心主張 6】：人機協作的物理本質是「君王與百官」的共生關係，人類手握最高否決權與合併鎖 (Verdict Lock) 以防範 AI 語意掏空。<br>- 傳統 AI 定位*：搜尋助手或寫作外掛。<br>- 本論文重構*：我們將 AI 重新解構為**「Socratic 智囊（討論諮詢）」**與**「實踐腳爪（高精執行殼層）」**。我們在工序中實施「君王與百官」架構：低階行政交給百官（AI 寫 SQL、讀 Zotero、排版），但所有政策與合併（Merge to Main Branch）必須經過君王御筆親批（Verdict PASS & Lock），從物理工具層面保障大腦主權永固，拒絕完全委派。<br>- <br>  ## 🗺️ 第三章：理論地基：AI 時代的「神經符號大腦」與人類品位裁決<br>  ### 📌 3.1 認知卸載 (Cognitive Offloading) 與思維主權邊界<br>---<br>【主張】【核心主張 4】：劃定嚴格的「思維主權邊界」，並以「Socratic 自審頻率 ($F_s$)」指標與 Test-Time Compute 量化主權防禦。<br>- 前人理論*：Aslan 等人量化了人對 LLM 的依賴邊界；Snell 等人 (2024) 則證明在推理測試時投入額外運算（Test-Time Compute）最佳化，其效果遠勝盲目擴大模型參數。<br>- 本論文重構*：我們提出**「Socratic 自審頻率 ($F_s$)」**。我們論證，自審答辯本質上就是一種 Test-Time Compute 的物理展現，透過在寫作自審階段注入高密度推理 Token 進行反覆辯論，能使論文品位質變。同時，我們藉由十一表 SQLite 的盲檢（Blind Audit）完整性約束，即是發揮關聯式邏輯「硬性裁剪」AI 語意幻覺的物理驗證引擎，確保認知主權不崩塌。<br>- <br>  ### 📌 3.4 重新定義 AI 時代的「原創性」：人類的「品位選擇與除錯判定」 |
-| 75 | `zotero_Suhr_2019_326` | `zotero_326` | *A corpus for reasoning about natural lan...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 76 | `zotero_Trinh_2024_345` | `zotero_345` | *Solving olympiad geometry without human ...* | 🟢 Stage 2 | 🎯 核心問題: 純語意大模型在面對高度形式化、定理導向的數學與邏輯推理（如奧林匹亞幾何證明）時，極易發生邏輯崩塌與幻覺。<br>🏆 獨特貢獻: 首次在無需人類專家示範的情況下，通過自我對抗合成大量幾何證明資料，達到奧林匹亞幾何金牌級別。<br>⚖️ 品位評判: Verdict PASS。本主權大腦採用十一表 SQLite DTO 作為代數與關聯邏輯的剛性剪枝驗證引擎，這與 AlphaGeometry 符號裁判的想法完全對合！ |
-| 77 | `zotero_Tsimpoukelli_2021_346` | `zotero_346` | *Multimodal few-shot learning with frozen...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 78 | `zotero_Unknown_2022_604` | `zotero_604` | *risks in language models* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 79 | `zotero_Wei_2022_356` | `zotero_356` | *Finetuned language models are zero-shot ...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 80 | `zotero_Wei_2022_357` | `zotero_357` | *Chain-of- thought prompting elicits reas...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 81 | `zotero_Yu_2024_369` | `zotero_369` | *Metamath: Bootstrap your own mathematica...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 82 | `zotero_Yu_2024_370` | `zotero_370` | *Rlhf-v: Towards trustworthy mllms via be...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 83 | `zotero_Yue_2024_374` | `zotero_374` | *MAmmoTH: Building math generalist models...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 84 | `zotero_Zeng_2024_7` | `zotero_7` | *Exploring Memorization in Fine-tuned Lan...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 85 | `zotero_Zhao_2023_388` | `zotero_388` | *RobuT: A systematic study of table QA ro...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 86 | `zotero_extracted_Unknown_2020_754` | `zotero_extracted_Unknown_2020_754` | *# 2020 Conference on Empirical Methods i...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 87 | `zotero_extracted_Unknown_2023_166` | `zotero_extracted_Unknown_2023_166` | *Mahyar Abbasian, Iman Azimi, Amir M Rahm...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 88 | `zotero_extracted_Unknown_2023_668` | `zotero_extracted_Unknown_2023_668` | *Amos Azaria and Tom M. Mitchell. 2023. T...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 89 | `zotero_extracted_Unknown_2023_971` | `zotero_extracted_Unknown_2023_971` | *Language Processing (EMNLP), pages 5418–...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 90 | `zotero_extracted_Unknown_2025_285` | `zotero_extracted_Unknown_2025_285` | *I. Foundational, general-purpose tools I...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
-| 91 | `zotero_extracted_Unknown_2025_918` | `zotero_extracted_Unknown_2025_918` | *I. Iterative self-refinement Self-feedba...* | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 序號 | 引用鍵 (Cite Key) | 大腦主鍵 (Paper ID) | 論文標題 (Title) | 學術重力 (Gravity) | 消化狀態 (Stage) | 引用脈絡與關鍵說明 (Citation Context) |
+| :---: | :--- | :--- | :--- | :---: | :---: | :--- |
+| 1 | `arxiv_AgenticScience_2025_14111` | `arxiv_meta_2508.14111` | *From AI for Science to Agentic Science: ...* | `7.10` | 🟢 Stage 2 | 【主張】【核心主張 11】：相較於現有 SOTA 自主科學發現代理（如 STORM、GPT-Researcher、FutureHouse ChemCrow），本方法論實施的「主權與 Verdict Lock 結合現地物理誤差強對合」架構，是真實戰壕研究中保障大腦思維主權的唯一有效典範。<br>- 現有 SOTA 架構*：現有的 AI 代理科學工具均朝向「無人化自主發現」演進，人類完全被排除在生成完整鏈結之外（完全委派），這引發嚴重的認識警覺崩塌。<br>- 本論文重構*：我們對這種「無人化代理」發動了學術批判。我們論證：人機協作的終極目的，絕非消滅人類的思考，而是「以 AI 淬煉人類的品位與思考」。我們的方法論不追求無腦全自動，而是將 AI 定位為高精百官，死守人類君王的 Verdict Lock。透過將論點地圖與本地實測資料進行 Stage 2 物理對合，在卸載低階認知負荷的同時，將人類的學術品位與主體性推向了最高巔峰。<br>- <br>  ## 🗺️ 第六章：實驗室治理與集體知識遺傳典範<br>  ### 📌 6.1 「哈教授」的 30 秒 SQL 照妖鏡四大檢核 |
+| 2 | `arxiv_Aiersilan_2026_2601` | `arxiv_meta_2601.02410` | *The Vibe-Check Protocol: Quantifying Cog...* | `7.00` | 🟢 Stage 2 | 🎯 核心問題: 當 'Vibe Coding'（開發者僅用自然語言與 AI 代理協作而不直接碰代碼）成為編程教育與開發主流時，這究竟是培養了高階架構師，還是僅僅創造了表面能力的虛假繁榮（Illusion of Competence），實質上造成了嚴重的認知卸載與技能衰退？<br>🏆 獨特貢獻: 首創將 Vibe Coding 的認知代價予以數學公式化（$M_{CSR}, M_{HT}, E_{gap}$），為教育者與軟體工程經理提供了一個量化 Break-Even Point（效率增益 vs 技能衰退）的科學決策工具。<br>⚖️ 品位評判: Verdict PASS！Karpathy 吹捧的 Vibe Coding 終於有了清醒的數學解藥。特別是 Explainability Gap ($E_{gap}$) 的信息熵公式，以極度硬核的數學結構揭示了『代碼跑得通不等於你懂』的現實... |
+| 3 | `arxiv_Ardito_2023_2312` | `arxiv_meta_2312.05241` | *Contra generative AI detection in higher...* | `5.06` | 🟢 Stage 2 | 🎯 核心問題: 在生成式 AI 鋪天蓋地的時代，高等教育評估採用「AI 偵測器 (AI Detection Tools)」來維護學術誠信是否可行？它在技術、倫理與教學法上面臨哪些根本性的缺陷與挑戰？<br>🏆 獨特貢獻: 系統性解構了 AI 偵測器在技術與倫理上的不可行性，並以數學教育中「計算機引入」的成功轉型為例，為高等教育政策提供了一套從「事後防堵防禦」轉向「融入 AI 共創、強調人際互動與真實評估」的建設性轉型指引。<br>⚖️ 品位評判: Verdict PASS！Cesare Giulio Ardito 教授極具洞察力地指出了 AI 偵測器的「卡夫卡式審判（The Trial）」倫理荒謬性。這強烈 Grounding 了我們在「主權大腦」中拋棄 AI 自動打分、死守「十一表... |
+| 4 | `arxiv_Aslan_2026_2603` | `arxiv_meta_2603.26296` | *Adaptation and Validation of the Turkish...* | `4.30` | 🟢 Stage 2 | 【主張】【核心主張 4】：劃定嚴格的「思維主權邊界」，並以「Socratic 自審頻率 ($F_s$)」指標與 Test-Time Compute 量化主權防禦。<br>- 前人理論*：Aslan 等人量化了人對 LLM 的依賴邊界；Snell 等人 (2024) 則證明在推理測試時投入額外運算（Test-Time Compute）最佳化，其效果遠勝盲目擴大模型參數。<br>- 本論文重構*：我們提出**「Socratic 自審頻率 ($F_s$)」**。我們論證，自審答辯本質上就是一種 Test-Time Compute 的物理展現，透過在寫作自審階段注入高密度推理 Token 進行反覆辯論，能使論文品位質變。同時，我們藉由十一表 SQLite 的盲檢（Blind Audit）完整性約束，即是發揮關聯式邏輯「硬性裁剪」AI 語意幻覺的物理驗證引擎，確保認知主權不崩塌。<br>- <br>  ### 📌 3.4 重新定義 AI 時代的「原創性」：人類的「品位選擇與除錯判定」 |
+| 5 | `arxiv_Chukwuere_2024_2403` | `arxiv_meta_2403.13487` | *The future of generative AI chatbots in ...* | `4.80` | 🟢 Stage 2 | 【主張】【核心主張 10】：本方法論提出「從語意檢測退後到物理盲檢」的新教育評估典範，重建了指導教授與研究生之間破裂的學術信任。<br>- 現有 SOTA 缺點*：現有的 AI 寫作工具完全忽略了「指導教授與實驗室治理」的現實痛點，加劇了學生敷衍交差與教授信任破裂的全球教育學危機。<br>- 本論文重構*：我們提出全新的學術治理防線。我們論證：導師不應指望用軟體去檢測學生論文是否由 AI 生成，而應在 30 秒內直接下 SQL 盲檢（SQL Audit）學生十一表大腦中的實體軌跡──包括 Ingestion 採集任務血統、現地實測物理誤差 `friction_percentage`，以及在紅軍自審答辯日誌 `red_team_logs` 中的 Verdict PASS 防禦紀錄，直接重構師徒間的科研信任。<br>- <br>  ### 📌 6.2 去中心化聯邦 DTO 重建：以純文字 JSON 消滅資料庫 Git 衝突 |
+| 6 | `arxiv_Denkin_2024_2405` | `arxiv_meta_2405.18889` | *On Perception of Prevalence of Cheating ...* | `4.86` | 🟢 Stage 2 | 【主張】【核心主張 3】：解構採用「野性實踐先行 ➔ 論文寫作 PoC 自證 ➔ 理論回溯」的工序合理性，證明「先實踐、後論證」非主流建構式行動研究的合理性。<br>- 傳統科學流程*：強調「先進行文獻調查，再提出假設並驗證」的線性學院工序。<br>- 本論文重構*：我們大膽打破此陳規。我們論證：在快速變革的 AI 時代，這種「先實踐、後論證」非主流建構式行動研究，才是避免學術黑話與語意空轉的有效途徑。以肉身實踐（兩次分享、兩週蛻變）所淬煉出來的方法論，其合理性已在當場的實務操作中完成驗證。<br>- <br>  ### 📌 2.3 本地紅軍自審防線：思維主權防禦的剛性必要 |
+| 7 | `arxiv_Ilkou_2022_2203` | `arxiv_meta_2203.08507` | *Personal Knowledge Graphs: Use Cases in ...* | `5.19` | 🟢 Stage 2 | 【主張】【核心主張 7】：以「個人知識圖譜 (Personal Knowledge Graph, PKG)」與十一表大腦作為實體架構，能有效解決向量資料庫的「語意漂移 (Semantic Drift)」缺陷。<br>- 現有 SOTA 缺點*：現有的 AI 科研助理僅利用向量資料庫進行暫時性的語意相似度檢索（平面式 RAG），沒有任何實體資料庫結構定義，無法累積長期時序演化，使得研究資產退化為「一次性語意孤島」。<br>- 本論文重構*：我們設計 SQLite 十一表實體「主權大腦」數位孿生架構。在推理模型世代，我們的方法論不再是教 AI 怎麼寫字，而是藉由結構化 DTO 與 Verdict Lock 導引並合流其強大的推理鏈。本設計強行將「他者客觀文獻 (papers)」、「肉身實踐 (empirical_evidences)」與「手稿有向演化鏈 (my_manuscripts)」物理繫結，保證了研究者的知識資產具備 100% 跨電腦移植性，且每一次與 AI 激盪的戰役軌跡皆能按時間向量進行時序演化。<br>- <br>  ## 🗺️ 第五章：橫向對抗與原創防禦：與 SOTA 開放專案及學術文獻之對比論證<br>  ### 📌 5.1 SOTA 研究與開源專案地圖：我們在哪裡？<br>---<br>【主張】【核心主張 8】：以「純文字 JSON 貢獻包」做為去中心化 DTO 載體，消滅了資料庫 Git 合併衝突，實現了實驗室共有大腦的「跳躍式知識遺傳」傳承。<br>- 現有 SOTA 缺點*：目前的 AI 寫作工具皆為「單兵、封完整鏈結境下的玩具」，完全無法應對多人協作時的 Git 資料庫二進位衝突、以及學長姐畢業後科研資產與 Skills 流失的傳承痛點。<br>- 本論文重構*：我們將其解構為「協同個人知識圖譜的協同合流」實踐。我們實作了 `export_contributions.py`，將學生的個人主權 PKG 導出為純文字 JSON DTO，徹底消滅了 Git 合併衝突；當學弟妹加入實驗室時，只需執行 `rebuild_lab_brain.py` 一鍵重建，新進人員瞬間繼承歷代學長姐被紅軍質問並答辯Verdict PASS的戰役軌跡，實現「跳躍式知識遺傳」與高頻演化。<br>- <br>  ## 🗺️ 第七章：遞迴自指驗證：以本方法論撰寫本論文之優劣實測與元反思<br>  ### 📌 7.3 專書大一統合流與《個人 AI 賦能》第 15 章的合流實踐<br>---<br>【主張】【核心主張 12】：本論文最無懈可擊的科學與工程佐證，正是這篇論文被撰寫出來的完整「實體歷程與大腦資料庫物理匯出」，這構成了 100% 行解合一的「終極自指自證真值」，雙向螺旋回寫厚化專書第 15 章，達成學術與工程演化的完美完整鏈結。<br>- 傳統寫作典範*：方法論論文僅進行簡陋的抽象文字描述，其背後的研究歷程與自審答辯過程完全隱藏在黑箱中，無法重現，極易誘發學術空洞黑話。<br>- 本論文自指重構*：本論文最無懈可擊的「物理證據」，就是整個寫作歷程沉澱下來的十一表大腦 SQLite 資料庫 (`Research_Artifacts.db`)。任何人皆可下載我們開源的 SQL DUMP 檔案，一鍵 `rebuild` 重現這 7 篇引文的定錨、`empirical_evidences` 的實測物理誤差，以及紅軍 Verdict PASS 的全部自審答辯軌跡。書本方法引導論文，論文歷程實體厚化專書，達成了學術與工程上前所未有的「雙向螺旋演化與終極自指完整鏈結」！<br>- <br>  ## 🗺️ 第八章：未來演化與迭代藍圖：基於當前實證結果之下一步計畫<br>  ### 📌 8.2 Socratic 面試與紅軍對審的「動態 Prompt 偏置」最佳化 |
+| 8 | `arxiv_Kim_2026_2602` | `arxiv_meta_2602.21595` | *SPOC: Safety-Aware Planning Under Partia...* | `4.44` | 🟢 Stage 2 | 🎯 核心問題: 在不完全觀測（Partial Observability）與物理邊界約束的複雜不確定環境中，如何保障自主系統規劃的軌跡絕對不侵入危險邊界？<br>🏆 獨特貢獻: 在數學上實現了部分觀測 POMDP 框架下，100% 保障實體物理安全約束的 CBF 定軌導航演算法。<br>⚖️ 品位評判: 本質相通！這就是哈爸大腦『MCI / MPM 看板與 SQLite 照妖鏡』在自主導航領域的完美實踐。我們利用十一表 SQLite 剛性 Schema 來當作 CBF，實施外鍵錯誤清零與 Verdict Lock 阻斷，正是 SPOC 精神... |
+| 9 | `arxiv_Li_2025_2508` | `arxiv_meta_2508.07606` | *In-situ Value-aligned Human-Robot Intera...* | `4.44` | 🟢 Stage 2 | 🎯 核心問題: 在高度動態且具備物理邊界約束的真實人機互動 (HRI) 中，如何確保 AI 與人類的意圖、現地真值 (Ground Truth) 剛性價值對齊？<br>🏆 獨特貢獻: 成功將高層語意對齊與底層實體物理空間約束進行數學融合，提出 In-situ 物理現地真值對合演算法。<br>⚖️ 品位評判: 極具啟發！本文是哈爸大腦『物理摩擦 (friction_percentage)』概念的硬核學術對應。這證明了思維主權不能建構在虛浮的語意之上，而必須透過 SQLite 實體資料庫的外鍵、對應關係進行『現地真值校準』，拉起物理防線！ |
+| 10 | `arxiv_Maynard_2026_2601` | `arxiv_meta_2601.07085` | *The AI Cognitive Trojan Horse: How Large...* | `7.20` | 🟢 Stage 2 | 【主張】【核心主張 1】：AI 生成文字雖然流暢，但極易降低大腦的認識警覺度 (Epistemic Vigilance)，產生認知的「特洛伊木馬效應」與思考空洞化。<br>- 前人理論*：Maynard 指出 LLMs 的高度流暢性會在神經層面麻痺大腦審查，誘發認識警覺度塌方；Tamura 等人（2026）則通過雙盲對照實驗定量證實，被試在面對 LLM 道德說服時的觀點偏離率高達 65%。<br>- 本論文重構*：我們完全繼承其警示，但更進一步指出**「純粹語意環境無法自我覺醒」**。我們論證，為了打破特洛伊木馬的麻痺效應，人類大腦必須在協作工具鏈中強制加入「非語意」的硬性物理約束（如 SQLite 資料庫定錨與實測誤差百分比），迫使研究者強行喚醒其認識警覺。 |
+| 11 | `arxiv_Tamura_2026_2604` | `arxiv_meta_2604.22356` | *Large Language Model Counterarguments in...* | `4.30` | 🟢 Stage 2 | 【主張】【核心主張 1】：AI 生成文字雖然流暢，但極易降低大腦的認識警覺度 (Epistemic Vigilance)，產生認知的「特洛伊木馬效應」與思考空洞化。<br>- 前人理論*：Maynard 指出 LLMs 的高度流暢性會在神經層面麻痺大腦審查，誘發認識警覺度塌方；Tamura 等人（2026）則通過雙盲對照實驗定量證實，被試在面對 LLM 道德說服時的觀點偏離率高達 65%。<br>- 本論文重構*：我們完全繼承其警示，但更進一步指出**「純粹語意環境無法自我覺醒」**。我們論證，為了打破特洛伊木馬的麻痺效應，人類大腦必須在協作工具鏈中強制加入「非語意」的硬性物理約束（如 SQLite 資料庫定錨與實測誤差百分比），迫使研究者強行喚醒其認識警覺。 |
+| 12 | `arxiv_Yu_2026_2605` | `arxiv_meta_2605.23177` | *Cognitive offloading and the speedup ill...* | `4.35` | 🟢 Stage 2 | 【主張】【核心主張 2】：AI 雖然縮短了初期的程式碼與文字生成時間，但後續的「幻覺除錯債」呈非線性暴增，實質產生假性加速。<br>- 前人理論*：Yu 等人透過大規模人類被試實驗證實，AI 輔助組的速度帳面提升了 40%，但論點的 Grounding 漏洞率飆升了 300%，且研究人員普遍陷入過度自信的認知盲區。<br>- 本論文重構*：我們將此定義為**「科學負債 (Scientific Debt)」**。單純依賴 AI 進行瀑布式寫作必將面臨負債崩塌；唯有實施「V0.1 猜想 ➔ 自審對抗 ➔ 遞迴重構」的螺旋共演工序，將除錯與防禦化整為零併入每次對話，才能將「假性提速」轉化為「實質科學演化」。<br>- <br>  ## 🗺️ 第二章：逆向演進與主權自律：建構歷程與反饋收斂的合理性解構<br>  ### 📌 2.1 逆向建構的工序合理性：從現場實踐到理論回溯 |
+| 13 | `arxiv_Zeng_2026_2604` | `arxiv_meta_2604.21073` | *Generative Discovery of Magnetic Insulat...* | `4.40` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 14 | `ms_sovereign_research_2026` | `ms_sovereign_research_2026` | *基於去中心化聯邦大腦與品位裁決之主權 AI 協作研究方法論* | `4.51` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 15 | `zotero_Abdin_2024_68` | `zotero_68` | *Phi-3 Technical Report: A Highly Capable...* | `4.92` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 16 | `zotero_Alayrac_2022_651` | `zotero_651` | *Flamingo: a Visual Language Model for Fe...* | `5.09` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 17 | `zotero_Bender_2021_625` | `zotero_625` | *On the dangers of stochastic parrots: Ca...* | `5.26` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 18 | `zotero_Besta_2025_682` | `zotero_682` | *Reasoning Language Models: A Blueprint* | `4.44` | 🟢 Stage 2 | 【主張】【核心主張 6】：人機協作的物理本質是「君王與百官」的共生關係，人類手握最高否決權與合併鎖 (Verdict Lock) 以防範 AI 語意掏空。<br>- 傳統 AI 定位*：搜尋助手或寫作外掛。<br>- 本論文重構*：我們將 AI 重新解構為**「Socratic 智囊（討論諮詢）」**與**「實踐腳爪（高精執行殼層）」**。我們在工序中實施「君王與百官」架構：低階行政交給百官（AI 寫 SQL、讀 Zotero、排版），但所有政策與合併（Merge to Main Branch）必須經過君王御筆親批（Verdict PASS & Lock），從物理工具層面保障大腦主權永固，拒絕完全委派。<br>- <br>  ## 🗺️ 第三章：理論地基：AI 時代的「神經符號大腦」與人類品位裁決<br>  ### 📌 3.1 認知卸載 (Cognitive Offloading) 與思維主權邊界 |
+| 19 | `zotero_Brown_2020_122` | `zotero_122` | *Language models are few-shot learners* | `5.36` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 20 | `zotero_ChameleonTeam_2024_29` | `zotero_29` | *Chameleon: Mixed-Modal Early-Fusion Foun...* | `4.83` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 21 | `zotero_Chan_2024_671` | `zotero_671` | *Don't Do RAG: When Cache-Augmented Gener...* | `4.80` | 🟢 Stage 2 | 🎯 核心問題: 在長文本 LLM 時代，檢索增強生成 (RAG) 帶來的高延遲、跨區段分塊摩擦與語意割裂，是否可透過將知識庫直接預載入 KV 快取（CAG）來消除？<br>🏆 獨特貢獻: 首次將外部知識檢索問題轉化為 LLM 內部注意力機制的快取定錨問題，提出去檢索化的『知識庫靠泊 (Cache Docking)』範式。<br>⚖️ 品位評判: 極具創見！完全呼應了哈爸大腦的『文獻引渡靠泊』概念。當我們把 Zotero 文獻與 SQLite 物理對合，其實就是一種 CAG 實踐——藉由消除動態模糊搜尋的摩擦，換取極致的主權 Grounding 可信度！ |
+| 22 | `zotero_Chen_2024_5` | `zotero_5` | *Benchmarking Large Language Models in Re...* | `4.72` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 23 | `zotero_Chen_2024_63` | `zotero_63` | *Are We on the Right Way for Evaluating L...* | `4.72` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 24 | `zotero_Chowdhery_2023_549` | `zotero_549` | *Palm: Scaling language modeling with pat...* | `5.06` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 25 | `zotero_Dai_2023_148` | `zotero_148` | *InstructBLIP: Towards general-purpose vi...* | `4.60` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 26 | `zotero_Driess_2023_158` | `zotero_158` | *Palm-e: an embodied multimodal language ...* | `5.06` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 27 | `zotero_Driess_2023_643` | `zotero_643` | *PaLM-E: An Embodied Multimodal Language ...* | `4.68` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 28 | `zotero_Duan_2024_49` | `zotero_49` | *VLMEvalKit: An Open-Source Toolkit for E...* | `4.51` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 29 | `zotero_Es_2023_4` | `zotero_4` | *RAGAS: Automated Evaluation of Retrieval...* | `7.50` | 🟢 Stage 2 | 【主張】【核心主張 9】：建立「手稿全景成熟度與可信度自審審計協定 (SMMCAP)」，以此剛性品質治理指標，引導下一步「未來演化與迭代藍圖」的自動化突變。<br>- 現有 SOTA 缺點*：現有的科研 Agent 寫作工具缺乏自律度量與對合檢驗，容易導致 AI 進行自指評估與幻覺共謀。<br>- 本論文重構*：我們提出 SMMCAP v1.0 剛性成熟度審計協定。引渡 RAGAS 自動化評估指標，設計手稿文本、SQLite Grounding、Citations 就位率、自審覆蓋率多維盲檢，首創產出真實不注水的 MCI 成熟度報告。這引導了我們在第八章規劃的「未來迭代藍圖」（如 Zotero API 自動重定向、根據當前學術重力 Ga 動態偏置最佳化自審、以及去中心化 P2P 聯邦同步協定），強制消除任何 AI 的語意泡沫，實現學術演化的自主突變。 |
+| 30 | `zotero_Fatehkia_2024_10` | `zotero_10` | *T-RAG: Lessons from the LLM Trenches* | `4.44` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 31 | `zotero_Feng_2023_631` | `zotero_631` | *From pretraining data to language models...* | `4.97` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 32 | `zotero_Fu_2024_652` | `zotero_652` | *Video-MME: The First-Ever Comprehensive ...* | `4.83` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 33 | `zotero_Guu_2020_8` | `zotero_8` | *REALM: Retrieval-Augmented Language Mode...* | `5.26` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 34 | `zotero_He_2024_650` | `zotero_650` | *MA-LMM: Memory-Augmented Large Multimoda...* | `4.76` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 35 | `zotero_Howard_2018_546` | `zotero_546` | *Universal language model fine-tuning for...* | `5.26` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 36 | `zotero_Hu_2022_182` | `zotero_182` | *LoRA: Low-rank adaptation of large langu...* | `5.09` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 37 | `zotero_Huang_2023_185` | `zotero_185` | *Language is not all you need: Aligning p...* | `5.00` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 38 | `zotero_Jones_1972_632` | `zotero_632` | *A statistical interpretation of term spe...* | `6.25` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 39 | `zotero_Kadiyala_2024_638` | `zotero_638` | *The Implementation of Multimodal Large L...* | `4.80` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 40 | `zotero_Kazemi_2024_201` | `zotero_201` | *Geomverse: A systematic evaluation of la...* | `4.51` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 41 | `zotero_Kazemzadeh_2014_451` | `zotero_451` | *Referitgame: Referring to objects in pho...* | `5.48` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 42 | `zotero_Koyejo_2022_76` | `zotero_76` | *Flamingo: a visual language model for fe...* | `5.09` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 43 | `zotero_Koyejo_2022_99` | `zotero_99` | *Flamingo: a visual language model for fe...* | `4.80` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 44 | `zotero_Laurençon_2024_46` | `zotero_46` | *Building and better understanding vision...* | `4.44` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 45 | `zotero_Laurençon_2024_59` | `zotero_59` | *What matters when building vision-langua...* | `5.94` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 46 | `zotero_Lee_2024_52` | `zotero_52` | *Meteor: Mamba-based Traversal of Rationa...* | `4.72` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 47 | `zotero_Li_2023_227` | `zotero_227` | *CAMEL: Communicative agents for ”mind” e...* | `6.40` | 🟢 Stage 2 | 🎯 核心問題: 傳統基於語義交談的單體 LLM 在面對複雜真實世界多步任務時，極度依賴人類高頻率、高品位的 Prompt 引導與糾偏，導致協作的自動化上限極低且極度耗費人力。<br>🏆 獨特貢獻: 開創了基於「角色扮演與自動對話啟動提示 (Inception Prompting)」的多代理自主協作通信範式，並開源了首個支持大規模 AI Society 與 Code 協作數據生成的多智慧體框架。<br>⚖️ 品位評判: Verdict PASS。CAMEL 卓越地實現了 AI 角色扮演與 Inception 剛性控制。然而，我們的主權 AI 協作研究方法論在其基礎上發動了**重大科學突破**：我們不僅讓 Agent 扮演角色，更引入了 **『十一表 SQL... |
+| 48 | `zotero_Li_2023_228` | `zotero_228` | *Blip-2: bootstrapping language-image pre...* | `5.00` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 49 | `zotero_Li_2023_236` | `zotero_236` | *Evaluating object hallucination in large...* | `4.60` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 50 | `zotero_Liu_2024_406` | `zotero_406` | *MMBench: Is Your Multi-modal Model an Al...* | `4.76` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 51 | `zotero_Lu_2024_272` | `zotero_272` | *Mathvista: Evaluating mathematical reaso...* | `4.58` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 52 | `zotero_Maaz_2024_636` | `zotero_636` | *Video-ChatGPT: Towards Detailed Video Un...* | `4.76` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 53 | `zotero_Mathew_2022_285` | `zotero_285` | *Infographicvqa* | `5.19` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 54 | `zotero_Mañas_2023_279` | `zotero_279` | *MAPL: Parameter-efficient adaptation of ...* | `5.18` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 55 | `zotero_Mañas_2024_278` | `zotero_278` | *Improving automatic vqa evaluation using...* | `4.51` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 56 | `zotero_Mirzadeh_2024_660` | `zotero_660` | *GSM-Symbolic: Understanding the Limitati...* | `4.44` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 57 | `zotero_NVIDIA_2025_674` | `zotero_674` | *Cosmos World Foundation Model Platform f...* | `4.60` | 🟢 Stage 2 | 🎯 核心問題: 當前生成式 AI 缺乏對現實物理世界的邊界約束與動態守恆理解，易產生違反常識的幻覺與運動漂移。<br>🏆 獨特貢獻: 首次建立了具備物理守恆約束的自動化世界模擬平台，奠定了 AI 物理世界模型基礎。<br>⚖️ 品位評判: Verdict PASS。這強烈支持了我們將曾文溪實測 `12.5%` 誤差寫入 empirical_evidences 來物理剪枝 LLM 自指幻覺的戰略判斷！ |
+| 58 | `zotero_NVIDIA_2025_678` | `zotero_678` | *Cosmos World Foundation Model Platform f...* | `4.60` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 59 | `zotero_Obeid_2020_295` | `zotero_295` | *Chart-to-text: Generating natural langua...* | `5.33` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 60 | `zotero_Padlewski_2024_26` | `zotero_26` | *Vibe-Eval: A hard evaluation suite for m...* | `4.51` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 61 | `zotero_Park_2023_640` | `zotero_640` | *Generative Agents: Interactive Simulacra...* | `5.00` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 62 | `zotero_Radford_2021_303` | `zotero_303` | *Learning transferable visual models from...* | `5.22` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 63 | `zotero_Rafailov_2024_304` | `zotero_304` | *Direct preference optimization: Your lan...* | `4.71` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 64 | `zotero_Ren_2015_307` | `zotero_307` | *Exploring models and data for image ques...* | `5.56` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 65 | `zotero_Ru_2024_22` | `zotero_22` | *RAGChecker: A Fine-grained Framework for...* | `4.76` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 66 | `zotero_Salemi_2024_6` | `zotero_6` | *Evaluating Retrieval Quality in Retrieva...* | `4.68` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 67 | `zotero_Schuhmann_2022_309` | `zotero_309` | *Laion-5b: An open large-scale dataset fo...* | `5.05` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 68 | `zotero_Shayegani_2024_318` | `zotero_318` | *Jailbreak in pieces: Compositional adver...* | `4.80` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 69 | `zotero_Shukor_2023_319` | `zotero_319` | *ep-alm: Efficient perceptual augmentatio...* | `4.68` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 70 | `zotero_Singh_2019_322` | `zotero_322` | *Towards vqa models that can read* | `5.03` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 71 | `zotero_Singh_2019_486` | `zotero_486` | *Towards vqa models that can read* | `5.40` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 72 | `zotero_Singh_2022_321` | `zotero_321` | *Flava: A foundational language and visio...* | `5.19` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 73 | `zotero_Singhal_2022_639` | `zotero_639` | *Large Language Models Encode Clinical Kn...* | `4.72` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 74 | `zotero_Snell_2024_520` | `zotero_520` | *Scaling LLM Test-Time Compute Optimally ...* | `4.58` | 🟢 Stage 2 | 【主張】【核心主張 6】：人機協作的物理本質是「君王與百官」的共生關係，人類手握最高否決權與合併鎖 (Verdict Lock) 以防範 AI 語意掏空。<br>- 傳統 AI 定位*：搜尋助手或寫作外掛。<br>- 本論文重構*：我們將 AI 重新解構為**「Socratic 智囊（討論諮詢）」**與**「實踐腳爪（高精執行殼層）」**。我們在工序中實施「君王與百官」架構：低階行政交給百官（AI 寫 SQL、讀 Zotero、排版），但所有政策與合併（Merge to Main Branch）必須經過君王御筆親批（Verdict PASS & Lock），從物理工具層面保障大腦主權永固，拒絕完全委派。<br>- <br>  ## 🗺️ 第三章：理論地基：AI 時代的「神經符號大腦」與人類品位裁決<br>  ### 📌 3.1 認知卸載 (Cognitive Offloading) 與思維主權邊界<br>---<br>【主張】【核心主張 4】：劃定嚴格的「思維主權邊界」，並以「Socratic 自審頻率 ($F_s$)」指標與 Test-Time Compute 量化主權防禦。<br>- 前人理論*：Aslan 等人量化了人對 LLM 的依賴邊界；Snell 等人 (2024) 則證明在推理測試時投入額外運算（Test-Time Compute）最佳化，其效果遠勝盲目擴大模型參數。<br>- 本論文重構*：我們提出**「Socratic 自審頻率 ($F_s$)」**。我們論證，自審答辯本質上就是一種 Test-Time Compute 的物理展現，透過在寫作自審階段注入高密度推理 Token 進行反覆辯論，能使論文品位質變。同時，我們藉由十一表 SQLite 的盲檢（Blind Audit）完整性約束，即是發揮關聯式邏輯「硬性裁剪」AI 語意幻覺的物理驗證引擎，確保認知主權不崩塌。<br>- <br>  ### 📌 3.4 重新定義 AI 時代的「原創性」：人類的「品位選擇與除錯判定」 |
+| 75 | `zotero_Suhr_2019_326` | `zotero_326` | *A corpus for reasoning about natural lan...* | `5.21` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 76 | `zotero_Trinh_2024_345` | `zotero_345` | *Solving olympiad geometry without human ...* | `5.06` | 🟢 Stage 2 | 🎯 核心問題: 純語意大模型在面對高度形式化、定理導向的數學與邏輯推理（如奧林匹亞幾何證明）時，極易發生邏輯崩塌與幻覺。<br>🏆 獨特貢獻: 首次在無需人類專家示範的情況下，通過自我對抗合成大量幾何證明資料，達到奧林匹亞幾何金牌級別。<br>⚖️ 品位評判: Verdict PASS。本主權大腦採用十一表 SQLite DTO 作為代數與關聯邏輯的剛性剪枝驗證引擎，這與 AlphaGeometry 符號裁判的想法完全對合！ |
+| 77 | `zotero_Tsimpoukelli_2021_346` | `zotero_346` | *Multimodal few-shot learning with frozen...* | `4.89` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 78 | `zotero_Unknown_2022_604` | `zotero_604` | *risks in language models* | `4.80` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 79 | `zotero_Wei_2022_356` | `zotero_356` | *Finetuned language models are zero-shot ...* | `4.97` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 80 | `zotero_Wei_2022_357` | `zotero_357` | *Chain-of- thought prompting elicits reas...* | `4.72` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 81 | `zotero_Yu_2024_369` | `zotero_369` | *Metamath: Bootstrap your own mathematica...* | `4.51` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 82 | `zotero_Yu_2024_370` | `zotero_370` | *Rlhf-v: Towards trustworthy mllms via be...* | `4.72` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 83 | `zotero_Yue_2024_374` | `zotero_374` | *MAmmoTH: Building math generalist models...* | `4.89` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 84 | `zotero_Zeng_2024_7` | `zotero_7` | *Exploring Memorization in Fine-tuned Lan...* | `4.83` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 85 | `zotero_Zhao_2023_388` | `zotero_388` | *RobuT: A systematic study of table QA ro...* | `4.97` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 86 | `zotero_extracted_Unknown_2020_754` | `zotero_extracted_Unknown_2020_754` | *# 2020 Conference on Empirical Methods i...* | `3.50` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 87 | `zotero_extracted_Unknown_2023_166` | `zotero_extracted_Unknown_2023_166` | *Mahyar Abbasian, Iman Azimi, Amir M Rahm...* | `17.50` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 88 | `zotero_extracted_Unknown_2023_668` | `zotero_extracted_Unknown_2023_668` | *Amos Azaria and Tom M. Mitchell. 2023. T...* | `5.50` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 89 | `zotero_extracted_Unknown_2023_971` | `zotero_extracted_Unknown_2023_971` | *Language Processing (EMNLP), pages 5418–...* | `3.50` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 90 | `zotero_extracted_Unknown_2025_285` | `zotero_extracted_Unknown_2025_285` | *I. Foundational, general-purpose tools I...* | `13.00` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
+| 91 | `zotero_extracted_Unknown_2025_918` | `zotero_extracted_Unknown_2025_918` | *I. Iterative self-refinement Self-feedba...* | `17.00` | 🟡 Stage 1 | [Stage 1 背景文獻] 作為學術脈絡探索與主題背景定錨支撐。 |
 
 ---
 
@@ -116,6 +116,7 @@
 
 ### 📄 [1] @arxiv_AgenticScience_2025_14111
 - **標題 (Title)**: From AI for Science to Agentic Science: A Survey on Autonomous Scientific Discovery
+- **學術重力分數 (Academic Gravity Score)**: `7.10`
 - **🎯 1. 核心問題 (Core Question)**:
   > 傳統的 AI for Science (Level 1) 僅將 AI 視為局部的計算預言機（如蛋白質結構預測工具），缺乏主動的科學 Agency。現有的 AI 科研助理（Level 2）雖然能自動化跑特定的實驗，但其高層次的科學發現邏輯（如假說生成、實驗反覆修正、迭代學習與品位裁決）依然高度依賴人類科學家。在海量交叉學科的背景下，傳統『平面式』AI 助理極易遭遇 Rate Limit、認知超載與黑箱委託，亟需一個將基礎能力（Planning, Tools, Memory, Collaboration, Evolution）與經典科學方法論閉環相結合的『智能體科學 (Agentic Science)』大一統框架。
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -140,6 +141,7 @@
 
 ### 📄 [2] @arxiv_Aiersilan_2026_2601
 - **標題 (Title)**: The Vibe-Check Protocol: Quantifying Cognitive Offloading in AI Programming
+- **學術重力分數 (Academic Gravity Score)**: `7.00`
 - **🎯 1. 核心問題 (Core Question)**:
   > 當 'Vibe Coding'（開發者僅用自然語言與 AI 代理協作而不直接碰代碼）成為編程教育與開發主流時，這究竟是培養了高階架構師，還是僅僅創造了表面能力的虛假繁榮（Illusion of Competence），實質上造成了嚴重的認知卸載與技能衰退？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -165,6 +167,7 @@
 
 ### 📄 [3] @arxiv_Ardito_2023_2312
 - **標題 (Title)**: Contra generative AI detection in higher education assessments
+- **學術重力分數 (Academic Gravity Score)**: `5.06`
 - **🎯 1. 核心問題 (Core Question)**:
   > 在生成式 AI 鋪天蓋地的時代，高等教育評估採用「AI 偵測器 (AI Detection Tools)」來維護學術誠信是否可行？它在技術、倫理與教學法上面臨哪些根本性的缺陷與挑戰？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -191,6 +194,7 @@
 
 ### 📄 [4] @arxiv_Aslan_2026_2603
 - **標題 (Title)**: Adaptation and Validation of the Turkish Version of the Large Language Model Dependency Scale (LLM-D12)
+- **學術重力分數 (Academic Gravity Score)**: `4.30`
 - **🎯 1. 核心問題 (Core Question)**:
   > LLM text flow and reasoning vs human cognitive offloading.
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -211,6 +215,7 @@
 
 ### 📄 [5] @arxiv_Chukwuere_2024_2403
 - **標題 (Title)**: The future of generative AI chatbots in higher education
+- **學術重力分數 (Academic Gravity Score)**: `4.80`
 - **🎯 1. 核心問題 (Core Question)**:
   > 生成式 AI 聊天機器人（Chatbots）在高等教育中的大規模普及，如何引發學生獨立思維的退化與學術空洞化危機？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -232,6 +237,7 @@
 
 ### 📄 [6] @arxiv_Denkin_2024_2405
 - **標題 (Title)**: On Perception of Prevalence of Cheating and Usage of Generative AI
+- **學術重力分數 (Academic Gravity Score)**: `4.86`
 - **🎯 1. 核心問題 (Core Question)**:
   > 大學資工/IT 領域的教師如何看待學生利用生成式 AI 進行舞弊的盛行率？教師的主觀感知與學校官方 20 年來（2004-2023）的客觀舞弊調查數據是否一致？面對生成式 AI 帶來的評估挑戰，教師的態度與教學法轉型心聲為何？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -257,6 +263,7 @@
 
 ### 📄 [7] @arxiv_Ilkou_2022_2203
 - **標題 (Title)**: Personal Knowledge Graphs: Use Cases in e-learning Platforms
+- **學術重力分數 (Academic Gravity Score)**: `5.19`
 - **🎯 1. 核心問題 (Core Question)**:
   > 如何在線上學習與協作檢索（Collaborative Search）環境中，利用「個人知識圖譜 (PKG)」來表示使用者/學習者的個人資料與興趣，以同時提供高個人化、具解釋性的語意推薦，並兼顧隱私保護與時間動態性？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -283,6 +290,7 @@
 
 ### 📄 [8] @arxiv_Kim_2026_2602
 - **標題 (Title)**: SPOC: Safety-Aware Planning Under Partial Observability And Physical Constraints
+- **學術重力分數 (Academic Gravity Score)**: `4.44`
 - **🎯 1. 核心問題 (Core Question)**:
   > 在不完全觀測（Partial Observability）與物理邊界約束的複雜不確定環境中，如何保障自主系統規劃的軌跡絕對不侵入危險邊界？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -304,6 +312,7 @@
 
 ### 📄 [9] @arxiv_Li_2025_2508
 - **標題 (Title)**: In-situ Value-aligned Human-Robot Interactions with Physical Constraints
+- **學術重力分數 (Academic Gravity Score)**: `4.44`
 - **🎯 1. 核心問題 (Core Question)**:
   > 在高度動態且具備物理邊界約束的真實人機互動 (HRI) 中，如何確保 AI 與人類的意圖、現地真值 (Ground Truth) 剛性價值對齊？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -325,6 +334,7 @@
 
 ### 📄 [10] @arxiv_Maynard_2026_2601
 - **標題 (Title)**: The AI Cognitive Trojan Horse: How Large Language Models May Bypass Human Epistemic Vigilance
+- **學術重力分數 (Academic Gravity Score)**: `7.20`
 - **🎯 1. 核心問題 (Core Question)**:
   > 為什麼 AI 生成的說服性與解釋性文本比人類更容易被接受？在 LLM 生成的流暢與看似無私的文字面前，人類演化與後天習得的「認識警覺度 (epistemic vigilance)」為何會面臨崩塌與繞過？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -350,6 +360,7 @@
 
 ### 📄 [11] @arxiv_Tamura_2026_2604
 - **標題 (Title)**: Large Language Model Counterarguments in Older Adults: Cognitive Offloading or Vulnerability to Moral Persuasion?
+- **學術重力分數 (Academic Gravity Score)**: `4.30`
 - **🎯 1. 核心問題 (Core Question)**:
   > LLM 強大的反駁能力與高情商語氣，對人類的道德信念與思維主權會產生何種潛在說服控制與認識順從風險？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -371,6 +382,7 @@
 
 ### 📄 [12] @arxiv_Yu_2026_2605
 - **標題 (Title)**: Cognitive offloading and the speedup illusion in human-AI interaction
+- **學術重力分數 (Academic Gravity Score)**: `4.35`
 - **🎯 1. 核心問題 (Core Question)**:
   > 在人機高度協作環境下，認知卸載 (Cognitive Offloading) 所帶來的『速度幻覺 (Speedup Illusion)』如何誘發人類思維主權的崩塌與認知退化？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -392,6 +404,7 @@
 
 ### 📄 [13] @zotero_Besta_2025_682
 - **標題 (Title)**: Reasoning Language Models: A Blueprint
+- **學術重力分數 (Academic Gravity Score)**: `4.44`
 - **🎯 1. 核心問題 (Core Question)**:
   > 如何打破傳統 LLM 的單向生成限制，系統化建構具備主動推理、狀態定錨與多路徑反思自審能力的推理語言模型 (Reasoning LM)？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -413,6 +426,7 @@
 
 ### 📄 [14] @zotero_Chan_2024_671
 - **標題 (Title)**: Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks
+- **學術重力分數 (Academic Gravity Score)**: `4.80`
 - **🎯 1. 核心問題 (Core Question)**:
   > 在長文本 LLM 時代，檢索增強生成 (RAG) 帶來的高延遲、跨區段分塊摩擦與語意割裂，是否可透過將知識庫直接預載入 KV 快取（CAG）來消除？
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -434,6 +448,7 @@
 
 ### 📄 [15] @zotero_Es_2023_4
 - **標題 (Title)**: RAGAS: Automated Evaluation of Retrieval Augmented Generation
+- **學術重力分數 (Academic Gravity Score)**: `7.50`
 - **🎯 1. 核心問題 (Core Question)**:
   > 傳統上，評估檢檢索增強生成 (RAG) 系統需要大量且高成本的人工標記『黃金標準答案 (Ground-Truth)』。而在真實多變的私有知識庫部署場景下，這種黃金答案往往付之闕如，導致評估週期漫長。此外，RAG 的評估需要區分不同維度：檢索模組是否能找出相關內容、生成模組是否忠實利用了檢索脈絡，以及生成的回答是否符合使用者原始意圖。如果僅僅依賴語言模型生成的 perplexity 或簡單的短答案比對，無法精準定位 RAG 系統的病灶（是檢索不好還是生成不好）。
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -462,6 +477,7 @@
 
 ### 📄 [16] @zotero_Li_2023_227
 - **標題 (Title)**: CAMEL: Communicative agents for ”mind” exploration of large language model society
+- **學術重力分數 (Academic Gravity Score)**: `6.40`
 - **🎯 1. 核心問題 (Core Question)**:
   > 傳統基於語義交談的單體 LLM 在面對複雜真實世界多步任務時，極度依賴人類高頻率、高品位的 Prompt 引導與糾偏，導致協作的自動化上限極低且極度耗費人力。
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -483,6 +499,7 @@
 
 ### 📄 [17] @zotero_NVIDIA_2025_674
 - **標題 (Title)**: Cosmos World Foundation Model Platform for Physical AI
+- **學術重力分數 (Academic Gravity Score)**: `4.60`
 - **🎯 1. 核心問題 (Core Question)**:
   > 當前生成式 AI 缺乏對現實物理世界的邊界約束與動態守恆理解，易產生違反常識的幻覺與運動漂移。
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -504,6 +521,7 @@
 
 ### 📄 [18] @zotero_Snell_2024_520
 - **標題 (Title)**: Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters
+- **學術重力分數 (Academic Gravity Score)**: `4.58`
 - **🎯 1. 核心問題 (Core Question)**:
   > LLM text flow and reasoning vs human cognitive offloading.
 - **🧪 2. 核心方法 (Core Methodology)**:
@@ -524,6 +542,7 @@
 
 ### 📄 [19] @zotero_Trinh_2024_345
 - **標題 (Title)**: Solving olympiad geometry without human demonstrations
+- **學術重力分數 (Academic Gravity Score)**: `5.06`
 - **🎯 1. 核心問題 (Core Question)**:
   > 純語意大模型在面對高度形式化、定理導向的數學與邏輯推理（如奧林匹亞幾何證明）時，極易發生邏輯崩塌與幻覺。
 - **🧪 2. 核心方法 (Core Methodology)**:

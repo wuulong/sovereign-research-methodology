@@ -748,9 +748,10 @@ class BrainCLI:
             print(f"❌ 查無此手稿：'{manuscript_id}'")
             return
             
-        # 2. 查詢引用關聯與文獻基本資料
+        # 2. 查詢引用關聯與文獻基本資料 (已整合學術重力分數)
         cursor.execute("""
-            SELECT mc.paper_id, p.cite_key, p.title, p.authors, p.year, p.topic_id, mc.citation_context, p.meta_data
+            SELECT mc.paper_id, p.cite_key, p.title, p.authors, p.year, p.topic_id, mc.citation_context, p.meta_data,
+                   json_extract(p.meta_data, '$.academic_prestige.academic_gravity_score') AS gravity_score
             FROM manuscript_citations mc
             LEFT JOIN papers p ON mc.paper_id = p.paper_id
             WHERE mc.manuscript_id = ?
@@ -808,8 +809,8 @@ class BrainCLI:
         
         md.append("## 🗺️ 2. 論點與引文地基對合看板 (Citations Grounding Ledger)")
         md.append("本節列出本手稿在資料庫中物理定錨的所有引用文獻及其引用脈絡。\n")
-        md.append("| 序號 | 引用鍵 (Cite Key) | 大腦主鍵 (Paper ID) | 論文標題 (Title) | 消化狀態 (Stage) | 引用脈絡與關鍵說明 (Citation Context) |")
-        md.append("| :---: | :--- | :--- | :--- | :---: | :--- |")
+        md.append("| 序號 | 引用鍵 (Cite Key) | 大腦主鍵 (Paper ID) | 論文標題 (Title) | 學術重力 (Gravity) | 消化狀態 (Stage) | 引用脈絡與關鍵說明 (Citation Context) |")
+        md.append("| :---: | :--- | :--- | :--- | :---: | :---: | :--- |")
         
         stage2_list = []
         
@@ -828,10 +829,14 @@ class BrainCLI:
                     pass
             status_icon = "🟢 Stage 2" if stage == "STAGE_2_DEEP" else "🟡 Stage 1"
             
+            # 取得學術重力分數
+            grav = c['gravity_score']
+            grav_str = f"`{grav:.2f}`" if grav is not None else "`N/A`"
+            
             ctx_str = c['citation_context'] if c['citation_context'] else "None"
             ctx_clean = ctx_str.replace('\n', '<br>')
             
-            md.append(f"| {idx} | `{ckey}` | `{pid}` | *{title_brief}* | {status_icon} | {ctx_clean} |")
+            md.append(f"| {idx} | `{ckey}` | `{pid}` | *{title_brief}* | {grav_str} | {status_icon} | {ctx_clean} |")
             
             if stage == "STAGE_2_DEEP" and meta_str:
                 try:
@@ -840,7 +845,8 @@ class BrainCLI:
                         stage2_list.append({
                             "cite_key": ckey,
                             "title": c['title'],
-                            "extraction": meta["paper_extraction"]
+                            "extraction": meta["paper_extraction"],
+                            "gravity_score": c['gravity_score']
                         })
                 except:
                     pass
@@ -857,9 +863,12 @@ class BrainCLI:
             for i, pdata in enumerate(stage2_list, 1):
                 ext = pdata["extraction"]
                 verdict = ext.get("sovereign_taste_verdict", {})
+                grav_score = pdata.get("gravity_score")
+                grav_display = f"`{grav_score:.2f}`" if grav_score is not None else "`N/A`"
                 
                 md.append(f"### 📄 [{i}] @{pdata['cite_key']}")
                 md.append(f"- **標題 (Title)**: {pdata['title']}")
+                md.append(f"- **學術重力分數 (Academic Gravity Score)**: {grav_display}")
                 md.append(f"- **🎯 1. 核心問題 (Core Question)**:\n  > {ext.get('core_question', 'N/A')}")
                 md.append(f"- **🧪 2. 核心方法 (Core Methodology)**:\n  > {ext.get('core_methodology', 'N/A')}")
                 

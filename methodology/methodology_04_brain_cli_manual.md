@@ -46,6 +46,7 @@ python3 brain_cli.py [-d DB_PATH] [功能參數] [--json]
 | **`-c`, `--cite-tree [key]`** | **文獻引用合規樹狀圖** | 合併文獻 `key_references_to_suck` 與 `paper_relations` 的關聯，遞迴繪製 ASCII 引用樹，標示其在 DB 中的合規狀態 (`🟢 Stage 2` / `🟡 Stage 1` / `❌ 未註冊`)。 |
 | **`-v`, `--verbose`** | **十大學術因子通讀** | 需搭配 `-c` 使用。在引用樹下方以條目排版輸出樹中所有已消化 `Stage 2` 文獻的完整十大學術因子 DTO，免除重複手動檢索的認知摩擦。 |
 | **`-s`, `--sql [SQL_str]`** | **實體 SQL 照妖鏡** | 直接輸入自訂 SQL 語句進行硬核查詢與資料治理。 |
+| **`-g`, `--report [ms_id]`** | **全景 Markdown 探勘報告** | 將指定手稿的所有相關 DB 內容（含手稿 Meta、引文地基對合看板、十大學術因子 DTO、紅軍對審日誌與現地誤差）匯出為有結構的 Markdown 報告。預設為 `ms_sovereign_research_2026`。 |
 
 ---
 
@@ -92,6 +93,15 @@ CAG2024RAG (不用做 RAG！當快取增強生成 (CAG) 成為知識任務之所
 ```bash
 python3 scripts/brain_cli.py -s "SELECT cite_key, json_extract(meta_data, '$.stage') AS ingestion_stage FROM papers WHERE json_extract(meta_data, '$.compliance_status.is_compliant') = 1;"
 ```
+
+### 5. 匯出全景 Markdown 探勘報告
+當需要對某一論文手稿的引文地基與審查防線進行全景式審閱，並以標題階層方便在 Obsidian 中點選瀏覽時，可以執行 `-g` 指令：
+```bash
+python3 scripts/brain_cli.py -g ms_sovereign_research_2026
+```
+**執行成果與輸出：**
+*   **生成檔案路徑**：[sovereign_research_13_brain_report.md](file:///Users/wuulong/github/bmad-pa/events/my_research/sovereign-research-methodology/manuscripts/sovereign_research/sovereign_research_13_brain_report.md)
+*   **報告內容**：包含手稿基本資料、91 篇定錨文獻與學術重力分數對照矩陣、各篇 Stage 2 文獻的十大學術因子 DTO 展開、紅軍對審日誌與現地誤差檢測表，免除在 SQLite 資料庫中反覆下 SQL 檢索的難度。
 
 ---
 

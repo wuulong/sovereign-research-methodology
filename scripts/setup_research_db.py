@@ -6,31 +6,15 @@
 目的：
 1. 載入 schema.sql 建立全新十一表結構。
 2. 預載哈爸的環境路徑對合 (directory_roots)。
-3. 預載哈爸專屬三大真實專案與一格 Zotero 公海緩衝專案，作為永恆地基。
 """
-
 import os
 import sqlite3
 import json
 
 # ==============================================================================
-# 哈爸專屬四大專案與 Topics 永恆骨架 (新增 prj_sync 緩衝區)
+# 哈爸專屬專案與 Topics 骨架 (僅保留方法論核心專案與 Zotero 同步公海基礎設施)
 # ==============================================================================
 PROJECTS_SEED = [
-    {
-        "project_id": "prj_tdhi",
-        "project_name": "TDHI 台灣數位健康生態系實踐沙箱",
-        "description": "台灣數位健康研究院 (TDHI) 的 PoC 實踐沙箱。包含門診分流路由、四分離資料庫、個資邊緣去識別化遮蔽，以及健保處方前置攔截審查機制。",
-        "search_spec": {"keywords": ["Digital Health", "TFVH router", "de-identification"], "min_year": 2022},
-        "architecture_spec": {"hospital_model": "TFVH", "patient_target": "蓬萊 004", "db_architecture": "四分離 SQLite"}
-    },
-    {
-        "project_id": "prj_river_exploration",
-        "project_name": "AI 流域學與河流探索專案",
-        "description": "利用 AI 與多模態大模型進行台灣山區水文與河流流域的標準化探索（曾文溪、台南古河道）。整合 GIS 圖資、Open Data，以及『書＋資料庫＋遊記』三位一體實踐。",
-        "search_spec": {"keywords": ["mountain hydrology", "river exploration", "triad methodology"], "min_year": 2020},
-        "architecture_spec": {"methodology": "書-DB-遊記三位一體", "gis_platform": "QGIS & sqlite-vec"}
-    },
     {
         "project_id": "prj_ai_enablement",
         "project_name": "AI 應用與賦能研究專案",
@@ -48,66 +32,7 @@ PROJECTS_SEED = [
 ]
 
 TOPICS_SEED = [
-    # prj_tdhi Topics
-    {
-        "topic_id": "top_deidentification",
-        "project_id": "prj_tdhi",
-        "topic_name": "邊緣 PHI 去識別化與隱私安全漫遊",
-        "sequence_order": 1,
-        "status": "COMPLETED",
-        "focus_spec": {"focus_variables": ["deidentification_rate"], "equations": ["K-Anonymity"], "auto_tags": ["Privacy-Deid"]}
-    },
-    {
-        "topic_id": "top_clinical_routing",
-        "project_id": "prj_tdhi",
-        "topic_name": "診間語音病歷結構化與科室 AI 路由",
-        "sequence_order": 2,
-        "status": "ACTIVE",
-        "focus_spec": {"focus_variables": ["routing_accuracy"], "equations": ["TFVHOutpatientRouter"], "auto_tags": ["Clinical-AI"]}
-    },
-    # prj_river_exploration Topics
-    {
-        "topic_id": "top_river_gis_prep",
-        "project_id": "prj_river_exploration",
-        "topic_name": "河流流域 GIS 數據準備與 QGIS 樣式注入",
-        "sequence_order": 1,
-        "status": "COMPLETED",
-        "focus_spec": {"focus_variables": ["VRT_rendering_speed"], "equations": ["Spatial_Distance"], "auto_tags": ["GIS-OpenData"]}
-    },
-    {
-        "topic_id": "top_multimodal_hydrology",
-        "project_id": "prj_river_exploration",
-        "topic_name": "多模態 AI 山區水文觀測與現地真值比對",
-        "sequence_order": 2,
-        "status": "ACTIVE",
-        "focus_spec": {"focus_variables": ["water_flow_pixel_deviation"], "equations": ["Manning_Equation"], "auto_tags": ["Mountain-Hydrology"]}
-    },
-    # prj_ai_enablement Topics
-    {
-        "topic_id": "top_personal_empowerment",
-        "project_id": "prj_ai_enablement",
-        "topic_name": "個人 AI 賦能與裝備化 Skill 封裝",
-        "sequence_order": 1,
-        "status": "COMPLETED",
-        "focus_spec": {"focus_variables": ["skill_execution_friction"], "equations": ["BMAD_Entropy"], "auto_tags": ["Sovereign-AI"]}
-    },
-    {
-        "topic_id": "top_organizational_knowledge",
-        "project_id": "prj_ai_enablement",
-        "topic_name": "組織級知識庫架構與 CAG vs RAG 知識架構評估",
-        "sequence_order": 2,
-        "status": "ACTIVE",
-        "focus_spec": {"focus_variables": ["CAG_latency"], "equations": ["Cache_Hit_Efficiency"], "auto_tags": ["Knowledge-Engineering"]}
-    },
-    {
-        "topic_id": "top_reasoning_models",
-        "project_id": "prj_ai_enablement",
-        "topic_name": "DeepSeek-R1 與推理時計算思考鏈擴展",
-        "sequence_order": 3,
-        "status": "PLANNED",
-        "focus_spec": {"focus_variables": ["test_time_compute_length"], "equations": ["RL_Reward_Loss"], "auto_tags": ["DeepSeek-R1"]}
-    },
-    # prj_sync Topics
+    # prj_sync Topics (Zotero 同步 staging)
     {
         "topic_id": "top_haba_staging",
         "project_id": "prj_sync",
@@ -117,12 +42,12 @@ TOPICS_SEED = [
         "focus_spec": {"focus_variables": ["sync_friction", "ingestion_volume"], "equations": [], "auto_tags": ["Zotero-Sync"]},
         "meta_data": "Zotero 原始同步文獻的公海收容所，用於動態靠泊重定向。"
     },
-    # prj_ai_enablement 新增主題
+    # prj_ai_enablement 主題 (方法論論文寫作主戰場)
     {
         "topic_id": "top_sovereign_methodology",
         "project_id": "prj_ai_enablement",
         "topic_name": "主權 AI 協作研究方法論與大腦 DTO 對合",
-        "sequence_order": 4,
+        "sequence_order": 1,
         "status": "ACTIVE",
         "focus_spec": {"focus_variables": ["MCI_index", "SMMCAP_compliance"], "equations": ["MCI_formula"], "auto_tags": ["Sovereign-Research"]},
         "meta_data": "本方法論的核心論文寫作主戰場。"
@@ -131,24 +56,16 @@ TOPICS_SEED = [
 
 MANUSCRIPTS_SEED = [
     {
-        "manuscript_id": "ms_conf_haba_2026",
-        "topic_id": "top_sovereign_methodology",
-        "title": "基於書-DB-遊記三位一體之台灣山區河流流域 AI 探索 PoC 實踐",
-        "cite_key": "Haba2026Conf",
-        "manuscript_type": "Conference",
-        "evolution_stage": "Published",
-        "previous_manuscript_id": None
-    },
-    {
         "manuscript_id": "ms_sovereign_research_2026",
         "topic_id": "top_sovereign_methodology",
         "title": "AI 時代的學術革命：基於本地主權大腦、品位裁決與遞迴重構的人機協作研究方法論",
         "cite_key": "ms_sovereign_research_2026",
         "manuscript_type": "Journal",
         "evolution_stage": "Writing",
-        "previous_manuscript_id": "ms_conf_haba_2026"
+        "previous_manuscript_id": None
     }
 ]
+
 
 def setup_db():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
