@@ -1,6 +1,6 @@
 # NotebookLM Asset Pack - events/my_research/sovereign-research-methodology/scripts
 - **Source Folder**: `events/my_research/sovereign-research-methodology/scripts`
-- **Generated At**: 2026-06-06 07:37:50
+- **Generated At**: 2026-06-06 07:59:56
 
 ---
 
@@ -1425,11 +1425,8 @@ def taiwanize_content(content):
 
 # 敏感詞彙保密過濾器 (去識別化對照)
 SENSITIVE_PATTERNS = {
-    r"(?i)organization": "組織",
-    r"組織": "組織",
     r"MET-00[0-9]": "系統架構模組",
     r"EXT-00[0-9]": "外部資訊模組",
-    r"SIM-00[0-9]": "實踐資料",
 }
 
 def clean_sensitive_text(text):
@@ -1448,14 +1445,14 @@ STATIC_MILESTONES = [
         "datetime": "2026-05-10 14:00:00",
         "source": "計畫起源",
         "event": "QMEMS 實驗室學術痛點挖掘（T260510-HHH03）",
-        "description": "提出研究生濫用 AI 導致認知掏空的問題。確立 Layer 0-1-2 三層靠泊 Ingestion 流水線、學術重力場 Ga 排序公式以及最初的學者領主宣言草案。",
+        "description": "提出研究生濫用 AI 導致認知掏空的問題。確立三層靠泊 Ingestion 流水線、學術重力場 Ga 排序公式以及最初的學者領主宣言草案。",
         "commit_hash": "N/A"
     },
     {
         "datetime": "2026-05-14 10:30:00",
-        "source": "組織轉型",
-        "event": "組織知識大腦概念原型與單一資料表實作（T260514-HHH01）",
-        "description": "導入 ID-Prefix 標準編碼與實踐資料設計以保護資料安全。首度在 SQLite 中實作大腦資料庫化與 知識分層架構。",
+        "source": "大腦原型",
+        "event": "大腦知識大腦概念原型與單一資料表實作（T260514-HHH01） [v0.1]",
+        "description": "導入 ID-Prefix 標準編碼，規範多源資料聚合與版本定錨。首度在 SQLite 中實作大腦資料庫化（單一資料表，版本 v0.1）與基礎知識分層。",
         "commit_hash": "N/A"
     },
     {
@@ -1468,15 +1465,22 @@ STATIC_MILESTONES = [
     {
         "datetime": "2026-05-26 11:00:00",
         "source": "自審對抗",
-        "event": "十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01）",
-        "description": "升級為十一表大腦，建立 empirical_evidences 替代舊實踐表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊數據殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。",
+        "event": "十一表 Schema 升級與紅軍 Verdict Lock 戰役（T260526-HHH01） [v0.1.1]",
+        "description": "大腦資料庫 Schema 升級為十一表（版本 v0.1.1），建立 empirical_evidences 替代舊模擬表。開發 MCI 與 MPM 看板。遭遇 SMMCAP Stale 報告舊數據殘留問題，強制下修 MCI，並於 Socratic 對抗答辯後成功解除合併阻斷鎖。",
         "commit_hash": "N/A"
     },
     {
         "datetime": "2026-06-05 18:00:00",
         "source": "事實修正",
-        "event": "06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續）",
-        "description": "原定與教授之 face-to-face 盲檢會面因故推遲。於 06/06 先行進行去中心化整理、獨立開源 Repo 分離與公開發表，並將正式面談審查留待下一個階段。",
+        "event": "06/05 審查會議推遲與開源分離整理（T260526-HHH01 延續） [v0.2]",
+        "description": "原定與教授之面談盲檢因故推遲。於 06/06 先行進行去中心化整理，將大腦資產（包含四大核心主權技能、手稿與工具鏈，版本 v0.2）移出並獨立為開源 Repo，且於主專案中註冊為 Submodule。",
+        "commit_hash": "N/A"
+    },
+    {
+        "datetime": "2026-06-06 07:30:00",
+        "source": "版本定錨",
+        "event": "主權技能本土化完整釋出與方法論大合流（T260526-HHH01 延續） [v0.2.1]",
+        "description": "於子 Repo 完整釋出四大主權核心技能（skills/）並清理中國用語；將 02 中繼資料規格與 03 關係本體規格合流併入 02 系統規格手冊；重建 NotebookLM 封包，升級大腦與工具控制體系為 v0.2.1 完整合流開源版。",
         "commit_hash": "N/A"
     }
 ]
@@ -3624,7 +3628,7 @@ MOCK_PROJECTS = [
         "project_name": "AI 應用與賦能研究專案",
         "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、組織級知識治理架構，以及 DeepSeek-R1 與推理時計算（Test-Time Compute）最佳化等前沿 AI 研究方法。",
         "search_spec": {
-            "keywords": ["personal AI enablement", "enterprise GenAI", "DeepSeek-R1 reasoning", "CAG vs RAG", "test-time compute"],
+            "keywords": ["personal AI enablement", "organizational knowledge governance", "DeepSeek-R1 reasoning", "CAG vs RAG", "test-time compute"],
             "exclude": ["hardware training", "asics"],
             "min_year": 2024
         },
@@ -3701,7 +3705,7 @@ MOCK_TOPICS = [
         }
     },
     {
-        "topic_id": "top_enterprise_transformation",
+        "topic_id": "top_organizational_knowledge",
         "project_id": "prj_ai_enablement",
         "topic_name": "組織級知識庫架構與 CAG vs RAG 知識架構評估",
         "sequence_order": 2,
@@ -3810,7 +3814,7 @@ MOCK_PAPERS = [
     {
         "paper_id": "zotero_dont_do_rag",
         "cite_key": "CAG2024RAG",
-        "topic_id": "top_enterprise_transformation",
+        "topic_id": "top_organizational_knowledge",
         "title": "不用做 RAG！當快取增強生成 (CAG) 成為知識任務之所需",
         "authors": "Sophia Yang, Tech Research Team",
         "year": 2024,
@@ -3818,7 +3822,7 @@ MOCK_PAPERS = [
         "bibtex": """@article{CAG2024RAG,
   author = {Yang, Sophia and Research, Tech},
   title = {Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks},
-  journal = {Journal of Enterprise AI Architectures},
+  journal = {Journal of Organizational Knowledge Architectures},
   year = {2024},
   volume = {3},
   pages = {45--58}
@@ -3828,7 +3832,7 @@ MOCK_PAPERS = [
             "max_context_tokens": 1000000,
             "retrieval_robustness": 98.2
         },
-        "abstract": "本論文探討在大模型長上下文（Context）與 KV Cache 爆發的時代，以快取增強生成 (CAG) 取代複雜 RAG 架構的可行性。CAG 將整個組織或個人的知識庫快取在 LLM 的 Context 中，大幅降低了傳統 RAG 中 chunking、embedding 與 vector search 所產生的誤差與延遲。這為組織 AI 轉型提供了極高可靠性、零檢索摩擦的全新知識治理路徑。",
+        "abstract": "本論文探討在大模型長上下文（Context）與 KV Cache 爆發的時代，以快取增強生成 (CAG) 取代複雜 RAG 架構的可行性。CAG 將整個組織或個人的知識庫快取在 LLM 的 Context 中，大幅降低了傳統 RAG 中 chunking、embedding 與 vector search 所產生的誤差與延遲。這為組織級知識治理與應用提供了極高可靠性、零檢索摩擦的全新知識路徑。",
         "urls": [
             {"type": "arxiv_pdf", "link": "https://arxiv.org/pdf/2412.18000.pdf"},
             {"type": "local_pdf", "link": "file:///Users/wuulong/Zotero/storage/Dont_Do_RAG_2024.pdf"}
@@ -3999,7 +4003,7 @@ def clean_and_rebuild_mock(db_path):
         
         # 2. 寫入 directory_roots (如果 setup_research_db 沒載入則在此補載)
         roots_to_insert = [
-            ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案代碼庫根目錄"}),
+            ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案程式碼庫根目錄"}),
             ("zotero_storage", "STUDENT_LOCAL", "haba", "/Users/wuulong/Zotero/storage/", {"description": "哈爸個人 Zotero 本地文獻 PDF 儲存目錄"}),
             ("lab_nas", "STUDENT_LOCAL", "haba", "/Volumes/VRES_NAS/archive/", {"description": "哈爸個人或實驗室 NAS 伺服器掛載路徑"}),
             ("remote_url", "GLOBAL_WEB", "internet", "", {"description": "網際網路線上遠端 HTTP 資源入口"})
@@ -6033,7 +6037,7 @@ PROJECTS_SEED = [
         "project_id": "prj_ai_enablement",
         "project_name": "AI 應用與賦能研究專案",
         "description": "研究個人 AI 賦能（BMAD 方法論、裝備化 Skill CLI）、組織級知識治理架構，以及 DeepSeek-R1 與推理時計算最佳化等前沿 AI 研究方法。",
-        "search_spec": {"keywords": ["personal AI enablement", "enterprise GenAI", "DeepSeek-R1 reasoning"], "min_year": 2024},
+        "search_spec": {"keywords": ["personal AI enablement", "organizational knowledge governance", "DeepSeek-R1 reasoning"], "min_year": 2024},
         "architecture_spec": {"methodology_framework": "BMAD-method / Haba-Quadrilogy", "core_technologies": ["DeepSeek-R1", "CAG"]}
     },
     {
@@ -6090,7 +6094,7 @@ TOPICS_SEED = [
         "focus_spec": {"focus_variables": ["skill_execution_friction"], "equations": ["BMAD_Entropy"], "auto_tags": ["Sovereign-AI"]}
     },
     {
-        "topic_id": "top_enterprise_transformation",
+        "topic_id": "top_organizational_knowledge",
         "project_id": "prj_ai_enablement",
         "topic_name": "組織級知識庫架構與 CAG vs RAG 知識架構評估",
         "sequence_order": 2,
@@ -6146,7 +6150,7 @@ def setup_db():
         
     print("🚀 正在預先配置哈爸的環境路徑路由 (directory_roots)...")
     roots_to_insert = [
-        ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案代碼庫根目錄"}),
+        ("workspace_root", "STUDENT_LOCAL", "haba", "/Users/wuulong/github/bmad-pa/", {"description": "哈爸個人專案程式碼庫根目錄"}),
         ("zotero_storage", "STUDENT_LOCAL", "haba", "/Users/wuulong/Zotero/storage/", {"description": "哈爸個人 Zotero 本地文獻 PDF 儲存目錄"}),
         ("lab_nas", "STUDENT_LOCAL", "haba", "/Volumes/VRES_NAS/archive/", {"description": "哈爸個人或實驗室 NAS 伺服器掛載路徑"}),
         ("remote_url", "GLOBAL_WEB", "internet", "", {"description": "網際網路線上遠端 HTTP 資源入口"})

@@ -1,6 +1,6 @@
 # NotebookLM Asset Pack - events/my_research/sovereign-research-methodology/skills
 - **Source Folder**: `events/my_research/sovereign-research-methodology/skills`
-- **Generated At**: 2026-06-06 07:37:50
+- **Generated At**: 2026-06-06 07:59:56
 
 ---
 
