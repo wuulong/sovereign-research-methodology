@@ -24,9 +24,10 @@
 
 ### 📐 Methodology 支柱：大憲章本體規格 (`methodology/`)
 本目錄專門整理大腦方法論的架構、規則與改良，包含三大地基定錨規格（地基定錨生命週期階段一）：
-- `methodology_01_requirements.md` (原 `sovereign_research_01_requirements.md`) ➔ 系統工程規格需求書。
-- `methodology_02_metadata_schema_spec.md` (原 `sovereign_research_02_metadata_schema_spec.md`) ➔ 十一表大腦 Schema 剛性規範。
-- `methodology_03_relation_ontology.md` (原 `sovereign_research_03_relation_ontology.md`) ➔ 文獻有向演化與 BFS 遞迴閱讀關係本體規格。
+- `methodology_01_requirements.md` ➔ 系統工程規格需求書。
+- `methodology_02_system_architecture_navigator.md` ➔ 總入口導覽與 10 大分區地圖。
+- `methodology_11_database_schema_spec.md` ➔ 十一表大腦 Schema 剛性規範。
+- `methodology_12_relation_ontology_spec.md` ➔ 文獻有向演化關係本體規格。
 - **`build_log/`** ➔ **方法論專屬建構日誌**（本檔案即為 `01` 號第一案），用以物理存檔方法論本身的改良決策軌跡。
 
 ### 📂 Manuscripts 支柱：具體寫作手稿 (`manuscripts/`)

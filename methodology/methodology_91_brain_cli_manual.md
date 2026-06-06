@@ -1,4 +1,4 @@
-# 🌊 主權大腦實體探勘命令列工具使用手冊 (Brain CLI Manual)
+# 🌊 methodology_91: 主權大腦實體探勘命令列工具使用手冊 (Brain CLI Manual)
 
 ## 📌 1. 工具定位與核心哲學
 
