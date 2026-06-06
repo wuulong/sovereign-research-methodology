@@ -25,9 +25,20 @@
 
 ---
 
-## 📊 3. MPM 三維自證校驗架構圖
+## 🚀 3. Verifier 專屬心流命令
 
-以下為 Verifier 執行 MPM 指標審查時的三維剛性校驗架構圖：
+以下為主權自證驗證器所主控的核心命令：
+
+| 命令名稱 | 實體工程動作 (Physical Action) | 驅動的底層 Python 腳本 | 讀寫 of 資料庫實體表 |
+| :--- | :--- | :--- | :--- |
+| **`!paper_verify`** (或 **`!paper_mpm`**) | **元自證一鍵物理審計**：執行完整性校驗與腳本可用性跑分測試，計算 MPM 指數並產出 `SMPRR` 報告。 | `scripts/verify_poc_completeness.py` | 全庫十一張表 (唯讀校驗) |
+| **`!paper_checksum`** | **資料指紋回寫手稿**：重新 rebuild 並導出 `contribution.json` Checksum，回寫手稿最後章節完成物理自指。 | `scripts/verify_poc_completeness.py` | `my_manuscripts` (寫入更新 Checksum) |
+
+---
+
+## 📊 4. MPM 三維自證校驗架構圖
+
+以下為 Verifier 執行 MPM 指標審查時時的三維剛性校驗架構圖：
 
 ```mermaid
 flowchart TD
@@ -57,7 +68,7 @@ flowchart TD
 
 ---
 
-## 🧬 4. 「MPM 元自證成熟度」剛性演算法
+## 🧬 5. 「MPM 元自證成熟度」剛性演算法
 
 為了保證方法論作為科研典範的物理可用性，MPM 指標採用極其剛性的三維加權計算：
 
@@ -69,7 +80,7 @@ $$\text{MPM} = (\text{SQLite 有效性} \times 0.40) + (\text{工具鏈無摩擦
 
 ---
 
-## 🛠️ 5. 驅動之 Python 腳本與 DB 實體對照
+## 🛠️ 6. 驅動之 Python 腳本與 DB 實體對照
 
 | 運作階段 | 驅動的底層 Python 腳本 | 讀寫的資料庫實體表 |
 | :--- | :--- | :--- |

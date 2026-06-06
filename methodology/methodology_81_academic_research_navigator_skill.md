@@ -25,7 +25,21 @@
 
 ---
 
-## 📊 3. Stage 2 消化加工與 Ingestion 流水線
+## 🚀 3. Navigator 專屬心流命令
+
+以下為學術研究導航員所主控的核心命令：
+
+| 命令名稱 | 實體工程動作 (Physical Action) | 驅動的底層 Python 腳本 | 讀寫 of 資料庫實體表 |
+| :--- | :--- | :--- | :--- |
+| **`!paper_scout [QUERY]`** | **公海文獻探採**：使用 Semantic Scholar API 根據關鍵字，在公海中探查潛在文獻。 | `scripts/paper_scout.py` | `exploration_tasks` (寫入)<br>`papers` (寫入/靠泊) |
+| **`!paper_hydrate [URL/ID]`** | **PDF 下載與預萃取**：根據學術重力 Ga 排定之優先級，下載 PDF 並使用 Marker 預萃取成純文字 Markdown。 | `scripts/hydrate_paper_assets.py` | `paper_urls` (寫入相對路徑)<br>`papers` (更新狀態) |
+| **`!paper_guide`** | **Pending 優先級指引**：計算 Pending 文獻的 Ga 重力，產出精讀建議清單。 | `scripts/hydrate_citations_and_gravity.py` | `papers` (唯讀重力分與狀態) |
+| **`!paper_digest [paper_id]`** | **Stage 2 降維消化**：Agent 協同精讀，提取 10 大核心因子與學者品位裁決（Taste Verdict）寫入信封。 | `scripts/literature_deconstruct_and_save.py` | `papers` (變更狀態為 `STAGE_2_DEEP` 並更新 `meta_data` JSON) |
+| **`!paper_tree [paper_id]`** | **經典家譜 BFS 探查**：以 BFS 探查文獻向後兩層之 `GROUNDED_ON` 依賴關係，審查理論根系是否健全。 | `scripts/verify_argument_provenance.py` | `papers` (唯讀)<br>`paper_relations` (唯讀關係) |
+
+---
+
+## 📊 4. Stage 2 消化加工與 Ingestion 流水線
 
 以下為 Navigator 將公海論文加工成「一等主權知識公民」的實體 Mermaid 流程圖：
 
@@ -48,7 +62,7 @@ flowchart TD
 
 ---
 
-## 🧬 4. 「根系浮空懲罰」底層核心演算規則
+## 🧬 5. 「根系浮空懲罰」底層核心演算規則
 
 當研究生引用文獻 $A$ 時，Navigator 會透過 BFS 演算法向後探查兩層依賴關係（$A \rightarrow B \rightarrow C$，關係邊為 `GROUNDED_ON`）：
 
@@ -68,7 +82,7 @@ flowchart LR
 
 ---
 
-## 🛠️ 5. 驅動之 Python 腳本與 DB 實體對照
+## 🛠️ 6. 驅動之 Python 腳本與 DB 實體對照
 
 | 運作階段 | 驅動的底層 Python 腳本 | 讀寫的資料庫實體表 |
 | :--- | :--- | :--- |

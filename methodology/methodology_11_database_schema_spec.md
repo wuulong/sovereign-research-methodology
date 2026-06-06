@@ -15,15 +15,156 @@
 | **3. 幽靈引文與未讀先引**<br>（快餐式引用，將未讀文獻直接丟進 References 濫竽充數） | **`papers.meta_data` JSON信封**<br>聯動 **`manuscript_citations`** | **Stage 2 降維解構合規洗滌**：<br>文獻必須先完成 Stage 2 深度解構（降維提取 10 大學術因子，置於 `meta_data`），大腦才認可其為 `'STAGE_2_DEEP'`。`manuscript_citations` 自動核對手稿引用，未過關者觸發「幽靈引文警告」。 |
 | **4. 自我認知偏差與投機防巧**<br>（自我審查流於形式，或對一兩篇文獻自審 PASS 虛報進度） | **`red_team_logs` 表**<br>聯動 **合併鎖 (Verdict Lock) 與加權計分** | **Socratic 對抗與 Verdict Lock 剛性阻斷**：<br>紅軍攻擊寫入 `red_team_logs`，狀態為 `VULNERABLE` 時會觸發合併鎖，物理阻斷論文編譯。在 MCI 算法中，紅軍得分採用「自審覆蓋率 60% + PASS率 40%」綜合模型，覆蓋率不足會受到強力制約。 |
 | **5. 跨電腦移植性差與路徑衝突**<br>（不同成員電腦環境絕對路徑不同，導致資料庫外鍵斷線與無法執行） | **`directory_roots` 表**<br>聯動 **`paper_urls` 表** | **抽象 Root Key 與相對路徑解耦設計**：<br>`directory_roots` 隔離各電腦的實體絕對路徑，提供 `root_key`。`paper_urls` 僅儲存 `root_key` 與相對路徑。移機時僅需修改一處絕對路徑即可全庫復活，實現永續傳承。 |
-| **6. 多人協作與 Git 資料庫衝突**<br>（SQLite 二進位檔案在多人提交 Git 時必然發生無法 merge 的衝突） | **純文字 DTO 封裝**<br>(如 `contribution.json`) | **二進位解耦與跳躍式知識遺傳**：<br>不直接在 Git 提交二進位 `.db` 檔，而是由匯出指令導出為純文字 DTO JSON。協作者拉取後一鍵 rebuild 重建本地資料庫，完美避開 Git 二進位衝突。 |
+| **6. 多人協作與 Git 資料庫衝突**<br>（SQLite 二進位檔案在多人提交 Git 時必然發生無法 merge 的衝突） | **純文字 DTO 封裝**<br>（如 `contribution.json`） | **二進位解耦與跳躍式知識遺傳**：<br>不直接在 Git 提交二進位 `.db` 檔，而是由匯出指令導出為純文字 DTO JSON。協作者拉取後一鍵 rebuild 重建本地資料庫，完美避開 Git 二進位衝突。 |
 
 ---
 
-## 🧪 2. 全庫大一統 JSON 規格書 (Metadata Schema Spec v2.1)
+## 📊 2. SQLite 十一表實體關係圖 (ER Diagram)
+
+以下為主權大腦資料庫 `Research_Artifacts.db` 的完整實體關係圖，呈現核心專案主題、文獻探勘、實踐舉證、紅軍對抗與手稿編譯之間的強耦合關聯：
+
+```mermaid
+erDiagram
+    PROJECTS ||--o{ TOPICS : "contains"
+    TOPICS ||--o{ PAPERS : "organizes"
+    TOPICS ||--o{ MY_MANUSCRIPTS : "drives"
+    TOPICS ||--o{ TOPIC_GRAVITY_OVERRIDES : "overrides"
+    EXPLORATION_TASKS ||--o{ PAPERS : "collects"
+    DIRECTORY_ROOTS ||--o{ PAPER_URLS : "mounts"
+    
+    PAPERS ||--o{ PAPER_RELATIONS : "references as source"
+    PAPERS ||--o{ PAPER_RELATIONS : "referenced as target"
+    PAPERS ||--o{ PAPER_URLS : "resolves to"
+    PAPERS ||--o{ PAPER_TAGS : "tagged with"
+    PAPERS ||--o{ EMPIRICAL_EVIDENCES : "proves"
+    PAPERS ||--o{ RED_TEAM_LOGS : "attacks"
+    
+    MY_MANUSCRIPTS ||--o{ RED_TEAM_LOGS : "critiques"
+    MY_MANUSCRIPTS ||--o{ MY_MANUSCRIPTS : "inherits from"
+    MY_MANUSCRIPTS ||--o{ MANUSCRIPT_CITATIONS : "cites"
+    PAPERS ||--o{ MANUSCRIPT_CITATIONS : "cited by"
+
+    PROJECTS {
+        string project_id PK
+        string project_name
+        string description
+        string search_spec "JSON"
+        string architecture_spec "JSON"
+        timestamp created_time
+        string meta_data "JSON"
+    }
+    TOPICS {
+        string topic_id PK
+        string project_id FK
+        string topic_name
+        int sequence_order
+        string focus_spec "JSON"
+        string status
+        string meta_data "JSON"
+    }
+    EXPLORATION_TASKS {
+        string task_id PK
+        string query
+        timestamp run_time
+        string status
+        int papers_found
+        string agent_version
+        string error_log
+        string meta_data "JSON"
+    }
+    DIRECTORY_ROOTS {
+        string root_key PK
+        string owner_name
+        string absolute_path
+        string meta_data "JSON"
+    }
+    PAPERS {
+        string paper_id PK
+        string task_id FK
+        string topic_id FK
+        string title
+        string authors
+        int year
+        string core_method
+        string cite_key "Unique"
+        string bibtex
+        string meta_data "JSON"
+    }
+    PAPER_RELATIONS {
+        string relation_id PK
+        string source_paper_id FK
+        string target_paper_id FK
+        string relation_type "IMPROVES | REFUTES | GROUNDED_ON"
+        string description
+    }
+    PAPER_URLS {
+        string url_id PK
+        string paper_id FK
+        string root_key FK
+        string url_link
+        string url_type
+        string download_status
+        int file_size_bytes
+        string meta_data "JSON"
+    }
+    PAPER_TAGS {
+        string paper_id PK
+        string tag_name PK
+        string meta_data "JSON"
+    }
+    TOPIC_GRAVITY_OVERRIDES {
+        string topic_id PK
+        string entity_name PK
+        string entity_type PK
+        real bias_score
+        string description
+    }
+    EMPIRICAL_EVIDENCES {
+        string evidence_id PK
+        string paper_id FK
+        string practice_scenario "JSON"
+        string evidence_payload "JSON"
+        real friction_percentage
+        string artifact_visual_path
+        timestamp evidence_time
+        string meta_data "JSON"
+    }
+    RED_TEAM_LOGS {
+        string log_id PK
+        string paper_id FK
+        string manuscript_id FK
+        string aspect_analyzed
+        string reviewer_attack
+        string student_defense
+        string verdict "PASS | VULNERABLE | CRITICAL_BUG"
+        timestamp test_time
+        string meta_data "JSON"
+    }
+    MY_MANUSCRIPTS {
+        string manuscript_id PK
+        string topic_id FK
+        string title
+        string cite_key "Unique"
+        string manuscript_type "Conference | Journal | Thesis"
+        string evolution_stage "Planning | Writing | Under_Review | Published"
+        string previous_manuscript_id FK
+        string meta_data "JSON"
+    }
+    MANUSCRIPT_CITATIONS {
+        string manuscript_id PK
+        string paper_id PK
+        string citation_context
+        string meta_data "JSON"
+    }
+}
+
+---
+
+## 🧪 3. 全庫大一統 JSON 規格書 (Metadata Schema Spec v2.1)
 
 此設計引進了**「全域合規性檢核信封 (compliance_status)」**，用於動態記錄資料庫每筆詮釋資料的品質合規狀態、缺失欄位與審計軌跡，實體化「大腦自主品質治理」。
 
-### 2.1 全域必填：合規性檢核信封 (compliance_status)
+### 3.1 全域必填：合規性檢核信封 (compliance_status)
 為防止資料規格隨時間退化，**所有資料表** 的 `meta_data` JSON 根節點下，**[必須]** 包含一個固定的 `compliance_status` 物件，由大腦審計工具 `audit_brain_compliance.py` 自動定期掃描更新：
 
 ```json
@@ -37,7 +178,7 @@
 
 ---
 
-## 🧱 3. 各資料表 JSON 剛性結構合集
+## 🧱 4. 各資料表 JSON 剛性結構合集
 
 ### 📌 papers (背景文獻主表 - meta_data)
 ```json
@@ -138,9 +279,9 @@
 
 ---
 
-## 📈 4. 資料品質約束與自動化審計
+## 📈 5. 資料品質約束與自動化審計
 
-*   **自動化審計打標**：透過呼叫 `scripts/audit_brain_compliance.py` 自動掃描大腦，比對每筆 `meta_data` JSON 的 Key。若缺少必填 Key，將 `is_compliant` 標記為 `false`，並在 `missing_fields` 中記錄缺失的 Key 路徑。
+*   **自動化審計打標**：透過呼叫 `scripts/audit_brain_compliance.py` 自動掃描大腦，比對每筆 `meta_data` JSON 的 Key。若缺少必填 Key，將 `is_compliant` 標記為 `false` / `true`，並在 `missing_fields` 中記錄缺失的 Key 路徑。
 *   **一鍵 SQL 盲檢合規率**：
     ```sql
     SELECT 

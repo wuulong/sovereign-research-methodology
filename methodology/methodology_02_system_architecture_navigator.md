@@ -4,9 +4,35 @@
 
 ---
 
-## 🏛️ 1. 主權大腦四星協同運作模型 (Sovereign Skills & DB Orchestration)
+## 🏛️ 1. 系統整體架構與三大運作閉環 (Macro System Architecture & Loops)
 
-整個主權科研典範並非依靠單一 AI 代理人的心流碰撞，而是由 **四大專屬學術研究 Skill** 圍繞著實體 **SQLite 資料庫 (`Research_Artifacts.db`)** 所構成的精密防禦縱深：
+主權科研大腦 (Sovereign Research Brain) 是一個以「行解合一 (Action-Knowledge Alignment)」為核心的防禦性個人學術知識系統，旨在利用資料庫與工具鏈的剛性對合，防止 AI 時代下研究者被生成式黑話代寫所產生的「認知掏空」危機。
+
+整個系統以一個核心實體資料庫——**SQLite `Research_Artifacts.db`** 為錨定核心，將文獻、實踐證據與手稿 Claims 進行強外鍵綁定，並透過四大星級 Skills (Navigator, Auditor, Builder, Verifier) 與本地工具鏈，在宏觀上流轉著以下**三大運作閉環**：
+
+### 🔄 閉環一：文獻引渡與降維消化閉環 (Ingestion & Digesting Loop)
+此閉環負責將公海中氾濫的論文洗滌並轉化為大腦的「一等知識公民」，建立可靠的理論地基：
+1. **重力場引渡**：透過學術重力場 Ga 演算 (考慮 Venue、Institution 偏置與 Citation 數)，自動挑選 Pending 優先精讀文獻，下載 PDF 並使用 Marker 預萃取成 Markdown 格式。
+2. **主題靠泊**：根據專案的搜尋契約，將文獻靠泊至特定的邏輯主題 (Topic) 下，防範文獻零散堆砌。
+3. **降維解構與品位裁決**：人機協同精讀，提取 10 大核心學術因子與學者主觀批判的 Verdict 寫入 JSON 信封，升級為 `STAGE_2_DEEP` 深度消化狀態。細節參見 **[第 2 區]** 與 **[第 3 區]**。
+
+### 🔄 閉環二：紅軍自審與答辯防線閉環 (Grill & Defense Loop)
+此閉環是捍衛人類思考手感與論點硬度的剛性防火牆，以對抗對抗流於形式的自審與投機行為：
+1. **紅軍 Socratic 拷問**：紅軍對抗引擎掃描手稿，對最薄弱的主張 (Claims) 提出尖銳質疑，並將漏洞落庫至紅軍日誌，標記為 `VULNERABLE`。
+2. **合併阻斷鎖 (Verdict Lock)**：只要資料庫中存在一筆 `VULNERABLE` 質疑，系統將剛性切斷 References 完璧拼裝，物理阻斷論文最終合龍與編譯。
+3. **現地舉證與解鎖**：學生必須針對質疑修正手稿，在資料庫中補齊本地實踐舉證 (Empirical Evidences) 與誤差摩擦，填寫答辯內容。答辯經指導教授或系統評判通過 (Verdict PASS) 後，合併鎖解鎖，推回電閘。細節參見 **[第 4 區]** 與 **[第 5 區]**。
+
+### 🔄 閉環三：手稿合龍與元自證閉環 (Compilation & Verification Loop)
+此閉環負責論文發表前的物理裝配、白箱引用完璧化與 100% 重現自指校驗：
+1. **意圖驅動寫作**：手稿 ToC 強制要求聲明人類的寫作意圖與資料庫實體地基，Builder 實體核對 cite_key，自動拼裝 references.bib，一鍵合龍編譯手稿。
+2. **資料指紋自指合龍**：將大腦資料庫 DTO (contribution.json) 計算出之 Checksum 雜湊值自動寫入/嵌入手稿最後章節，自證手稿數據 100% 由本地資料庫長出。
+3. **工具鏈可用性審計**：自證驗證器 Verifier 實體校驗 SQLite 結構健全度與本機核心 Python 支援腳本的可用性，計算元自證成熟度 (MPM)，確保該大腦可在他人電腦「一鍵冷啟動重建」，實現去中心化科學傳承。細節參見 **[第 6 區]**、**[第 7 區]** 與 **[第 8 區]**。
+
+---
+
+## 🏛️ 2. 主權大腦四星協同運作物理拓撲 (Orchestration Topology)
+
+在實際運作中，這三大閉環並非依靠散裝的 Prompts，而是由以下四大星級 Skills 圍繞著 SQLite 實體資料庫進行的精密物理協調：
 
 ```mermaid
 flowchart TD
@@ -71,7 +97,7 @@ flowchart TD
 
 ---
 
-## 📐 2. 10 大分區系統化編號規範 (Segmentation Specs)
+## 📐 3. 10 大分區系統化編號規範 (Segmentation Specs)
 
 為確保方法論規格書的易讀性與擴充對稱性，本目錄下的所有檔案均採用「**每區預算 10 碼，區間跳跃式分區**」進行編號。每一分區的 `X0` 碼作為該分區總導覽/保留使用，而規格書則從 `X1` 開始編號：
 
@@ -94,7 +120,7 @@ flowchart TD
 
 ---
 
-## 📂 3. 10 大分區規格書跳轉地圖 (The Specification Matrix)
+## 📂 4. 10 大分區規格書跳轉地圖 (The Specification Matrix)
 
 ### 第 0 區：系統需求與架構導覽
 *   **`01`**：[methodology_01_requirements.md](file:///Users/wuulong/github/bmad-pa/events/my_research/sovereign-research-methodology/methodology/methodology_01_requirements.md) ➔ 宣示思維主權與防衛認知掏空的頂層規格需求。

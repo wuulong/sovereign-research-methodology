@@ -25,7 +25,20 @@
 
 ---
 
-## 📊 3. Verdict Lock 狀態轉移與防禦流程圖
+## 🚀 3. Auditor 專屬心流命令
+
+以下為學術品質自審與審計防線所主控的核心命令：
+
+| 命令名稱 | 實體工程動作 (Physical Action) | 驅動的底層 Python 腳本 | 讀寫 of 資料庫實體表 |
+| :--- | :--- | :--- | :--- |
+| **`!paper_grill [MS_CODE]`** | **紅軍 Socratic 拷問**：自動掃描手稿 Claims，對最薄弱的主張發起靈魂拷問並寫入日誌。 | `scripts/verify_manuscript_maturity.py` | `red_team_logs` (寫入質疑日誌)<br>`my_manuscripts` (唯讀) |
+| **`!paper_red [MS_CODE] [Loophole]`** | **手動寫入脆弱漏洞**：手動或自動在資料庫中標記某個 Claim 為 `VULNERABLE`，拉下 Verdict Lock 電閘。 | `scripts/add_red_team_logs.py`<br>`scripts/hydrate_loopholes_redteam.py` | `red_team_logs` (寫入 `VULNERABLE` 狀態) |
+| **`!paper_defense [MS_CODE] [Log_ID] [Defense_Text]`** | **學生提交現地證據答辯**：針對被質疑的紅軍日誌 ID 填寫答辯內容與實體 Evidence 連結。 | `scripts/verify_manuscript_maturity.py` | `red_team_logs` (寫入 `student_defense`) |
+| **`!paper_pass [MS_CODE] [Log_ID]`** | **答辯審核通過解鎖**：審查答辯內容，判定脆弱點修復，將 Verdict 更新為 `PASS`，推上電閘。 | `scripts/verify_manuscript_maturity.py` | `red_team_logs` (更新狀態為 `PASS`) |
+
+---
+
+## 📊 4. Verdict Lock 狀態轉移與防禦流程圖
 
 以下為 Auditor 剛性電閘與答辯解鎖的 Mermaid 狀態機轉移圖：
 
@@ -54,7 +67,7 @@ stateDiagram-v2
 
 ---
 
-## 🧬 4. 「紅軍防投機」計分規則
+## 🧬 5. 「紅軍防投機」計分規則
 
 為了防止學生只對 1 篇無關緊要的文獻進行自審並獲得 PASS，就宣稱自審通過率 100%，系統在計算 MCI 指標時，引入防投機計分公式：
 
@@ -64,7 +77,7 @@ $$\text{紅軍自審得分} = (\text{自審文獻覆蓋率} \times 0.6) + (\text
 
 ---
 
-## 🛠️ 5. 驅動之 Python 腳本與 DB 實體對照
+## 🛠️ 6. 驅動之 Python 腳本與 DB 實體對照
 
 | 運作階段 | 驅動的底層 Python 腳本 | 讀寫的資料庫實體表 |
 | :--- | :--- | :--- |
