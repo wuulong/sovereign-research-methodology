@@ -79,9 +79,15 @@ def main():
     if len(sys.argv) > 1:
         ms_code = sys.argv[1].strip()
         
-    paper_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_manuscript.md")
-    provenance_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_argument_map.md")
-    report_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_audit_report.md")
+    ms_subdir = os.path.join(base_dir, "manuscripts", ms_code)
+    if os.path.exists(ms_subdir) and os.path.isdir(ms_subdir):
+        paper_path = os.path.join(ms_subdir, f"{ms_code}_05_manuscript.md")
+        provenance_path = os.path.join(ms_subdir, f"{ms_code}_06_argument_map.md")
+        report_path = os.path.join(ms_subdir, f"{ms_code}_11_audit_report.md")
+    else:
+        paper_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_manuscript.md")
+        provenance_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_argument_map.md")
+        report_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_audit_report.md")
     
     print(f"🕵️‍♂️ 啟動哈教授學術自審與論點地圖盲檢引擎 (MS_CODE: {ms_code})...")
     
@@ -184,7 +190,7 @@ def main():
     
     report_md = []
     report_md.append(f"# 🕵️‍♂️ 哈教授學術盲檢自審與品質對合報告 (Academic Grounding Audit Report)")
-    report_md.append(f"*評估時間戳記：{now_str}* | *定錨手稿編號：`ms_sovereign_research_2026`*\n")
+    report_md.append(f"*評估時間戳記：{now_str}* | *定錨手稿編號：`ms_{ms_code}_2026`*\n")
     report_md.append("> [!IMPORTANT]")
     report_md.append("> 本報告是哈教授「30 秒 SQL 照妖鏡」的自動化實體展現。它盲檢了手稿與證明文件中的所有引文，")
     report_md.append("> 強制校對其在大腦資料庫中的註冊狀態與 Stage 2 深度解構合規性，以肉身實測與物理硬度剪枝 AI 八股幻想。\n")

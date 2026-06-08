@@ -194,9 +194,25 @@ def main():
     involved_paper_ids = []
     digested_paper_ids = []
     
+    # 閱讀層次統計與權重映射
+    LEVEL_WEIGHTS = {
+        "BODY_ON_DEEP": 1.0,
+        "SKIMMED": 0.7,
+        "DTO_SUMMARY": 0.3,
+        "UNREAD": 0.0
+    }
+    read_depth_counts = {
+        "BODY_ON_DEEP": 0,
+        "SKIMMED": 0,
+        "DTO_SUMMARY": 0,
+        "UNREAD": 0
+    }
+    unread_keys = []
+    summary_keys = []
+    
     for cite in all_citations:
         cursor.execute("""
-            SELECT paper_id, meta_data 
+            SELECT paper_id, meta_data, read_depth_level 
             FROM papers 
             WHERE LOWER(cite_key) = LOWER(?) OR LOWER(paper_id) = LOWER(?);
         """, (cite, cite))
@@ -204,8 +220,21 @@ def main():
         
         if row:
             registered_cites_count += 1
-            paper_id, meta_str = row
+            paper_id, meta_str, read_depth_level = row
             involved_paper_ids.append(paper_id)
+            
+            # 處理閱讀深度
+            if not read_depth_level or read_depth_level.upper() not in LEVEL_WEIGHTS:
+                level_resolved = "UNREAD"
+            else:
+                level_resolved = read_depth_level.upper()
+                
+            read_depth_counts[level_resolved] += 1
+            if level_resolved == "UNREAD":
+                unread_keys.append(cite)
+            elif level_resolved == "DTO_SUMMARY":
+                summary_keys.append(cite)
+                
             try:
                 meta = json.loads(meta_str) if meta_str else {}
                 stage = meta.get("stage", "STAGE_1_PRELIMINARY")
@@ -218,9 +247,15 @@ def main():
                 undigested_keys.append(cite)
         else:
             unregistered_keys.append(cite)
+            read_depth_counts["UNREAD"] += 1
+            unread_keys.append(cite)
             
     cite_grounding_rate = (registered_cites_count / citations_count * 100) if citations_count > 0 else 100.0
     stage2_digestion_rate = (stage2_cites_count / citations_count * 100) if citations_count > 0 else 100.0
+    
+    # 計算真實閱讀深度分數
+    total_weights = sum(read_depth_counts[level] * LEVEL_WEIGHTS[level] for level in LEVEL_WEIGHTS)
+    average_reading_score = (total_weights / citations_count * 100) if citations_count > 0 else 100.0
     
     # B. 【真正的 2 層深度遞迴 BFS 探針 + 根系未開發懲罰因子】
     recursive_targets = set()
@@ -360,9 +395,10 @@ def main():
     # 4. MCI 指數剛性加權計算
     # ==============================================================================
     brain_grounding_score = (
-        cite_grounding_rate * 0.20 +
-        stage2_digestion_rate * 0.30 +
-        recursive_digestion_rate * 0.20 +
+        cite_grounding_rate * 0.15 +
+        stage2_digestion_rate * 0.20 +
+        average_reading_score * 0.20 +
+        recursive_digestion_rate * 0.15 +
         red_team_score * 0.20 +
         claims_grounding_rate * 0.10
     )
@@ -416,9 +452,10 @@ def main():
 ### 📈 雙板塊加權明細
 *   **聯邦文件成熟度分 (50% 權重)**：`{avg_doc_maturity:.2f}%` (手稿聯邦 8 大資產之寫作完備度)
 *   **大腦 Grounding 綜合分 (50% 權重)**：`{brain_grounding_score:.2f}%` (大腦資料庫之實體地基信度)
-    *   *Cite 註冊存在率 (20% 權重)*: `{cite_grounding_rate:.2f}%` ({registered_cites_count}/{citations_count})
-    *   *Stage 2 消化率 (30% 權重)*: `{stage2_digestion_rate:.2f}%` ({stage2_cites_count}/{citations_count})
-    *   *遞迴閱讀就位率 (20% 權重)*: `{recursive_digestion_rate:.2f}%` (已開發根系率: {raw_recursive_rate:.1f}%, 根系覆蓋率: {roots_exploration_factor*100:.1f}%)
+    *   *Cite 註冊存在率 (15% 權重)*: `{cite_grounding_rate:.2f}%` ({registered_cites_count}/{citations_count})
+    *   *Stage 2 消化率 (20% 權重)*: `{stage2_digestion_rate:.2f}%` ({stage2_cites_count}/{citations_count})
+    *   *真實閱讀深度分 (20% 權重)*: `{average_reading_score:.2f}%` (各層次權重加權分)
+    *   *遞迴閱讀就位率 (15% 權重)*: `{recursive_digestion_rate:.2f}%` (已開發根系率: {raw_recursive_rate:.1f}%, 根系覆蓋率: {roots_exploration_factor*100:.1f}%)
     *   *紅軍對抗綜合得分 (20% 權重)*: `{red_team_score:.2f}%` (涵蓋率: {red_team_coverage*100:.1f}%, 答辯率: {red_team_pass_rate:.1f}%)
     *   *Claims Grounding 完整率 (10% 權重)*: `{claims_grounding_rate:.2f}%` (總 Claims: {total_claims_count} 條, 完美: {perfect_claims_count} 條)
 
@@ -458,8 +495,29 @@ def main():
                 f.write(f"> - `{k}`\n")
             f.write("\n")
 
-        f.write(f"""### 2. 重要文獻遞迴閱讀鏈 (Recursive Digestion Audit - BFS 2-Level)
-*   **遞迴閱讀就位率**：`{recursive_digestion_rate:.2f}%` (剛性懲罰：因 {len(undigested_keys)} 篇文獻未消化，其理論根系完全懸空，已乘上已開發覆蓋率 {roots_exploration_factor*100:.2f}%)
+        f.write(f"""### 2. 真實文獻閱讀深度體檢 (Reading Depth Audit)
+*   **真實閱讀深度分**：`{average_reading_score:.2f}%`
+*   各閱讀層次之文獻統計：
+    *   🟢 **真實身讀 (BODY_ON_DEEP)**：`{read_depth_counts['BODY_ON_DEEP']}` 篇 (權重 1.0)
+    *   🟡 **真實簡讀 (SKIMMED)**：`{read_depth_counts['SKIMMED']}` 篇 (權重 0.7)
+    *   🟠 **僅看摘要 (DTO_SUMMARY)**：`{read_depth_counts['DTO_SUMMARY']}` 篇 (權重 0.3)
+    *   🔴 **完全未讀 (UNREAD)**：`{read_depth_counts['UNREAD']}` 篇 (權重 0.0)
+
+""")
+        if unread_keys:
+            f.write("> [!CAUTION]\n> **🔴 以下引用文獻處於完全未讀 (UNREAD) 狀態！**\n> 請親自閱讀並使用 CLI 更新閱讀狀態（如 `-rd cite_key:2` 或 `3`）：\n")
+            for k in unread_keys:
+                f.write(f"> - `{k}`\n")
+            f.write("\n")
+            
+        if summary_keys:
+            f.write("> [!WARNING]\n> **⚠️ 以下引用文獻僅閱讀了 AI 摘要 (DTO_SUMMARY)！**\n> 建議深入簡讀或精讀關鍵論文，以提升研究真實度：\n")
+            for k in summary_keys:
+                f.write(f"> - `{k}`\n")
+            f.write("\n")
+
+        f.write(f"""### 3. 重要文獻遞迴閱讀鏈 (Recursive Digestion Audit - BFS 2-Level)
+*   **遞迴閱讀就位率**：`{recursive_digestion_rate:.2f}%` (剛性懲罰：因 {len(undigested_keys)} 篇文獻未消化，其理論根系完全懸空，已乘上已開發覆蓋率 {roots_exploration_factor*100:.1f}%)
 *   已開發 A 類文獻之 2 層深度有向關係網絡共涉及 **{recursive_target_total}** 篇底層文獻。
 *   其中已在 DB 完成 Ingestion 且就位的文獻：**{recursive_target_ingested}** 篇。
 
@@ -470,7 +528,7 @@ def main():
                 f.write(f"> - 來源文獻 `{src}` ➔ 其 GROUNDED_ON 基底 `{tgt}` 尚未 Ingestion 就位！\n")
             f.write("\n")
 
-        f.write(f"""### 3. 紅軍自審防線與 Verdict 答辯硬度 (Red-Team Audit)
+        f.write(f"""### 4. 紅軍自審防線與 Verdict 答辯硬度 (Red-Team Audit)
 *   **紅軍自審綜合得分**：`{red_team_score:.2f}%` (防投機投巧計分，覆蓋率佔 60%，答辯 PASS 率佔 40%)
 *   **紅軍日誌總數**：**{total_logs}** 筆 (手稿日誌: {len(ms_logs)} 筆, 引文日誌: {len(all_red_team_logs)} 筆)。
 *   **自審 PASS 數**：**{pass_logs}** 筆。
@@ -483,7 +541,7 @@ def main():
         if total_logs > 0 and red_team_coverage < 0.5:
             f.write("> [!CAUTION]\n> **🔴 警告：紅軍對抗覆蓋率過低！**\n> 雖然您現有的答辯日誌都順利通過 (PASS)，但您僅對極少數的文獻進行了紅軍挑戰。這在學術自律中屬於『投機行為』，MCI 指數已對此進行了剛性扣分限制。請儘速為更多 Claims 與 Citations 進行自審答辯！\n\n")
 
-        f.write(f"""### 4. 論文主張 Grounding 完整性 (Claims Grounding Integrity)
+        f.write(f"""### 5. 論文主張 Grounding 完整性 (Claims Grounding Integrity)
 *   **主張對合率**：`{claims_grounding_rate:.2f}%` (共 {total_claims_count} 個核心主張)。
 
 """)
@@ -509,6 +567,7 @@ def main():
     print(f"  - MCI 綜合指數: {mci:.2f}% ({mci_tier})")
     print(f"  - 文件成熟度分: {avg_doc_maturity:.2f}%")
     print(f"  - 大腦 Grounding 分: {brain_grounding_score:.2f}%")
+    print(f"    - 真實閱讀深度分: {average_reading_score:.2f}%")
 
 if __name__ == "__main__":
     main()

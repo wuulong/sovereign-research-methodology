@@ -47,6 +47,7 @@ python3 brain_cli.py [-d DB_PATH] [功能參數] [--json]
 | **`-v`, `--verbose`** | **十大學術因子通讀** | 需搭配 `-c` 使用。在引用樹下方以條目排版輸出樹中所有已消化 `Stage 2` 文獻的完整十大學術因子 DTO，免除重複手動檢索的認知摩擦。 |
 | **`-s`, `--sql [SQL_str]`** | **實體 SQL 照妖鏡** | 直接輸入自訂 SQL 語句進行硬核查詢與資料治理。 |
 | **`-g`, `--report [ms_id]`** | **全景 Markdown 探勘報告** | 將指定手稿的所有相關 DB 內容（含手稿 Meta、引文地基對合看板、十大學術因子 DTO、紅軍對審日誌與現地誤差）匯出為有結構的 Markdown 報告。預設為 `ms_sovereign_research_2026`。 |
+| **`-rd`, `--read-depth [args]`** | **真實文獻閱讀深度更新** | 批次更新文獻的真實閱讀層次。可傳入多個 `cite_key:level`（如 `key:3`）或單一 JSON 檔案路徑。 |
 
 ---
 
@@ -102,6 +103,31 @@ python3 scripts/brain_cli.py -g ms_sovereign_research_2026
 **執行成果與輸出：**
 *   **生成檔案路徑**：[sovereign_research_13_brain_report.md](file:///Users/wuulong/github/bmad-pa/events/my_research/sovereign-research-methodology/manuscripts/sovereign_research/sovereign_research_13_brain_report.md)
 *   **報告內容**：包含手稿基本資料、91 篇定錨文獻與學術重力分數對照矩陣、各篇 Stage 2 文獻的十大學術因子 DTO 展開、紅軍對審日誌與現地誤差檢測表，免除在 SQLite 資料庫中反覆下 SQL 檢索的難度。
+
+### 6. 手動/批次更新文獻閱讀層次 (Reading Depth Updates)
+
+您可以手動更新文獻的真實閱讀深度以修正 MCI 剛性指標。閱讀層次定義如下：
+*   `0` ➔ `UNREAD` (未讀，權重 0.0)
+*   `1` ➔ `DTO_SUMMARY` (看過十大因子摘要，權重 0.3)
+*   `2` ➔ `SKIMMED` (真實簡讀/速讀，權重 0.7)
+*   `3` ➔ `BODY_ON_DEEP` (真實身讀/精讀，權重 1.0)
+
+**多筆更新語法範例（命令列鍵值對）：**
+```bash
+python3 scripts/brain_cli.py -rd zotero_Listgarten_2024_635:3 zotero_Lewis_2020_rag:2
+```
+
+**大量更新語法範例（JSON 批次檔案）：**
+```bash
+python3 scripts/brain_cli.py -rd batch_read.json
+```
+JSON 檔案格式例如下：
+```json
+{
+  "zotero_Listgarten_2024_635": 3,
+  "zotero_Lewis_2020_rag": "SKIMMED"
+}
+```
 
 ---
 

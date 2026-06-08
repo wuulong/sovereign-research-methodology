@@ -9,7 +9,7 @@
 
 ## 🏗️ 1. manuscripts/sovereign_research/ 聯邦檔案架構
 
-本手稿聯邦檔案採用 **`[MS_CODE]_兩位數字_目前的說明.副檔名` 剛性數字命名契約**，由 `01` 到 `11` 循序推進，構成一個完整自洽的寫作生命週期：
+本手稿聯邦檔案採用 **`[MS_CODE]_兩位數字_目前的說明.副檔名` 剛性數字命名契約**，由 `01` 到 `13` 循序推進，構成一個完整自洽的寫作生命週期：
 
 ### 🪵 1. 骨架與引渡 Staging (01 - 02)
 - **`sovereign_research_01_toc.md`** ➔ **有向大綱 ToC**：引領論文螺旋共演與實踐路徑的大綱設計。
@@ -25,10 +25,12 @@
 - **`sovereign_research_07_originality_defense.md`** (ODB) ➔ **原創防禦地圖**：橫向比對全球 SOTA 特徵矩陣，自證獨創性與非對稱優勢。
 - **`sovereign_research_08_reading_protocol.md`** (RP) ➔ **閱讀協議與答辯**：與紅軍 Socratic 自審逼問的 Dialog Playbacks 答辯軌跡。
 
-### 🪵 4. 品質審計與元自證釋出 (09 - 11)
+### 🪵 4. 品質審計與元自證釋出 (09 - 13)
 - **`sovereign_research_09_maturity_report.md`** (MCI看板) ➔ **SMMCAP 審計報告**：執行品質成熟度審計後產出的缺失診斷報告。
 - **`sovereign_research_10_poc_proof_report.md`** (MPM看板) ➔ **SMPRR 自證報告**：執行元自證驗證後產出的 PoC 實體驗證報告。
-- **`sovereign_research_11_audit_report.md`** (歷史) ➔ **學術盲檢自審報告歷史存檔**：早期審計缺失歷史備查。
+- **`sovereign_research_11_audit_report.md`** ➔ **最新學術自審對抗報告**：顯示註冊率與合規率均達 100% 的盲檢自審報告。
+- **`sovereign_research_12_evolution_history.md`** ➔ **演化歷程與自證報告**：記錄本研究從心流探索、野性實踐到發表之螺旋建構歷程與物理證據對合表。
+- **`sovereign_research_13_brain_report.md`** ➔ **手稿全景探勘與大腦合龍審計報告**：全量對合匯出 SQLite 中的文獻、十大學術因子、紅軍答辯與現地真值，以消滅資料庫檢索門檻。
 - **`build_log/`** ➔ **手稿專屬建構歷史日誌**（如 `01_mci_improvement_plan.md` 為提升雙看板之行動方案），順序由 `01` 起編。
 
 ---

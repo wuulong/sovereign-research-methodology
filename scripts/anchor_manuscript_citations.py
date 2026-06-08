@@ -107,8 +107,15 @@ def parse_argument_map(map_path):
 def anchor_and_export():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     db_path = os.path.join(base_dir, "data", "Research_Artifacts.db")
-    bib_path = os.path.join(base_dir, "manuscripts", "references.bib")
-    map_path = os.path.join(base_dir, "manuscripts", "sovereign_research", "sovereign_research_06_argument_map.md")
+    
+    ms_code = "sovereign_research"
+    ms_subdir = os.path.join(base_dir, "manuscripts", ms_code)
+    if os.path.exists(ms_subdir) and os.path.isdir(ms_subdir):
+        bib_path = os.path.join(ms_subdir, f"{ms_code}_04_references.bib")
+        map_path = os.path.join(ms_subdir, f"{ms_code}_06_argument_map.md")
+    else:
+        bib_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_references.bib")
+        map_path = os.path.join(base_dir, "manuscripts", f"{ms_code}_argument_map.md")
     
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

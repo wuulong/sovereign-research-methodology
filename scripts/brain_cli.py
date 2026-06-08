@@ -101,7 +101,7 @@ class BrainCLI:
         if not cite_key:
             # 沒帶引數，列出所有文獻的 ID、Cite Key 與 Title
             cursor.execute("""
-                SELECT paper_id, cite_key, title, meta_data 
+                SELECT paper_id, cite_key, title, meta_data, read_depth_level 
                 FROM papers 
                 ORDER BY cite_key;
             """)
@@ -124,21 +124,22 @@ class BrainCLI:
                     "Paper ID": r['paper_id'],
                     "Cite Key": r['cite_key'],
                     "Title": r['title'][:50] + "..." if len(r['title']) > 50 else r['title'],
-                    "Stage": status_str
+                    "Stage": status_str,
+                    "Read Depth": r['read_depth_level'] if r['read_depth_level'] else "UNREAD"
                 })
                 
             if as_json:
                 print(json.dumps(results, ensure_ascii=False, indent=2))
             else:
-                headers = ["Paper ID", "Cite Key", "Title", "Stage"]
-                row_data = [[r["Paper ID"], r["Cite Key"], r["Title"], r["Stage"]] for r in results]
+                headers = ["Paper ID", "Cite Key", "Title", "Stage", "Read Depth"]
+                row_data = [[r["Paper ID"], r["Cite Key"], r["Title"], r["Stage"], r["Read Depth"]] for r in results]
                 print("\n📑 --- 大腦背景文獻全景清單 ---")
                 print(self.format_table(row_data, headers))
                 print(f"(* 累計檢索到 {len(results)} 筆文獻 *)")
             return
             
         cursor.execute("""
-            SELECT paper_id, topic_id, title, cite_key, meta_data 
+            SELECT paper_id, topic_id, title, cite_key, meta_data, read_depth_level 
             FROM papers 
             WHERE LOWER(cite_key) = LOWER(?) OR LOWER(paper_id) = LOWER(?);
         """, (cite_key, cite_key))
@@ -172,6 +173,7 @@ class BrainCLI:
             "Title": row['title'][:50] + "..." if len(row['title']) > 50 else row['title'],
             "Ingestion Stage": stage,
             "Maturity Verdict": is_compliant,
+            "Real Read Depth": row['read_depth_level'] if row['read_depth_level'] else "UNREAD",
             "Missing Fields": str(missing) if missing else "None"
         }
         
@@ -233,7 +235,7 @@ class BrainCLI:
         cursor = conn.cursor()
         
         cursor.execute("""
-            SELECT log_id, paper_id, aspect_analyzed, reviewer_attack, student_defense, verdict, test_time 
+            SELECT log_id, paper_id, aspect_analyzed, reviewer_attack, student_defense, verdict, test_time, raw_student_defense, defense_refinement_delta 
             FROM red_team_logs 
             WHERE manuscript_id = ? OR paper_id = ?;
         """, (ms_id, ms_id))
@@ -249,7 +251,9 @@ class BrainCLI:
                 "Verdict": "🟢 PASS" if r['verdict'] == 'PASS' else "🔴 VULNERABLE",
                 "Checked At": r['test_time'],
                 "Reviewer Attack": r['reviewer_attack'],
-                "Student Defense": r['student_defense']
+                "Student Defense": r['student_defense'],
+                "Raw Defense": r['raw_student_defense'],
+                "Refinement Delta": r['defense_refinement_delta']
             })
             
         if as_json:
@@ -278,11 +282,21 @@ class BrainCLI:
                 print("    " + "-" * 70)
                 
                 # 處理多行文字的縮排展示
-                attack_indented = "\n      ".join(r['Reviewer Attack'].strip().split("\n"))
-                defense_indented = "\n      ".join(r['Student Defense'].strip().split("\n"))
+                attack_indented = "\n      ".join(r['Reviewer Attack'].strip().split("\n")) if r['Reviewer Attack'] else ""
+                defense_indented = "\n      ".join(r['Student Defense'].strip().split("\n")) if r['Student Defense'] else ""
                 
                 print(f"    ⚡️ 紅軍拷問質疑 (Reviewer Attack):\n      {attack_indented}")
-                print(f"    🛡️  君王防衛答辯 (Student Defense):\n      {defense_indented}")
+                
+                if r.get('Raw Defense'):
+                    raw_indented = "\n      ".join(r['Raw Defense'].strip().split("\n"))
+                    print(f"    🛡️  研究者原始答辯 (Raw User Defense):\n      {raw_indented}")
+                    print(f"    🛡️  AI 潤飾學術答辯 (AI Polished Defense):\n      {defense_indented}")
+                else:
+                    print(f"    🛡️  君王防衛答辯 (Student Defense):\n      {defense_indented}")
+                    
+                if r.get('Refinement Delta'):
+                    delta_indented = "\n      ".join(r['Refinement Delta'].strip().split("\n"))
+                    print(f"    ⚖️  AI 潤飾語意偏差 (Semantic Friction Delta):\n      {delta_indented}")
                 print("    " + "=" * 70)
 
     def execute_custom_sql(self, sql_str, as_json=False):
@@ -313,6 +327,113 @@ class BrainCLI:
         except Exception as e:
             conn.close()
             print(f"❌ SQL 執行失敗，語法錯誤：{e}")
+
+    def update_read_depth(self, args_list, as_json=False):
+        """批次手動更新文獻的真實閱讀層次"""
+        if not args_list:
+            print("❌ 錯誤：請提供 cite_key:level 參數或 JSON 檔案路徑。")
+            return
+            
+        LEVEL_MAP = {
+            "0": "UNREAD",
+            "1": "DTO_SUMMARY",
+            "2": "SKIMMED",
+            "3": "BODY_ON_DEEP",
+            "unread": "UNREAD",
+            "dto_summary": "DTO_SUMMARY",
+            "skimmed": "SKIMMED",
+            "body_on_deep": "BODY_ON_DEEP"
+        }
+        
+        updates = {}
+        
+        # 判斷是否為 JSON 檔案
+        if len(args_list) == 1 and args_list[0].endswith(".json"):
+            json_path = args_list[0]
+            # 如果不是絕對路徑，則尋找相對於專案目錄的路徑
+            if not os.path.isabs(json_path):
+                base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+                json_path = os.path.join(base_dir, json_path)
+                
+            if not os.path.exists(json_path):
+                print(f"❌ 錯誤：找不到指定的 JSON 批次檔案：'{args_list[0]}'")
+                return
+                
+            try:
+                with open(json_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if not isinstance(data, dict):
+                    print("❌ 錯誤：JSON 檔案格式應為 {\"cite_key\": \"level\"} 的 Key-Value 對應。")
+                    return
+                updates = data
+            except Exception as e:
+                print(f"❌ 錯誤：讀取 JSON 檔案失敗: {e}")
+                return
+        else:
+            # 命令行鍵值對解析
+            for item in args_list:
+                if ":" not in item:
+                    print(f"❌ 錯誤：參數格式不正確：'{item}'。應為 'cite_key:level' 形式。")
+                    return
+                parts = item.split(":", 1)
+                updates[parts[0].strip()] = parts[1].strip()
+                
+        if not updates:
+            print("[-] 沒有需要更新的文獻資料。")
+            return
+            
+        # 檢驗與映射所有 levels
+        validated_updates = []
+        for key, raw_level in updates.items():
+            level_key = str(raw_level).strip().lower()
+            if level_key not in LEVEL_MAP:
+                print(f"❌ 錯誤：不正當的閱讀層次：'{raw_level}'（對應文獻：'{key}'）。\n可接受層次：0=UNREAD, 1=DTO_SUMMARY, 2=SKIMMED, 3=BODY_ON_DEEP")
+                return
+            validated_updates.append((key, LEVEL_MAP[level_key]))
+            
+        # 執行資料庫更新 (包在 Transaction 中)
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute("PRAGMA foreign_keys = ON;")
+        
+        success_count = 0
+        update_summary = []
+        
+        try:
+            for key, level in validated_updates:
+                # 剛性檢索 papers 是否存在該 key
+                cursor.execute("SELECT paper_id, cite_key, title FROM papers WHERE LOWER(cite_key) = LOWER(?) OR LOWER(paper_id) = LOWER(?);", (key, key))
+                row = cursor.fetchone()
+                if not row:
+                    raise Exception(f"大腦資料庫中查無文獻：'{key}'，無法執行更新。")
+                    
+                target_key = row['cite_key']
+                title_brief = row['title'][:30] + "..." if len(row['title']) > 30 else row['title']
+                
+                cursor.execute("""
+                    UPDATE papers 
+                    SET read_depth_level = ? 
+                    WHERE LOWER(cite_key) = LOWER(?) OR LOWER(paper_id) = LOWER(?);
+                """, (level, key, key))
+                
+                success_count += 1
+                update_summary.append([target_key, title_brief, level])
+                
+            conn.commit()
+            
+            if as_json:
+                json_out = [{"cite_key": item[0], "title": item[1], "new_read_depth": item[2]} for item in update_summary]
+                print(json.dumps(json_out, ensure_ascii=False, indent=2))
+            else:
+                print(f"\n🎉 成功批次手動更新 {success_count} 筆文獻之真實閱讀層次！")
+                headers = ["Cite Key", "Title", "New Read Depth"]
+                print(self.format_table(update_summary, headers))
+                
+        except Exception as e:
+            conn.rollback()
+            print(f"\n❌ 批次更新失敗，已復原所有變更。原因：{e}")
+        finally:
+            conn.close()
 
     def query_projects_and_topics(self, project_id=None, as_json=False):
         """查詢專案與循序主題看板"""
@@ -976,6 +1097,7 @@ def main():
     parser.add_argument("-c", "--cite-tree", help="查詢特定論文引用文獻樹狀合規看板 (可傳入 paper_id 或 cite_key)")
     parser.add_argument("-v", "--verbose", action="store_true", help="在引用樹查詢中展開印出 Stage 2 文獻的 10 大學術因子")
     parser.add_argument("--json", action="store_true", help="切換為結構化 JSON 輸出格式")
+    parser.add_argument("-rd", "--read-depth", nargs="+", help="手動批次更新文獻真實閱讀層次 (可為 cite_key:level 多個鍵值對，或單一 .json 批次檔案。對照：0=UNREAD, 1=DTO_SUMMARY, 2=SKIMMED, 3=BODY_ON_DEEP)")
     
     args = parser.parse_args()
     
@@ -1002,6 +1124,8 @@ def main():
         cli.check_directory_roots(args.json)
     elif args.cite_tree:
         cli.query_citation_tree(args.cite_tree, depth=2, verbose=args.verbose, as_json=args.json)
+    elif args.read_depth is not None:
+        cli.update_read_depth(args.read_depth, args.json)
     else:
         parser.print_help()
 

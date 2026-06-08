@@ -126,6 +126,7 @@ CREATE TABLE IF NOT EXISTS papers (
     -- 欄位用途：寫論文時，Agent 可秒級導出所有已引用的 BibTeX，拼裝成完美的 references.bib。
     cite_key TEXT UNIQUE NOT NULL,        -- LaTeX 引用鍵 (例如 'Wang2026ARWET')
     bibtex TEXT NOT NULL,                 -- 原始完整的 BibTeX 條目字串
+    read_depth_level TEXT DEFAULT 'UNREAD', -- 研究者真實閱讀狀態的分層次欄位 ('UNREAD' | 'DTO_SUMMARY' | 'SKIMMED' | 'BODY_ON_DEEP')
     
     meta_data TEXT,                       -- JSON 信封：存放動態物理參數 {"Q": 12000, "freq_MHz": 28.5}
     FOREIGN KEY (task_id) REFERENCES exploration_tasks(task_id),
@@ -251,6 +252,8 @@ CREATE TABLE IF NOT EXISTS red_team_logs (
     aspect_analyzed TEXT,                 -- 本次對抗的分析維度 (例如 'Duffing Non-linear Bifurcation')
     reviewer_attack TEXT,                 -- 紅軍 Agent (扮演嚴厲審稿人) 提出的尖銳物理質疑
     student_defense TEXT,                 -- 學生做出「品位裁決」後的防禦策略、修正公式與推導
+    raw_student_defense TEXT,              -- 研究者原始無潤飾答辯文字
+    defense_refinement_delta TEXT,         -- AI 潤飾產生的語意偏差與修改說明
     verdict TEXT NOT NULL,                -- 裁決判定：'PASS' (通過) | 'VULNERABLE' (脆弱) | 'CRITICAL_BUG' (嚴重錯誤)
     test_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     meta_data TEXT,                       -- JSON 信封：{"judge_model": "Gemini_3.0_Pro", "tokens_used": 1540}
