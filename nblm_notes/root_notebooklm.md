@@ -612,7 +612,7 @@ CREATE TABLE IF NOT EXISTS paper_tags (
 CREATE INDEX IF NOT EXISTS idx_tags_name ON paper_tags(tag_name); -- 加速標籤查詢
 
 -- ------------------------------------------------------------------------------
--- 資料表：taxonomy_framework (大一統階層分類架構表 - v2.3 新增)
+-- 資料表：taxonomy_framework (大一統階層分類架構表 - v1.2.3 新增)
 -- 目的：定義哈爸審定之大一統主/次分類骨架，剛性防禦 AI 自動標記時的語意漂移。
 -- ------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS taxonomy_framework (
